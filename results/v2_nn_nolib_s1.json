@@ -1,0 +1,1064 @@
+{
+ "history": [
+  {
+   "iteration": 0,
+   "solved_this_iter": 82,
+   "solved_ever": 82,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0,
+   "n_replays": 232,
+   "n_dreams": 2000,
+   "dream_seconds": 21.9
+  },
+  {
+   "iteration": 1,
+   "solved_this_iter": 77,
+   "solved_ever": 82,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 66.5,
+   "n_replays": 221,
+   "n_dreams": 2000,
+   "dream_seconds": 13.2
+  },
+  {
+   "iteration": 2,
+   "solved_this_iter": 77,
+   "solved_ever": 83,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 61.8,
+   "n_replays": 235,
+   "n_dreams": 2000,
+   "dream_seconds": 14.6
+  },
+  {
+   "iteration": 3,
+   "solved_this_iter": 79,
+   "solved_ever": 83,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 58.8,
+   "n_replays": 238,
+   "n_dreams": 2000,
+   "dream_seconds": 11.0
+  },
+  {
+   "iteration": 4,
+   "solved_this_iter": 85,
+   "solved_ever": 85,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 50.3,
+   "n_replays": 245,
+   "n_dreams": 2000,
+   "dream_seconds": 13.4
+  },
+  {
+   "iteration": 5,
+   "solved_this_iter": 85,
+   "solved_ever": 85,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 46.4,
+   "n_replays": 250,
+   "n_dreams": 2000,
+   "dream_seconds": 5.0
+  },
+  {
+   "iteration": 6,
+   "solved_this_iter": 83,
+   "solved_ever": 85,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 47.1,
+   "n_replays": 250,
+   "n_dreams": 2000,
+   "dream_seconds": 8.9
+  },
+  {
+   "iteration": 7,
+   "solved_this_iter": 87,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 44.3,
+   "n_replays": 253,
+   "n_dreams": 2000,
+   "dream_seconds": 7.0
+  }
+ ],
+ "grammar": "  0.000\t$_\n  0.000\talg\tR\n  0.000\talg\tU\n  0.000\talg\tF\n  0.000\talg -> alg -> alg\tseq\n  0.000\talg -> alg\tinv\n  0.000\talg -> alg -> alg\tsetup\n  0.000\talg -> alg -> alg\tcomm\n  0.000\talg -> alg\tx\n  0.000\talg -> alg\ty\n  0.000\talg -> alg\tz\n  0.000\talg -> alg\tmirror",
+ "frontiers": {
+  "1-corner#0": [
+   "(seq R R)",
+   "(x (seq R R))",
+   "(seq R (x R))"
+  ],
+  "1-corner#1": [
+   "(setup R (seq F F))",
+   "(seq F (setup R F))",
+   "(seq (setup U F) F)"
+  ],
+  "1-corner#2": [
+   "F",
+   "(z F)",
+   "(z (z F))"
+  ],
+  "1-corner#3": [
+   "(setup R F)",
+   "(setup R (setup F F))",
+   "(setup (setup R R) F)"
+  ],
+  "1-corner#4": [
+   "(inv (seq R F))",
+   "(mirror (seq F R))",
+   "(mirror (setup F R))"
+  ],
+  "1-corner#5": [
+   "(comm F R)",
+   "(comm (comm F R) F)",
+   "(comm (comm F (comm R F)) F)"
+  ],
+  "1-corner#6": [
+   "(setup R F)",
+   "(setup (setup R R) F)",
+   "(setup R (setup F F))"
+  ],
+  "1-corner#7": [
+   "(setup U (inv R))",
+   "(inv (setup U R))",
+   "(seq U (inv R))"
+  ],
+  "1-corner#8": [
+   "(seq U (mirror R))",
+   "(seq (mirror R) U)",
+   "(mirror (seq (mirror U) R))"
+  ],
+  "1-corner#9": [
+   "(inv R)",
+   "(inv (inv (inv R)))",
+   "(inv (inv (inv (inv (inv R)))))"
+  ],
+  "1-corner#10": [
+   "(mirror (seq F R))",
+   "(mirror (setup F R))",
+   "(inv (seq R F))"
+  ],
+  "1-corner#11": [
+   "R",
+   "(x R)",
+   "(x (x R))"
+  ],
+  "1-corner#12": [
+   "(setup R F)",
+   "(setup (setup R R) F)",
+   "(setup R (setup F F))"
+  ],
+  "1-corner#13": [
+   "(comm (z R) R)",
+   "(y (comm R F))",
+   "(y (comm R (y R)))"
+  ],
+  "1-corner#14": [
+   "(comm F R)",
+   "(inv (comm R F))",
+   "(inv (inv (comm F R)))"
+  ],
+  "1-corner#15": [
+   "F",
+   "(z F)",
+   "(z (z F))"
+  ],
+  "1-corner#16": [
+   "(setup U F)",
+   "(seq U F)",
+   "(setup U (setup F F))"
+  ],
+  "1-corner#17": [
+   "R",
+   "(x (x R))",
+   "(x (x (x R)))"
+  ],
+  "1-corner#18": [
+   "(inv R)",
+   "(inv (inv (inv R)))",
+   "(inv (inv (inv (inv (inv R)))))"
+  ],
+  "1-corner#19": [
+   "F",
+   "(y (y F))",
+   "(y (y (y (y F))))"
+  ],
+  "1-corner#20": [
+   "(comm F (mirror R))",
+   "(mirror (comm (mirror F) R))",
+   "(mirror (mirror (comm F (mirror R))))"
+  ],
+  "1-corner#21": [
+   "(seq R F)",
+   "(seq (seq U R) F)",
+   "(seq (seq R F) U)"
+  ],
+  "1-corner#22": [
+   "(comm (z R) R)",
+   "(z (comm R U))",
+   "(comm R (x U))"
+  ],
+  "1-corner#23": [
+   "(comm F R)",
+   "(comm (comm F R) F)",
+   "(inv (comm R F))"
+  ],
+  "2-corners#1": [
+   "(setup F (setup F (inv R)))",
+   "(setup F (inv (setup F R)))",
+   "(inv (setup F (setup F R)))"
+  ],
+  "2-corners#2": [
+   "(comm U (comm R (comm (comm R U) U)))",
+   "(comm (comm U (comm R (comm U R))) U)",
+   "(comm (comm (comm R (comm U R)) U) U)"
+  ],
+  "2-corners#3": [
+   "(comm (comm U (comm R (comm U R))) U)",
+   "(comm (comm (comm R (comm U R)) U) U)",
+   "(comm U (comm U (inv R)))"
+  ],
+  "2-corners#4": [
+   "(setup U (setup F R))",
+   "(setup F (setup U R))",
+   "(setup (inv R) U)"
+  ],
+  "2-corners#5": [
+   "(setup R (comm (z R) R))",
+   "(comm (setup R (z R)) R)",
+   "(comm (seq R (z R)) R)"
+  ],
+  "2-corners#6": [
+   "(setup R (setup R F))",
+   "(setup (setup R F) F)",
+   "(setup (setup R R) (setup R F))"
+  ],
+  "2-corners#7": [
+   "(comm U (inv R))",
+   "(inv (comm (inv R) U))",
+   "(inv (inv (comm U (inv R))))"
+  ],
+  "2-corners#8": [
+   "(comm (mirror U) (setup F R))"
+  ],
+  "2-corners#9": [
+   "(setup R (setup R (setup R U)))",
+   "(setup U (setup (setup R U) R))",
+   "(setup R (setup (setup R U) U))"
+  ],
+  "2-corners#10": [
+   "(setup U (setup F R))",
+   "(setup F (setup U R))",
+   "(setup (inv R) U)"
+  ],
+  "2-corners#11": [
+   "(setup (setup (setup F R) R) F)",
+   "(setup (setup R F) (inv F))",
+   "(inv (setup (setup R F) F))"
+  ],
+  "2-corners#12": [
+   "(setup F (inv R))",
+   "(inv (setup F R))",
+   "(setup F (setup R (inv R)))"
+  ],
+  "2-corners#13": [
+   "(setup (setup F R) U)",
+   "(setup (comm F R) F)",
+   "(setup (setup (setup F F) R) U)"
+  ],
+  "2-corners#14": [
+   "(setup F R)",
+   "(setup F (setup F R))",
+   "(setup (setup F F) R)"
+  ],
+  "2-corners#15": [
+   "(setup F R)",
+   "(setup F (setup F R))",
+   "(setup (setup F F) R)"
+  ],
+  "2-corners#16": [
+   "(setup (setup U (setup U R)) R)",
+   "(setup (setup R U) (setup U R))",
+   "(setup (setup (setup R U) U) R)"
+  ],
+  "2-corners#17": [
+   "(comm U (inv R))",
+   "(inv (comm (inv R) U))",
+   "(inv (inv (inv (comm (inv R) U))))"
+  ],
+  "2-corners#18": [
+   "(setup F (inv R))",
+   "(inv (setup F R))",
+   "(setup F (comm F R))"
+  ],
+  "2-corners#20": [
+   "(setup (inv R) U)",
+   "(inv (inv (inv (setup (inv R) (inv U)))))",
+   "(inv (inv (inv (inv (setup (inv R) U)))))"
+  ],
+  "2-corners#22": [
+   "(setup F R)",
+   "(setup F (setup F R))",
+   "(setup (setup F F) R)"
+  ],
+  "3-Dlayer#0": [
+   "(setup F (inv U))",
+   "(inv (setup F U))",
+   "(setup (setup F U) (inv U))"
+  ],
+  "3-Dlayer#2": [
+   "(comm U (comm U (comm U (comm F U))))",
+   "(comm (comm U (comm (comm U F) U)) U)",
+   "(comm (comm U (comm (comm F U) U)) U)"
+  ],
+  "3-Dlayer#3": [
+   "(setup U (setup F U))",
+   "(setup (setup U F) U)",
+   "(setup U (setup F (setup U U)))"
+  ],
+  "3-Dlayer#4": [
+   "(comm (comm U F) U)",
+   "(comm U (comm (comm F U) U))",
+   "(comm U (comm (comm U (comm F U)) U))"
+  ],
+  "3-Dlayer#5": [
+   "(comm U F)",
+   "(comm U (comm F U))",
+   "(inv (comm F U))"
+  ],
+  "3-Dlayer#6": [
+   "(comm F (seq U U))",
+   "(setup F (seq U U))",
+   "(comm U (comm F (seq U U)))"
+  ],
+  "3-Dlayer#7": [
+   "(comm (inv U) F)",
+   "(comm U (comm F (inv U)))",
+   "(comm (comm U F) (inv U))"
+  ],
+  "3-Dlayer#9": [
+   "(setup U (setup F U))",
+   "(setup (setup U F) U)",
+   "(setup (setup (setup U U) F) U)"
+  ],
+  "3-Dlayer#12": [
+   "(comm U F)",
+   "(comm U (comm F U))",
+   "(inv (comm F U))"
+  ],
+  "3-Dlayer#13": [
+   "(comm U F)",
+   "(comm U (comm F U))",
+   "(comm (comm (comm F U) U) U)"
+  ],
+  "3-Dlayer#14": [
+   "(comm (inv U) F)",
+   "(comm (mirror U) F)",
+   "(comm (comm U F) (inv U))"
+  ],
+  "3-Dlayer#15": [
+   "(setup F (inv U))",
+   "(inv (setup F U))",
+   "(setup F (mirror U))"
+  ],
+  "3-Dlayer#16": [
+   "(setup F (inv U))",
+   "(inv (setup F U))",
+   "(setup F (mirror U))"
+  ],
+  "3-Dlayer#17": [
+   "(comm (inv U) F)",
+   "(inv (comm F (inv U)))",
+   "(comm U (comm F (inv U)))"
+  ],
+  "3-Dlayer#18": [
+   "(comm (inv U) F)",
+   "(inv (comm F (inv U)))",
+   "(comm (comm U F) (inv U))"
+  ],
+  "3-Dlayer#19": [
+   "(setup U (setup F U))",
+   "(setup (setup U F) U)",
+   "(setup U (setup (setup F F) U))"
+  ],
+  "3-Dlayer#20": [
+   "(comm F (inv U))",
+   "(comm F (mirror U))",
+   "(inv (comm (inv U) F))"
+  ],
+  "3-Dlayer#22": [
+   "(comm U F)",
+   "(comm U (comm F U))",
+   "(inv (comm F U))"
+  ],
+  "3-Dlayer#23": [
+   "(comm F (seq U U))",
+   "(setup F (seq U U))",
+   "(seq U (seq U (comm U F)))"
+  ],
+  "4-Uorient#0": [
+   "(comm (comm U (comm R F)) U)",
+   "(comm (comm (inv R) U) F)",
+   "(comm (comm (x U) R) F)"
+  ],
+  "4-Uorient#1": [
+   "(comm F (x (comm U R)))",
+   "(comm F (comm (x U) R))",
+   "(comm F (comm (inv R) U))"
+  ],
+  "4-Uorient#4": [
+   "(comm (comm R F) U)",
+   "(setup (comm R F) U)",
+   "(comm (comm F R) (mirror U))"
+  ],
+  "4-Uorient#5": [
+   "(setup R (comm U (x U)))",
+   "(x (setup R (comm F U)))",
+   "(setup R (x (comm F U)))"
+  ],
+  "4-Uorient#6": [
+   "(comm U (comm F (y F)))",
+   "(comm (comm (y F) F) U)",
+   "(comm (comm R F) (mirror U))"
+  ],
+  "4-Uorient#7": [
+   "(comm (mirror (comm U R)) R)",
+   "(mirror (comm (comm U R) (mirror R)))",
+   "(comm (comm (mirror U) (mirror R)) R)"
+  ],
+  "4-Uorient#8": [
+   "(comm (comm R F) (inv U))",
+   "(comm (comm (y F) F) U)",
+   "(comm (comm R F) (mirror U))"
+  ],
+  "4-Uorient#11": [
+   "(comm (comm R F) (y F))",
+   "(comm (comm R F) (y (y R)))",
+   "(comm (comm R (y R)) (y F))"
+  ],
+  "4-Uorient#13": [
+   "(comm (mirror (comm U R)) R)",
+   "(mirror (comm (comm U R) (mirror R)))",
+   "(comm (comm (mirror U) (mirror R)) R)"
+  ],
+  "4-Uorient#14": [
+   "(comm (mirror (comm U R)) R)",
+   "(comm (comm (mirror R) (comm U R)) R)",
+   "(comm (comm R (mirror (comm R U))) U)"
+  ],
+  "4-Uorient#15": [
+   "(comm U (comm F R))",
+   "(comm (setup F U) R)",
+   "(comm (comm (x U) R) U)"
+  ],
+  "4-Uorient#17": [
+   "(comm R (mirror (comm U R)))",
+   "(comm R (comm (mirror R) (comm U R)))",
+   "(comm R (comm (mirror U) (mirror R)))"
+  ],
+  "4-Uorient#18": [
+   "(comm (comm F R) (y F))",
+   "(comm (comm F (y F)) U)",
+   "(comm (comm F (y F)) (x F))"
+  ],
+  "4-Uorient#19": [
+   "(comm (comm R F) U)",
+   "(comm (comm F R) (mirror U))",
+   "(comm (comm U (inv R)) F)"
+  ],
+  "4-Uorient#21": [
+   "(comm (comm (comm F R) U) U)"
+  ],
+  "4-Uorient#22": [
+   "(comm F (x (comm U R)))",
+   "(comm F (comm (x U) R))",
+   "(comm F (comm (inv R) U))"
+  ],
+  "4-Uorient#23": [
+   "(setup R (comm U (x U)))",
+   "(comm (setup R U) (x (setup R U)))",
+   "(comm (setup R U) (setup R (x U)))"
+  ],
+  "5-solved#7": [
+   "U",
+   "(y U)",
+   "(y (y U))"
+  ],
+  "5-solved#23": [
+   "U",
+   "(y U)",
+   "(y (y U))"
+  ],
+  "4-Uorient#20": [
+   "(comm U (comm (comm R F) U))",
+   "(comm (comm U (comm F R)) U)"
+  ],
+  "4-Uorient#3": [
+   "(comm U (comm (comm U (comm U R)) R))",
+   "(comm (comm R (comm U (comm U R))) U)",
+   "(comm (comm (comm R F) U) U)"
+  ],
+  "4-Uorient#10": [
+   "(comm U (comm U (comm F R)))",
+   "(comm (comm (comm R F) U) U)",
+   "(comm (comm R (comm U (comm U R))) U)"
+  ],
+  "4-Uorient#12": [
+   "(comm (comm (comm U (comm F R)) U) U)",
+   "(comm (comm (comm R U) (mirror R)) U)"
+  ],
+  "4-Uorient#16": [
+   "(comm (comm (comm R U) (mirror R)) U)"
+  ]
+ },
+ "test": {
+  "test:1-corner#0": [
+   "(setup R (seq U U))"
+  ],
+  "test:1-corner#1": [
+   "(z (seq U U))"
+  ],
+  "test:1-corner#2": [
+   "(comm (y (y F)) R)"
+  ],
+  "test:1-corner#3": [
+   "(inv R)"
+  ],
+  "test:1-corner#4": [
+   "(seq (setup R U) F)"
+  ],
+  "test:1-corner#5": [
+   "(seq (seq U U) F)"
+  ],
+  "test:1-corner#6": [
+   "(setup (setup R U) U)"
+  ],
+  "test:1-corner#7": [
+   "(setup R F)"
+  ],
+  "test:1-corner#8": [
+   "(seq U F)"
+  ],
+  "test:1-corner#9": [
+   "(seq F F)"
+  ],
+  "test:1-corner#10": [
+   "(seq (y (seq F F)) F)"
+  ],
+  "test:1-corner#11": [
+   "(seq F (seq R F))"
+  ],
+  "test:2-corners#1": [
+   "(comm U (x U))"
+  ],
+  "test:2-corners#2": [
+   "(setup F R)"
+  ],
+  "test:2-corners#5": [
+   "(setup (inv R) U)"
+  ],
+  "test:2-corners#6": [
+   "(setup F (inv R))"
+  ],
+  "test:2-corners#7": [
+   "(comm (inv U) (x U))"
+  ],
+  "test:2-corners#8": [
+   "(setup R (setup R F))"
+  ],
+  "test:2-corners#11": [
+   "(setup (y R) R)"
+  ],
+  "test:3-Dlayer#1": [
+   "(comm (inv U) F)"
+  ],
+  "test:3-Dlayer#2": [
+   "(comm (comm F U) U)"
+  ],
+  "test:3-Dlayer#3": [
+   "(comm U (mirror R))"
+  ],
+  "test:3-Dlayer#4": [
+   "(comm F (x F))"
+  ],
+  "test:3-Dlayer#6": [
+   "(comm F (seq U U))"
+  ],
+  "test:3-Dlayer#7": [
+   "(comm (comm U F) U)"
+  ],
+  "test:3-Dlayer#9": [
+   "(setup F (mirror U))"
+  ],
+  "test:3-Dlayer#10": [
+   "(comm (inv U) F)"
+  ],
+  "test:4-Uorient#0": [
+   "(comm R (setup F U))"
+  ],
+  "test:4-Uorient#1": [
+   "(comm (comm R F) (y F))"
+  ],
+  "test:4-Uorient#2": [
+   "(comm U (comm U (comm (comm R F) U)))"
+  ],
+  "test:4-Uorient#3": [
+   "(setup F (comm U R))"
+  ],
+  "test:4-Uorient#4": [
+   "(comm (comm (comm R F) U) U)"
+  ],
+  "test:4-Uorient#5": [
+   "(comm (comm (inv R) U) F)"
+  ],
+  "test:4-Uorient#6": [
+   "(comm (comm (comm U (comm F R)) U) U)"
+  ],
+  "test:4-Uorient#7": [
+   "(comm (comm R F) (y F))"
+  ],
+  "test:4-Uorient#8": [
+   "(comm (comm U R) (mirror R))"
+  ],
+  "test:4-Uorient#11": [
+   "(comm U (comm (comm R F) U))"
+  ],
+  "test:5-solved#3": [
+   "(mirror U)"
+  ]
+ },
+ "test_n": 60,
+ "solutions_moves": {
+  "1-corner#0": "R2",
+  "1-corner#1": "R F2 R'",
+  "1-corner#2": "F",
+  "1-corner#3": "R F R'",
+  "1-corner#4": "F' R'",
+  "1-corner#5": "F R F' R'",
+  "1-corner#6": "R F R'",
+  "1-corner#7": "U R' U'",
+  "1-corner#8": "U L'",
+  "1-corner#9": "R'",
+  "1-corner#10": "F' L'",
+  "1-corner#11": "R",
+  "1-corner#12": "R F R'",
+  "1-corner#13": "D R D' R'",
+  "1-corner#14": "F R F' R'",
+  "1-corner#15": "F",
+  "1-corner#16": "U F U'",
+  "1-corner#17": "R",
+  "1-corner#18": "R'",
+  "1-corner#19": "F",
+  "1-corner#20": "F L' F' L",
+  "1-corner#21": "R F",
+  "1-corner#22": "D R D' R'",
+  "1-corner#23": "F R F' R'",
+  "2-corners#1": "F2 R' F2",
+  "2-corners#2": "U R2 U R' U R U' R' U' R' U R U R' U' R U' R' U' R U R' U R U' R' U' R U R U R' U' R U' R2",
+  "2-corners#3": "U R U R U' R' U R' U' R U' R U R' U' R' U R U R U' R' U R' U R U' R U R' U' R' U2",
+  "2-corners#4": "U F R F' U'",
+  "2-corners#5": "R D R D' R2",
+  "2-corners#6": "R2 F R2",
+  "2-corners#7": "U R' U' R",
+  "2-corners#8": "U' F R F' U F R' F'",
+  "2-corners#9": "R' U R",
+  "2-corners#10": "U F R F' U'",
+  "2-corners#11": "F R F' R F R' F R F' R' F R' F'",
+  "2-corners#12": "F R' F'",
+  "2-corners#13": "F R F' U F R' F'",
+  "2-corners#14": "F R F'",
+  "2-corners#15": "F R F'",
+  "2-corners#16": "U2 R U2 R U2 R' U2",
+  "2-corners#17": "U R' U' R",
+  "2-corners#18": "F R' F'",
+  "2-corners#20": "R' U R",
+  "2-corners#22": "F R F'",
+  "3-Dlayer#0": "F U' F'",
+  "3-Dlayer#2": "U' F U F' U' F U' F' U' F U F' U F U' F' U' F U F' U' F U' F' U F U F' U F U' F' U2",
+  "3-Dlayer#3": "U F U F' U'",
+  "3-Dlayer#4": "U F U' F' U F U F' U2",
+  "3-Dlayer#5": "U F U' F'",
+  "3-Dlayer#6": "F U2 F' U2",
+  "3-Dlayer#7": "U' F U F'",
+  "3-Dlayer#9": "U F U F' U'",
+  "3-Dlayer#12": "U F U' F'",
+  "3-Dlayer#13": "U F U' F'",
+  "3-Dlayer#14": "U' F U F'",
+  "3-Dlayer#15": "F U' F'",
+  "3-Dlayer#16": "F U' F'",
+  "3-Dlayer#17": "U' F U F'",
+  "3-Dlayer#18": "U' F U F'",
+  "3-Dlayer#19": "U F U F' U'",
+  "3-Dlayer#20": "F U' F' U",
+  "3-Dlayer#22": "U F U' F'",
+  "3-Dlayer#23": "F U2 F' U2",
+  "4-Uorient#0": "U R F R' F' U' F R F' R' U R F R' F' U F R F' R' U2",
+  "4-Uorient#1": "F B R B' R' F' R B R' B'",
+  "4-Uorient#4": "R F R' F' U F R F' R' U'",
+  "4-Uorient#5": "R U B U' B' R'",
+  "4-Uorient#6": "U F L F' L' U' L F L' F'",
+  "4-Uorient#7": "U' L' U L R L' U' L U R'",
+  "4-Uorient#8": "R F R' F' U' F R F' R' U",
+  "4-Uorient#11": "R F R' F' L F R F' R' L'",
+  "4-Uorient#13": "U' L' U L R L' U' L U R'",
+  "4-Uorient#14": "U' L' U L R L' U' L U R'",
+  "4-Uorient#15": "U F R F' R' U' R F R' F'",
+  "4-Uorient#17": "R U' L' U L R' L' U' L U",
+  "4-Uorient#18": "F R F' R' L R F R' F' L'",
+  "4-Uorient#19": "R F R' F' U F R F' R' U'",
+  "4-Uorient#21": "F R F' R' U R F R' F' U F R F' R' U' R F R' F' U'",
+  "4-Uorient#22": "F B R B' R' F' R B R' B'",
+  "4-Uorient#23": "R U B U' B' R'",
+  "5-solved#7": "U",
+  "5-solved#23": "U",
+  "4-Uorient#20": "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+  "4-Uorient#3": "U' R U' R' U' R U R' U' R U R U' R' U R U R' U2 R' U' R U2 R U' R' U' R U R' U' R' U R U' R' U R U R' U2",
+  "4-Uorient#10": "U2 F R F' R' U' R F R' F' U' F R F' R' U R F R' F' U'",
+  "4-Uorient#12": "U F R F' R' U' R F R' F' U F R F' R' U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U R F R' F' U2",
+  "4-Uorient#16": "R U R' U' L' U R U' R' L U L' R U R' U' L U R U' R' U'"
+ },
+ "test_moves": {
+  "test:1-corner#0": "R U2 R'",
+  "test:1-corner#1": "R2",
+  "test:1-corner#2": "B R B' R'",
+  "test:1-corner#3": "R'",
+  "test:1-corner#4": "R U R' F",
+  "test:1-corner#5": "U2 F",
+  "test:1-corner#6": "R U R' U R U' R'",
+  "test:1-corner#7": "R F R'",
+  "test:1-corner#8": "U F",
+  "test:1-corner#9": "F2",
+  "test:1-corner#10": "L2 F",
+  "test:1-corner#11": "F R F",
+  "test:2-corners#1": "U B U' B'",
+  "test:2-corners#2": "F R F'",
+  "test:2-corners#5": "R' U R",
+  "test:2-corners#6": "F R' F'",
+  "test:2-corners#7": "U' B U B'",
+  "test:2-corners#8": "R2 F R2",
+  "test:2-corners#11": "F R F'",
+  "test:3-Dlayer#1": "U' F U F'",
+  "test:3-Dlayer#2": "F U F' U F U' F' U'",
+  "test:3-Dlayer#3": "U L' U' L",
+  "test:3-Dlayer#4": "F U F' U'",
+  "test:3-Dlayer#6": "F U2 F' U2",
+  "test:3-Dlayer#7": "U F U' F' U F U F' U2",
+  "test:3-Dlayer#9": "F U' F'",
+  "test:3-Dlayer#10": "U' F U F'",
+  "test:4-Uorient#0": "R F U F' R' F U' F'",
+  "test:4-Uorient#1": "R F R' F' L F R F' R' L'",
+  "test:4-Uorient#2": "U2 R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+  "test:4-Uorient#3": "F U R U' R' F'",
+  "test:4-Uorient#4": "R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+  "test:4-Uorient#5": "R' U R U' F U R' U' R F'",
+  "test:4-Uorient#6": "U F R F' R' U' R F R' F' U F R F' R' U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U R F R' F' U2",
+  "test:4-Uorient#7": "R F R' F' L F R F' R' L'",
+  "test:4-Uorient#8": "U R U' R' L' R U R' U' L",
+  "test:4-Uorient#11": "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+  "test:5-solved#3": "U'"
+ },
+ "per_group": {
+  "1-corner": [
+   24,
+   24
+  ],
+  "2-corners": [
+   20,
+   24
+  ],
+  "3-Dlayer": [
+   19,
+   24
+  ],
+  "4-Uorient": [
+   22,
+   24
+  ],
+  "5-solved": [
+   2,
+   24
+  ]
+ },
+ "test_per_group": {
+  "1-corner": [
+   12,
+   12
+  ],
+  "2-corners": [
+   7,
+   12
+  ],
+  "3-Dlayer": [
+   8,
+   12
+  ],
+  "4-Uorient": [
+   10,
+   12
+  ],
+  "5-solved": [
+   1,
+   12
+  ]
+ },
+ "library_readable": [],
+ "args": {
+  "kind": "stages",
+  "dsl": "ruf",
+  "iterations": 8,
+  "per_task": 1.0,
+  "per_stage": 24,
+  "test_per_stage": 12,
+  "max_len": 8,
+  "per_length": 6,
+  "frontier": 3,
+  "max_new": 3,
+  "structure_penalty": 1.0,
+  "no_compress": true,
+  "recognition": true,
+  "n_dreams": 2000,
+  "steps": 800,
+  "seed": 1,
+  "out": "results/v2_nn_nolib_s1.json"
+ },
+ "policy": {
+  "1-corner": [
+   [
+    "R",
+    0.20097759159869472
+   ],
+   [
+    "F",
+    0.17732168217348077
+   ],
+   [
+    "inv",
+    0.09392778571388054
+   ],
+   [
+    "seq",
+    0.0904830956624298
+   ],
+   [
+    "setup",
+    0.07916916355094225
+   ],
+   [
+    "x",
+    0.07089069366850433
+   ],
+   [
+    "y",
+    0.06679337935660276
+   ],
+   [
+    "comm",
+    0.06276832699522829
+   ],
+   [
+    "U",
+    0.05926310993245917
+   ],
+   [
+    "z",
+    0.05630736338585544
+   ],
+   [
+    "mirror",
+    0.04209780796192199
+   ]
+  ],
+  "2-corners": [
+   [
+    "R",
+    0.21490954984238494
+   ],
+   [
+    "setup",
+    0.20043907686626738
+   ],
+   [
+    "F",
+    0.12248646415251674
+   ],
+   [
+    "U",
+    0.12210340003603824
+   ],
+   [
+    "inv",
+    0.10031059549912406
+   ],
+   [
+    "comm",
+    0.07998525050432025
+   ],
+   [
+    "z",
+    0.037448549429476084
+   ],
+   [
+    "y",
+    0.0351815479228981
+   ],
+   [
+    "mirror",
+    0.030965785358167835
+   ],
+   [
+    "x",
+    0.028753782109460613
+   ],
+   [
+    "seq",
+    0.02741599827934586
+   ]
+  ],
+  "3-Dlayer": [
+   [
+    "U",
+    0.2738246124881558
+   ],
+   [
+    "F",
+    0.1784948118463351
+   ],
+   [
+    "comm",
+    0.1664817097970795
+   ],
+   [
+    "inv",
+    0.10105354517651254
+   ],
+   [
+    "setup",
+    0.09692509650173714
+   ],
+   [
+    "seq",
+    0.040195198822029196
+   ],
+   [
+    "mirror",
+    0.03237837484046098
+   ],
+   [
+    "x",
+    0.03071017972925542
+   ],
+   [
+    "y",
+    0.030688341853205625
+   ],
+   [
+    "R",
+    0.028907578940647147
+   ],
+   [
+    "z",
+    0.020340550004581542
+   ]
+  ],
+  "4-Uorient": [
+   [
+    "comm",
+    0.3271202153913772
+   ],
+   [
+    "U",
+    0.19452299799462408
+   ],
+   [
+    "R",
+    0.16253973617784068
+   ],
+   [
+    "F",
+    0.1267555543858729
+   ],
+   [
+    "mirror",
+    0.06446869327643105
+   ],
+   [
+    "setup",
+    0.03561581590190858
+   ],
+   [
+    "y",
+    0.03194080743798314
+   ],
+   [
+    "x",
+    0.02989911399173621
+   ],
+   [
+    "inv",
+    0.019105190497083736
+   ],
+   [
+    "seq",
+    0.004451122276363806
+   ],
+   [
+    "z",
+    0.0035807526687787424
+   ]
+  ],
+  "5-solved": [
+   [
+    "U",
+    0.21538132783631525
+   ],
+   [
+    "F",
+    0.1354169633052128
+   ],
+   [
+    "comm",
+    0.10197060387786801
+   ],
+   [
+    "y",
+    0.09958344145945422
+   ],
+   [
+    "inv",
+    0.0943173266542049
+   ],
+   [
+    "mirror",
+    0.09035207506344865
+   ],
+   [
+    "x",
+    0.0856823085247681
+   ],
+   [
+    "R",
+    0.06829138755067743
+   ],
+   [
+    "z",
+    0.04719374835767295
+   ],
+   [
+    "setup",
+    0.04120428129614935
+   ],
+   [
+    "seq",
+    0.02060653607422823
+   ]
+  ]
+ }
+}

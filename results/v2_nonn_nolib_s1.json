@@ -1,0 +1,770 @@
+{
+ "history": [
+  {
+   "iteration": 0,
+   "solved_this_iter": 87,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 1,
+   "solved_this_iter": 87,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 2,
+   "solved_this_iter": 87,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 3,
+   "solved_this_iter": 87,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 4,
+   "solved_this_iter": 82,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 5,
+   "solved_this_iter": 82,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 6,
+   "solved_this_iter": 82,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 7,
+   "solved_this_iter": 82,
+   "solved_ever": 87,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  }
+ ],
+ "grammar": "  0.000\t$_\n  0.000\talg\tR\n  0.000\talg\tU\n  0.000\talg\tF\n  0.000\talg -> alg -> alg\tseq\n  0.000\talg -> alg\tinv\n  0.000\talg -> alg -> alg\tsetup\n  0.000\talg -> alg -> alg\tcomm\n  0.000\talg -> alg\tx\n  0.000\talg -> alg\ty\n  0.000\talg -> alg\tz\n  0.000\talg -> alg\tmirror",
+ "frontiers": {
+  "1-corner#0": [
+   "(seq R R)",
+   "(seq R (y F))",
+   "(seq R (x R))"
+  ],
+  "1-corner#1": [
+   "(comm F (mirror R))",
+   "(seq F (setup R F))",
+   "(seq (setup U F) F)"
+  ],
+  "1-corner#2": [
+   "F",
+   "(y R)",
+   "(x U)"
+  ],
+  "1-corner#3": [
+   "(setup R F)",
+   "(seq F (mirror R))",
+   "(seq F (inv R))"
+  ],
+  "1-corner#4": [
+   "(mirror (setup F R))",
+   "(mirror (seq F R))",
+   "(inv (seq R F))"
+  ],
+  "1-corner#5": [
+   "(comm F R)",
+   "(inv (setup R F))",
+   "(inv (comm R F))"
+  ],
+  "1-corner#6": [
+   "(setup R F)",
+   "(seq F (mirror R))",
+   "(seq F (inv R))"
+  ],
+  "1-corner#7": [
+   "(seq U (mirror R))",
+   "(seq U (inv R))",
+   "(seq (inv R) F)"
+  ],
+  "1-corner#8": [
+   "(seq U (mirror R))",
+   "(seq U (inv R))",
+   "(seq (inv R) F)"
+  ],
+  "1-corner#9": [
+   "(mirror R)",
+   "(inv R)",
+   "(inv (x R))"
+  ],
+  "1-corner#10": [
+   "(mirror (setup F R))",
+   "(mirror (seq F R))",
+   "(inv (seq R F))"
+  ],
+  "1-corner#11": [
+   "R",
+   "(y F)",
+   "(x R)"
+  ],
+  "1-corner#12": [
+   "(setup R F)",
+   "(seq F (mirror R))",
+   "(seq F (inv R))"
+  ],
+  "1-corner#13": [
+   "(setup (mirror F) R)",
+   "(setup (inv F) R)",
+   "(comm R (x U))"
+  ],
+  "1-corner#14": [
+   "(comm F R)",
+   "(inv (setup R F))",
+   "(inv (comm R F))"
+  ],
+  "1-corner#15": [
+   "F",
+   "(y R)",
+   "(x U)"
+  ],
+  "1-corner#16": [
+   "(setup U F)",
+   "(seq U F)",
+   "(seq U (x U))"
+  ],
+  "1-corner#17": [
+   "R",
+   "(y F)",
+   "(x R)"
+  ],
+  "1-corner#18": [
+   "(mirror R)",
+   "(inv R)",
+   "(inv (x R))"
+  ],
+  "1-corner#19": [
+   "F",
+   "(y R)",
+   "(x U)"
+  ],
+  "1-corner#20": [
+   "(comm F (mirror R))",
+   "(seq F (setup R F))",
+   "(seq (setup U F) F)"
+  ],
+  "1-corner#21": [
+   "(seq R F)",
+   "(seq R (y R))",
+   "(seq R (x U))"
+  ],
+  "1-corner#22": [
+   "(setup (mirror F) R)",
+   "(setup (inv F) R)",
+   "(comm R (x U))"
+  ],
+  "1-corner#23": [
+   "(comm F R)",
+   "(inv (setup R F))",
+   "(inv (comm R F))"
+  ],
+  "2-corners#1": [
+   "(seq U (setup (inv R) U))",
+   "(seq U (comm (inv R) U))",
+   "(inv (setup F (setup F R)))"
+  ],
+  "2-corners#2": [
+   "(comm U (comm U (inv R)))"
+  ],
+  "2-corners#3": [
+   "(comm U (comm U (inv R)))"
+  ],
+  "2-corners#4": [
+   "(setup (inv R) U)",
+   "(comm (inv R) U)",
+   "(seq U (setup F R))"
+  ],
+  "2-corners#5": [
+   "(seq R (comm (mirror F) R))",
+   "(seq R (comm (inv F) R))",
+   "(seq (comm (inv F) R) F)"
+  ],
+  "2-corners#6": [
+   "(setup R (setup R F))",
+   "(setup F (seq R R))",
+   "(setup (seq R R) F)"
+  ],
+  "2-corners#7": [
+   "(comm U (inv R))",
+   "(inv (comm (inv R) U))",
+   "(comm U (inv (x R)))"
+  ],
+  "2-corners#8": [
+   "(comm (mirror U) (setup F R))",
+   "(comm (inv U) (setup F R))"
+  ],
+  "2-corners#9": [
+   "(setup (inv R) U)",
+   "(comm (inv R) U)",
+   "(seq U (setup F R))"
+  ],
+  "2-corners#10": [
+   "(setup (inv R) U)",
+   "(comm (inv R) U)",
+   "(seq U (setup F R))"
+  ],
+  "2-corners#11": [
+   "(inv (setup (setup U R) F))",
+   "(inv (setup (setup R F) F))",
+   "(inv (setup (comm R F) F))"
+  ],
+  "2-corners#12": [
+   "(setup F (inv R))",
+   "(inv (setup F R))",
+   "(comm F (z R))"
+  ],
+  "2-corners#13": [
+   "(setup (setup F R) U)",
+   "(setup (comm F R) F)",
+   "(comm (setup F R) U)"
+  ],
+  "2-corners#14": [
+   "(setup F R)",
+   "(setup F (z U))",
+   "(setup F (x R))"
+  ],
+  "2-corners#15": [
+   "(setup F R)",
+   "(setup F (z U))",
+   "(setup F (x R))"
+  ],
+  "2-corners#16": [
+   "(seq U (setup (inv R) U))",
+   "(seq U (comm (inv R) U))",
+   "(inv (setup F (setup F R)))"
+  ],
+  "2-corners#17": [
+   "(comm U (inv R))",
+   "(inv (comm (inv R) U))",
+   "(comm U (inv (x R)))"
+  ],
+  "2-corners#18": [
+   "(setup F (inv R))",
+   "(inv (setup F R))",
+   "(comm F (z R))"
+  ],
+  "2-corners#20": [
+   "(setup (inv R) U)",
+   "(comm (inv R) U)",
+   "(seq U (setup F R))"
+  ],
+  "2-corners#22": [
+   "(setup F R)",
+   "(setup F (z U))",
+   "(setup F (x R))"
+  ],
+  "3-Dlayer#0": [
+   "(setup F (mirror U))",
+   "(setup F (inv U))",
+   "(inv (setup F U))"
+  ],
+  "3-Dlayer#1": [
+   "(seq (comm U F) (comm U F))"
+  ],
+  "3-Dlayer#2": [
+   "(comm U (comm U (mirror R)))"
+  ],
+  "3-Dlayer#3": [
+   "(setup (mirror R) U)",
+   "(setup (inv R) F)",
+   "(comm (mirror R) U)"
+  ],
+  "3-Dlayer#4": [
+   "(setup (comm U F) U)",
+   "(comm (comm U F) U)",
+   "(seq U (setup (inv R) F))"
+  ],
+  "3-Dlayer#5": [
+   "(comm U F)",
+   "(inv (comm F U))",
+   "(comm U (y R))"
+  ],
+  "3-Dlayer#6": [
+   "(setup F (seq U U))",
+   "(comm F (seq U U))",
+   "(seq U (comm U (mirror R)))"
+  ],
+  "3-Dlayer#7": [
+   "(comm (mirror U) F)",
+   "(comm (inv U) F)",
+   "(inv (comm F (inv U)))"
+  ],
+  "3-Dlayer#8": [
+   "(seq (comm U F) (comm U F))"
+  ],
+  "3-Dlayer#9": [
+   "(setup (mirror R) U)",
+   "(setup (inv R) F)",
+   "(comm (mirror R) U)"
+  ],
+  "3-Dlayer#10": [
+   "(seq (comm F U) (setup F U))",
+   "(seq (comm F U) (comm F U))"
+  ],
+  "3-Dlayer#11": [
+   "(seq (comm U F) (comm U F))"
+  ],
+  "3-Dlayer#12": [
+   "(comm U F)",
+   "(inv (comm F U))",
+   "(comm U (y R))"
+  ],
+  "3-Dlayer#13": [
+   "(comm U F)",
+   "(inv (comm F U))",
+   "(comm U (y R))"
+  ],
+  "3-Dlayer#14": [
+   "(comm (mirror U) F)",
+   "(comm (inv U) F)",
+   "(inv (comm F (inv U)))"
+  ],
+  "3-Dlayer#15": [
+   "(setup F (mirror U))",
+   "(setup F (inv U))",
+   "(inv (setup F U))"
+  ],
+  "3-Dlayer#16": [
+   "(setup F (mirror U))",
+   "(setup F (inv U))",
+   "(inv (setup F U))"
+  ],
+  "3-Dlayer#17": [
+   "(comm (mirror U) F)",
+   "(comm (inv U) F)",
+   "(inv (comm F (inv U)))"
+  ],
+  "3-Dlayer#18": [
+   "(comm (mirror U) F)",
+   "(comm (inv U) F)",
+   "(inv (comm F (inv U)))"
+  ],
+  "3-Dlayer#19": [
+   "(setup (mirror R) U)",
+   "(setup (inv R) F)",
+   "(comm (mirror R) U)"
+  ],
+  "3-Dlayer#20": [
+   "(setup F (mirror U))",
+   "(setup F (inv U))",
+   "(inv (setup F U))"
+  ],
+  "3-Dlayer#21": [
+   "(seq (comm F U) (setup F U))",
+   "(seq (comm F U) (comm F U))"
+  ],
+  "3-Dlayer#22": [
+   "(comm U F)",
+   "(inv (comm F U))",
+   "(comm U (y R))"
+  ],
+  "3-Dlayer#23": [
+   "(setup F (seq U U))",
+   "(comm F (seq U U))",
+   "(seq U (comm U (mirror R)))"
+  ],
+  "4-Uorient#0": [
+   "(comm (x (comm U R)) F)",
+   "(comm (comm (x U) R) F)",
+   "(comm (comm (inv R) U) F)"
+  ],
+  "4-Uorient#1": [
+   "(comm F (x (comm U R)))",
+   "(comm F (comm (x U) R))",
+   "(comm F (comm (inv R) U))"
+  ],
+  "4-Uorient#4": [
+   "(setup (comm R F) U)",
+   "(comm (comm R F) U)",
+   "(inv (setup (comm F R) U))"
+  ],
+  "4-Uorient#5": [
+   "(setup R (x (comm F U)))",
+   "(setup R (comm U (x U)))",
+   "(setup (y F) (comm F U))"
+  ],
+  "4-Uorient#6": [
+   "(setup (comm R F) (mirror U))",
+   "(setup (comm R F) (inv U))",
+   "(inv (setup (comm R F) U))"
+  ],
+  "4-Uorient#7": [
+   "(comm (mirror (setup U R)) R)",
+   "(comm (mirror (comm U R)) R)"
+  ],
+  "4-Uorient#8": [
+   "(setup (comm R F) (mirror U))",
+   "(setup (comm R F) (inv U))",
+   "(inv (setup (comm R F) U))"
+  ],
+  "4-Uorient#11": [
+   "(comm (comm R F) (y F))"
+  ],
+  "4-Uorient#13": [
+   "(comm (mirror (setup U R)) R)",
+   "(comm (mirror (comm U R)) R)"
+  ],
+  "4-Uorient#14": [
+   "(comm (mirror (setup U R)) R)",
+   "(comm (mirror (comm U R)) R)"
+  ],
+  "4-Uorient#15": [
+   "(comm U (comm F R))",
+   "(comm (setup F U) R)",
+   "(inv (comm R (setup F U)))"
+  ],
+  "4-Uorient#17": [
+   "(comm R (mirror (setup U R)))",
+   "(comm R (mirror (comm U R)))"
+  ],
+  "4-Uorient#18": [
+   "(setup (y (comm R F)) U)",
+   "(setup (comm F (y F)) U)",
+   "(comm (inv U) (comm R F))"
+  ],
+  "4-Uorient#19": [
+   "(setup (comm R F) U)",
+   "(comm (comm R F) U)",
+   "(inv (setup (comm F R) U))"
+  ],
+  "4-Uorient#21": [
+   "(comm (mirror R) (setup U R))",
+   "(comm (mirror R) (comm U R))"
+  ],
+  "4-Uorient#22": [
+   "(comm F (x (comm U R)))",
+   "(comm F (comm (x U) R))",
+   "(comm F (comm (inv R) U))"
+  ],
+  "4-Uorient#23": [
+   "(setup R (x (comm F U)))",
+   "(setup R (comm U (x U)))",
+   "(setup (y F) (comm F U))"
+  ],
+  "5-solved#7": [
+   "U",
+   "(y U)",
+   "(x F)"
+  ],
+  "5-solved#23": [
+   "U",
+   "(y U)",
+   "(x F)"
+  ]
+ },
+ "test": {
+  "test:1-corner#0": [
+   "(seq (setup R U) F)"
+  ],
+  "test:1-corner#1": [
+   "(seq R R)"
+  ],
+  "test:1-corner#2": [
+   "(seq U (inv R))"
+  ],
+  "test:1-corner#3": [
+   "(inv R)"
+  ],
+  "test:1-corner#4": [
+   "(seq (setup R U) F)"
+  ],
+  "test:1-corner#5": [
+   "(seq U (seq U F))"
+  ],
+  "test:1-corner#6": [
+   "(seq U (seq R R))"
+  ],
+  "test:1-corner#7": [
+   "(setup R F)"
+  ],
+  "test:1-corner#8": [
+   "(seq U F)"
+  ],
+  "test:1-corner#9": [
+   "(seq F F)"
+  ],
+  "test:1-corner#10": [
+   "(seq R (seq R F))"
+  ],
+  "test:1-corner#11": [
+   "(seq R (seq U F))"
+  ],
+  "test:2-corners#1": [
+   "(comm U (x U))"
+  ],
+  "test:2-corners#2": [
+   "(setup F R)"
+  ],
+  "test:2-corners#5": [
+   "(setup (inv R) U)"
+  ],
+  "test:2-corners#6": [
+   "(inv (setup F R))"
+  ],
+  "test:2-corners#7": [
+   "(setup F (comm R F))"
+  ],
+  "test:2-corners#8": [
+   "(setup R (setup R F))"
+  ],
+  "test:2-corners#9": [
+   "(inv (setup (setup R F) F))"
+  ],
+  "test:2-corners#10": [
+   "(seq R (comm (inv F) R))"
+  ],
+  "test:2-corners#11": [
+   "(setup F R)"
+  ],
+  "test:3-Dlayer#1": [
+   "(comm (inv U) F)"
+  ],
+  "test:3-Dlayer#2": [
+   "(setup (setup F U) U)"
+  ],
+  "test:3-Dlayer#3": [
+   "(comm U (mirror R))"
+  ],
+  "test:3-Dlayer#4": [
+   "(setup F U)"
+  ],
+  "test:3-Dlayer#6": [
+   "(setup F (seq U U))"
+  ],
+  "test:3-Dlayer#7": [
+   "(setup (comm U F) U)"
+  ],
+  "test:3-Dlayer#9": [
+   "(inv (setup F U))"
+  ],
+  "test:3-Dlayer#10": [
+   "(comm (inv U) F)"
+  ],
+  "test:4-Uorient#0": [
+   "(comm R (setup F U))"
+  ],
+  "test:4-Uorient#3": [
+   "(setup F (comm U R))"
+  ],
+  "test:5-solved#3": [
+   "(inv U)"
+  ]
+ },
+ "test_n": 60,
+ "solutions_moves": {
+  "1-corner#0": "R2",
+  "1-corner#1": "F L' F' L",
+  "1-corner#2": "F",
+  "1-corner#3": "R F R'",
+  "1-corner#4": "F' L' F",
+  "1-corner#5": "F R F' R'",
+  "1-corner#6": "R F R'",
+  "1-corner#7": "U L'",
+  "1-corner#8": "U L'",
+  "1-corner#9": "L'",
+  "1-corner#10": "F' L' F",
+  "1-corner#11": "R",
+  "1-corner#12": "R F R'",
+  "1-corner#13": "F' R F",
+  "1-corner#14": "F R F' R'",
+  "1-corner#15": "F",
+  "1-corner#16": "U F U'",
+  "1-corner#17": "R",
+  "1-corner#18": "L'",
+  "1-corner#19": "F",
+  "1-corner#20": "F L' F' L",
+  "1-corner#21": "R F",
+  "1-corner#22": "F' R F",
+  "1-corner#23": "F R F' R'",
+  "2-corners#1": "U R' U R",
+  "2-corners#2": "U2 R' U' R U' R' U R U'",
+  "2-corners#3": "U2 R' U' R U' R' U R U'",
+  "2-corners#4": "R' U R",
+  "2-corners#5": "R F' R F R'",
+  "2-corners#6": "R2 F R2",
+  "2-corners#7": "U R' U' R",
+  "2-corners#8": "U' F R F' U F R' F'",
+  "2-corners#9": "R' U R",
+  "2-corners#10": "R' U R",
+  "2-corners#11": "U R U' F' U R' U'",
+  "2-corners#12": "F R' F'",
+  "2-corners#13": "F R F' U F R' F'",
+  "2-corners#14": "F R F'",
+  "2-corners#15": "F R F'",
+  "2-corners#16": "U R' U R",
+  "2-corners#17": "U R' U' R",
+  "2-corners#18": "F R' F'",
+  "2-corners#20": "R' U R",
+  "2-corners#22": "F R F'",
+  "3-Dlayer#0": "F U' F'",
+  "3-Dlayer#1": "U F U' F' U F U' F'",
+  "3-Dlayer#2": "U2 L' U' L U' L' U L U'",
+  "3-Dlayer#3": "L' U L",
+  "3-Dlayer#4": "U F U' F' U F U F' U'",
+  "3-Dlayer#5": "U F U' F'",
+  "3-Dlayer#6": "F U2 F'",
+  "3-Dlayer#7": "U' F U F'",
+  "3-Dlayer#8": "U F U' F' U F U' F'",
+  "3-Dlayer#9": "L' U L",
+  "3-Dlayer#10": "F U F' U' F U F'",
+  "3-Dlayer#11": "U F U' F' U F U' F'",
+  "3-Dlayer#12": "U F U' F'",
+  "3-Dlayer#13": "U F U' F'",
+  "3-Dlayer#14": "U' F U F'",
+  "3-Dlayer#15": "F U' F'",
+  "3-Dlayer#16": "F U' F'",
+  "3-Dlayer#17": "U' F U F'",
+  "3-Dlayer#18": "U' F U F'",
+  "3-Dlayer#19": "L' U L",
+  "3-Dlayer#20": "F U' F'",
+  "3-Dlayer#21": "F U F' U' F U F'",
+  "3-Dlayer#22": "U F U' F'",
+  "3-Dlayer#23": "F U2 F'",
+  "4-Uorient#0": "B R B' R' F R B R' B' F'",
+  "4-Uorient#1": "F B R B' R' F' R B R' B'",
+  "4-Uorient#4": "R F R' F' U F R F' R'",
+  "4-Uorient#5": "R U B U' B' R'",
+  "4-Uorient#6": "R F R' F' U' F R F' R'",
+  "4-Uorient#7": "U' L' U R U' L U R'",
+  "4-Uorient#8": "R F R' F' U' F R F' R'",
+  "4-Uorient#11": "R F R' F' L F R F' R' L'",
+  "4-Uorient#13": "U' L' U R U' L U R'",
+  "4-Uorient#14": "U' L' U R U' L U R'",
+  "4-Uorient#15": "U F R F' R' U' R F R' F'",
+  "4-Uorient#17": "R U' L' U R' U' L U",
+  "4-Uorient#18": "F L F' L' U L F L' F'",
+  "4-Uorient#19": "R F R' F' U F R F' R'",
+  "4-Uorient#21": "L' U R U' L U R' U'",
+  "4-Uorient#22": "F B R B' R' F' R B R' B'",
+  "4-Uorient#23": "R U B U' B' R'",
+  "5-solved#7": "U",
+  "5-solved#23": "U"
+ },
+ "test_moves": {
+  "test:1-corner#0": "R U R' F",
+  "test:1-corner#1": "R2",
+  "test:1-corner#2": "U R'",
+  "test:1-corner#3": "R'",
+  "test:1-corner#4": "R U R' F",
+  "test:1-corner#5": "U2 F",
+  "test:1-corner#6": "U R2",
+  "test:1-corner#7": "R F R'",
+  "test:1-corner#8": "U F",
+  "test:1-corner#9": "F2",
+  "test:1-corner#10": "R2 F",
+  "test:1-corner#11": "R U F",
+  "test:2-corners#1": "U B U' B'",
+  "test:2-corners#2": "F R F'",
+  "test:2-corners#5": "R' U R",
+  "test:2-corners#6": "F R' F'",
+  "test:2-corners#7": "F R F R' F2",
+  "test:2-corners#8": "R2 F R2",
+  "test:2-corners#9": "R F R' F' R F' R'",
+  "test:2-corners#10": "R F' R F R'",
+  "test:2-corners#11": "F R F'",
+  "test:3-Dlayer#1": "U' F U F'",
+  "test:3-Dlayer#2": "F U F' U F U' F'",
+  "test:3-Dlayer#3": "U L' U' L",
+  "test:3-Dlayer#4": "F U F'",
+  "test:3-Dlayer#6": "F U2 F'",
+  "test:3-Dlayer#7": "U F U' F' U F U F' U'",
+  "test:3-Dlayer#9": "F U' F'",
+  "test:3-Dlayer#10": "U' F U F'",
+  "test:4-Uorient#0": "R F U F' R' F U' F'",
+  "test:4-Uorient#3": "F U R U' R' F'",
+  "test:5-solved#3": "U'"
+ },
+ "per_group": {
+  "1-corner": [
+   24,
+   24
+  ],
+  "2-corners": [
+   20,
+   24
+  ],
+  "3-Dlayer": [
+   24,
+   24
+  ],
+  "4-Uorient": [
+   17,
+   24
+  ],
+  "5-solved": [
+   2,
+   24
+  ]
+ },
+ "test_per_group": {
+  "1-corner": [
+   12,
+   12
+  ],
+  "2-corners": [
+   9,
+   12
+  ],
+  "3-Dlayer": [
+   8,
+   12
+  ],
+  "4-Uorient": [
+   2,
+   12
+  ],
+  "5-solved": [
+   1,
+   12
+  ]
+ },
+ "library_readable": [],
+ "args": {
+  "kind": "stages",
+  "dsl": "ruf",
+  "iterations": 8,
+  "per_task": 1.0,
+  "per_stage": 24,
+  "test_per_stage": 12,
+  "max_len": 8,
+  "per_length": 6,
+  "frontier": 3,
+  "max_new": 3,
+  "structure_penalty": 1.0,
+  "no_compress": true,
+  "recognition": false,
+  "n_dreams": 2000,
+  "steps": 800,
+  "seed": 1,
+  "out": "results/v2_nonn_nolib_s1.json"
+ }
+}

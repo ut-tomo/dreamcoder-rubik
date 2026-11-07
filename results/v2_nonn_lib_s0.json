@@ -1,0 +1,1296 @@
+{
+ "history": [
+  {
+   "iteration": 0,
+   "solved_this_iter": 92,
+   "solved_ever": 92,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 1,
+   "solved_this_iter": 113,
+   "solved_ever": 113,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))"
+   ],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 2,
+   "solved_this_iter": 120,
+   "solved_ever": 120,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))",
+    "#(comm (#(setup F) U) R)",
+    "#(comm R (#(setup F) U))",
+    "#(comm (#(lambda (comm $0 (x U))) R))"
+   ],
+   "wake_seconds": 120.0
+  },
+  {
+   "iteration": 3,
+   "solved_this_iter": 120,
+   "solved_ever": 120,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))",
+    "#(comm (#(setup F) U) R)",
+    "#(comm R (#(setup F) U))",
+    "#(comm (#(lambda (comm $0 (x U))) R))",
+    "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+    "#(lambda (comm $0 R))",
+    "#(lambda (comm $0 U))"
+   ],
+   "wake_seconds": 32.6
+  },
+  {
+   "iteration": 4,
+   "solved_this_iter": 120,
+   "solved_ever": 120,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))",
+    "#(comm (#(setup F) U) R)",
+    "#(comm R (#(setup F) U))",
+    "#(comm (#(lambda (comm $0 (x U))) R))",
+    "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+    "#(lambda (comm $0 R))",
+    "#(lambda (comm $0 U))",
+    "#(lambda (seq $0 U))",
+    "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+    "#(#(lambda (comm $0 (mirror R))) U)"
+   ],
+   "wake_seconds": 14.9
+  },
+  {
+   "iteration": 5,
+   "solved_this_iter": 120,
+   "solved_ever": 120,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))",
+    "#(comm (#(setup F) U) R)",
+    "#(comm R (#(setup F) U))",
+    "#(comm (#(lambda (comm $0 (x U))) R))",
+    "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+    "#(lambda (comm $0 R))",
+    "#(lambda (comm $0 U))",
+    "#(lambda (seq $0 U))",
+    "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+    "#(#(lambda (comm $0 (mirror R))) U)",
+    "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+   ],
+   "wake_seconds": 24.1
+  },
+  {
+   "iteration": 6,
+   "solved_this_iter": 120,
+   "solved_ever": 120,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))",
+    "#(comm (#(setup F) U) R)",
+    "#(comm R (#(setup F) U))",
+    "#(comm (#(lambda (comm $0 (x U))) R))",
+    "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+    "#(lambda (comm $0 R))",
+    "#(lambda (comm $0 U))",
+    "#(lambda (seq $0 U))",
+    "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+    "#(#(lambda (comm $0 (mirror R))) U)",
+    "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))",
+    "#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+   ],
+   "wake_seconds": 14.0
+  },
+  {
+   "iteration": 7,
+   "solved_this_iter": 120,
+   "solved_ever": 120,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (comm $0 (x U)))",
+    "#(setup F)",
+    "#(lambda (comm $0 (mirror R)))",
+    "#(comm (#(setup F) U) R)",
+    "#(comm R (#(setup F) U))",
+    "#(comm (#(lambda (comm $0 (x U))) R))",
+    "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+    "#(lambda (comm $0 R))",
+    "#(lambda (comm $0 U))",
+    "#(lambda (seq $0 U))",
+    "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+    "#(#(lambda (comm $0 (mirror R))) U)",
+    "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))",
+    "#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+    "#(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+    "#(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))",
+    "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))"
+   ],
+   "wake_seconds": 14.5
+  }
+ ],
+ "grammar": "  0.000\t$_\n -1.932\talg -> alg\t#(lambda (comm $0 U))\n -2.562\talg\t#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))\n -2.671\talg -> alg\t#(lambda (seq $0 U))\n -2.700\talg -> alg\t#(lambda (comm $0 (mirror R)))\n -2.735\talg\t#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))\n -2.838\talg\t#(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))\n -3.010\talg\t#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))\n -3.021\talg -> alg\t#(lambda (comm $0 (x U)))\n -3.028\talg\t#(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))\n -3.104\talg\t#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))\n -3.150\talg -> alg\tinv\n -3.198\talg\t#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))\n -3.294\talg -> alg\t#(setup F)\n -3.403\talg\t#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))\n -3.407\talg\t#(comm R (#(setup F) U))\n -3.505\talg -> alg\tz\n -3.508\talg\t#(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))\n -3.622\talg\t#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))\n -3.651\talg -> alg\tx\n -3.713\talg\t#(comm (#(setup F) U) R)\n -3.715\talg\t#(#(lambda (comm $0 (mirror R))) U)\n -3.832\talg\tU\n -4.100\talg\t#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))\n -4.271\talg -> alg -> alg\tseq\n -4.296\talg -> alg\tmirror\n -4.405\talg -> alg -> alg\tcomm\n -4.425\talg\tF\n -5.329\talg -> alg\ty\n -5.425\talg\tR\n -5.437\talg -> alg\t#(comm (#(lambda (comm $0 (x U))) R))\n -5.443\talg -> alg -> alg\tsetup\n -5.443\talg -> alg\t#(lambda (comm $0 R))",
+ "frontiers": {
+  "1-corner#0": [
+   "(#(lambda (comm $0 (mirror R))) F)",
+   "(mirror #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "1-corner#1": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "1-corner#2": [
+   "(#(setup F) #(#(lambda (comm $0 (mirror R))) U))",
+   "(z #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "1-corner#3": [
+   "#(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "1-corner#4": [
+   "F",
+   "(#(lambda (seq $0 U)) F)",
+   "(#(lambda (comm $0 U)) R)"
+  ],
+  "1-corner#5": [
+   "(mirror #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(#(lambda (comm $0 U)) (z #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 (x U))) (#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "1-corner#6": [
+   "(z #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(z #(comm R (#(setup F) U)))",
+   "(mirror #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "1-corner#7": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) U))",
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "1-corner#8": [
+   "#(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "1-corner#9": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(inv F)"
+  ],
+  "1-corner#10": [
+   "(#(setup F) #(#(lambda (comm $0 (mirror R))) U))",
+   "(z #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "1-corner#11": [
+   "(z #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (mirror R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "1-corner#12": [
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(x #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "1-corner#13": [
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(x #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "1-corner#14": [
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(x #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(x #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "1-corner#15": [
+   "(z #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(z #(comm R (#(setup F) U)))",
+   "(mirror #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "1-corner#16": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(inv F)"
+  ],
+  "1-corner#17": [
+   "(x #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(x #(comm R (#(setup F) U)))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) U)))"
+  ],
+  "1-corner#18": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(z #(comm (#(setup F) U) R))",
+   "(#(lambda (comm $0 U)) (z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))"
+  ],
+  "1-corner#19": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(z #(comm (#(setup F) U) R))",
+   "(#(lambda (comm $0 U)) (z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))"
+  ],
+  "1-corner#20": [
+   "#(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "1-corner#21": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(x #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "1-corner#22": [
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(x #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(x #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "1-corner#23": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) U))",
+   "(z #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "2-corners#0": [
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(#(lambda (comm $0 (mirror R))) (inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))"
+  ],
+  "2-corners#1": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))",
+   "(x #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "2-corners#2": [
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(#(lambda (comm $0 (mirror R))) (inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))"
+  ],
+  "2-corners#3": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))",
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "2-corners#4": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))",
+   "(x #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "2-corners#5": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(comm R (#(setup F) U))))",
+   "(inv (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))"
+  ],
+  "2-corners#6": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(comm R (#(setup F) U)))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#7": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#8": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))",
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "2-corners#9": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#10": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#11": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))))"
+  ],
+  "2-corners#13": [
+   "(#(setup F) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(#(lambda (comm $0 (x U))) (#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(inv (#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))))"
+  ],
+  "2-corners#14": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#15": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#16": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))",
+   "(#(lambda (comm $0 U)) (z #(comm R (#(setup F) U))))"
+  ],
+  "2-corners#17": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#18": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "2-corners#20": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(inv (#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))))"
+  ],
+  "2-corners#21": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))))"
+  ],
+  "2-corners#22": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))))"
+  ],
+  "2-corners#23": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "3-Dlayer#0": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))"
+  ],
+  "3-Dlayer#1": [
+   "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "3-Dlayer#2": [
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (seq $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(setup F) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(setup F) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "3-Dlayer#3": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))))"
+  ],
+  "3-Dlayer#4": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "3-Dlayer#5": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "3-Dlayer#6": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(inv #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "3-Dlayer#7": [
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) F))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (seq $0 U)) #(comm (#(setup F) U) R)))"
+  ],
+  "3-Dlayer#8": [
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) F))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (seq $0 U)) #(comm (#(setup F) U) R)))"
+  ],
+  "3-Dlayer#9": [
+   "(#(setup F) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(setup F) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))",
+   "(#(setup F) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "3-Dlayer#10": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(setup F) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "3-Dlayer#11": [
+   "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "3-Dlayer#12": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))"
+  ],
+  "3-Dlayer#13": [
+   "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "3-Dlayer#14": [
+   "#(#(lambda (comm $0 (mirror R))) U)",
+   "(#(lambda (comm $0 (mirror R))) U)",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 (mirror R))) U))"
+  ],
+  "3-Dlayer#15": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(setup F) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "3-Dlayer#16": [
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(inv (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 (mirror R))) (inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "3-Dlayer#17": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))"
+  ],
+  "3-Dlayer#18": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))"
+  ],
+  "3-Dlayer#19": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))))"
+  ],
+  "3-Dlayer#20": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(setup F) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "3-Dlayer#21": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(inv #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "3-Dlayer#22": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(setup F) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "3-Dlayer#23": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(inv #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "4-Uorient#0": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(mirror #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#1": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (comm $0 (x U))) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "4-Uorient#2": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(mirror #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#3": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (mirror R))) U))",
+   "(#(lambda (comm $0 (x U))) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "4-Uorient#6": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (mirror R))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "4-Uorient#7": [
+   "(inv #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(inv (#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (seq $0 U)) (inv #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "4-Uorient#8": [
+   "#(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))",
+   "(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#9": [
+   "#(comm (#(setup F) U) R)",
+   "(z #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "(inv #(comm R (#(setup F) U)))"
+  ],
+  "4-Uorient#10": [
+   "#(comm R (#(setup F) U))",
+   "(#(lambda (seq $0 U)) #(comm R (#(setup F) U)))",
+   "(inv #(comm (#(setup F) U) R))"
+  ],
+  "4-Uorient#13": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(seq #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "4-Uorient#14": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(mirror #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#15": [
+   "(inv #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(y #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))))"
+  ],
+  "4-Uorient#16": [
+   "#(comm R (#(setup F) U))",
+   "(#(lambda (seq $0 U)) #(comm R (#(setup F) U)))",
+   "(inv #(comm (#(setup F) U) R))"
+  ],
+  "4-Uorient#17": [
+   "(#(setup F) #(comm (#(setup F) U) R))",
+   "(mirror #(comm R (#(setup F) U)))",
+   "(inv (#(lambda (comm $0 (mirror R))) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#18": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(mirror #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#20": [
+   "#(comm R (#(setup F) U))",
+   "(#(lambda (seq $0 U)) #(comm R (#(setup F) U)))",
+   "(inv #(comm (#(setup F) U) R))"
+  ],
+  "4-Uorient#22": [
+   "#(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))",
+   "(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))",
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "4-Uorient#23": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 (mirror R))) #(comm (#(setup F) U) R))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#12": [
+   "U",
+   "(x F)",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) U))"
+  ],
+  "5-solved#16": [
+   "(#(lambda (seq $0 U)) U)",
+   "(inv (#(lambda (seq $0 U)) U))",
+   "(seq #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#20": [
+   "U",
+   "(x F)",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) U))"
+  ],
+  "5-solved#22": [
+   "(inv U)",
+   "(mirror U)",
+   "(#(lambda (seq $0 U)) (#(lambda (seq $0 U)) U))"
+  ],
+  "2-corners#12": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 (x U))) (#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "2-corners#19": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))",
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "4-Uorient#4": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(setup F) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))))"
+  ],
+  "4-Uorient#5": [
+   "(#(lambda (comm $0 U)) #(comm (#(setup F) U) R))",
+   "(#(lambda (comm $0 U)) (inv #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(comm (#(setup F) U) R)))"
+  ],
+  "4-Uorient#11": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))))"
+  ],
+  "4-Uorient#12": [
+   "(#(lambda (comm $0 U)) #(comm (#(setup F) U) R))",
+   "(#(lambda (comm $0 U)) (inv #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(comm (#(setup F) U) R)))"
+  ],
+  "4-Uorient#19": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))))"
+  ],
+  "4-Uorient#21": [
+   "(#(lambda (comm $0 U)) (z #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(comm R (#(setup F) U)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))))"
+  ],
+  "5-solved#0": [
+   "(#(lambda (seq $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(mirror #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "(#(lambda (seq $0 U)) (#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#1": [
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#2": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "5-solved#3": [
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#4": [
+   "(#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#5": [
+   "(inv #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "(#(lambda (seq $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(mirror (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "5-solved#8": [
+   "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+   "(#(comm (#(lambda (comm $0 (x U))) R)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "5-solved#9": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) (inv #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "5-solved#11": [
+   "(comm #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(comm #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(comm #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "5-solved#13": [
+   "#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "5-solved#17": [
+   "#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "(#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "5-solved#18": [
+   "(comm #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(comm #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))",
+   "(seq #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "5-solved#21": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (comm $0 U)) (#(lambda (seq $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "5-solved#6": [
+   "#(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "(mirror #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#7": [
+   "(#(lambda (seq $0 U)) (#(lambda (seq $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (mirror #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(inv (#(lambda (seq $0 U)) (#(lambda (seq $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "5-solved#10": [
+   "(#(lambda (seq $0 U)) (#(lambda (seq $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (mirror #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(inv (#(lambda (seq $0 U)) (#(lambda (seq $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "5-solved#14": [
+   "(seq #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(seq (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(seq (#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#15": [
+   "(#(lambda (seq $0 U)) (inv #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (inv (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (seq $0 U)) (mirror (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ],
+  "5-solved#19": [
+   "(seq #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(seq (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "(seq (#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "5-solved#23": [
+   "(#(lambda (seq $0 U)) (inv #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))",
+   "(#(lambda (seq $0 U)) (inv (#(lambda (comm $0 U)) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))",
+   "(#(lambda (seq $0 U)) (mirror (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))))"
+  ]
+ },
+ "test": {
+  "test:1-corner#0": [
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "test:1-corner#1": [
+   "(#(setup F) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))"
+  ],
+  "test:1-corner#2": [
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "test:1-corner#3": [
+   "(z #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))"
+  ],
+  "test:1-corner#4": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "test:1-corner#5": [
+   "(#(setup F) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "test:1-corner#6": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "test:1-corner#7": [
+   "(#(setup F) #(#(lambda (comm $0 (mirror R))) U))"
+  ],
+  "test:1-corner#8": [
+   "F"
+  ],
+  "test:1-corner#9": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))"
+  ],
+  "test:1-corner#10": [
+   "(mirror #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))"
+  ],
+  "test:1-corner#11": [
+   "(#(setup F) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))"
+  ],
+  "test:2-corners#0": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:2-corners#1": [
+   "(#(lambda (comm $0 (x U))) (inv #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "test:2-corners#2": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "test:2-corners#3": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "test:2-corners#4": [
+   "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))"
+  ],
+  "test:2-corners#5": [
+   "(inv (#(lambda (seq $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "test:2-corners#6": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:2-corners#7": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:2-corners#8": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))))))"
+  ],
+  "test:2-corners#9": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "test:2-corners#10": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))"
+  ],
+  "test:2-corners#11": [
+   "(z (#(lambda (comm $0 (mirror R))) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:3-Dlayer#0": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:3-Dlayer#1": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "test:3-Dlayer#2": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))"
+  ],
+  "test:3-Dlayer#3": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))"
+  ],
+  "test:3-Dlayer#4": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:3-Dlayer#5": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))"
+  ],
+  "test:3-Dlayer#6": [
+   "(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "test:3-Dlayer#7": [
+   "(#(lambda (comm $0 U)) (#(setup F) #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:3-Dlayer#8": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U))))"
+  ],
+  "test:3-Dlayer#9": [
+   "(#(setup F) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:3-Dlayer#10": [
+   "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))"
+  ],
+  "test:3-Dlayer#11": [
+   "(#(setup F) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:4-Uorient#0": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(comm (#(setup F) U) R))))"
+  ],
+  "test:4-Uorient#1": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "test:4-Uorient#2": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "test:4-Uorient#3": [
+   "(#(setup F) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "test:4-Uorient#4": [
+   "(inv (#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))))"
+  ],
+  "test:4-Uorient#5": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:4-Uorient#6": [
+   "(#(lambda (comm $0 U)) (z #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))))"
+  ],
+  "test:4-Uorient#7": [
+   "(#(lambda (comm $0 U)) #(comm (#(setup F) U) R))"
+  ],
+  "test:4-Uorient#8": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 (x U))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))))"
+  ],
+  "test:4-Uorient#9": [
+   "(y #(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:4-Uorient#10": [
+   "(#(lambda (comm $0 U)) #(comm (#(setup F) U) R))"
+  ],
+  "test:4-Uorient#11": [
+   "(#(lambda (comm $0 (x U))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))"
+  ],
+  "test:5-solved#0": [
+   "(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:5-solved#1": [
+   "(#(lambda (seq $0 U)) U)"
+  ],
+  "test:5-solved#2": [
+   "(inv #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "test:5-solved#3": [
+   "(#(lambda (seq $0 U)) (inv #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))))"
+  ],
+  "test:5-solved#4": [
+   "(seq #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ],
+  "test:5-solved#5": [
+   "(inv U)"
+  ],
+  "test:5-solved#6": [
+   "(inv U)"
+  ],
+  "test:5-solved#7": [
+   "(seq #(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "test:5-solved#8": [
+   "#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))"
+  ],
+  "test:5-solved#9": [
+   "(#(lambda (seq $0 U)) U)"
+  ],
+  "test:5-solved#10": [
+   "(comm #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))) #(#(lambda (comm $0 U)) #(comm R (#(setup F) U))))"
+  ],
+  "test:5-solved#11": [
+   "(#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))"
+  ]
+ },
+ "test_n": 60,
+ "solutions_moves": {
+  "1-corner#0": "F L' F' L",
+  "1-corner#1": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' B U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "1-corner#2": "F U L' U' L F'",
+  "1-corner#3": "U B U' B' L' B U B' U' L' U B U' B' L B U B' U' L",
+  "1-corner#4": "F",
+  "1-corner#5": "U' B' U B R B' U' B U R'",
+  "1-corner#6": "D F R F' D' F R' F' R F R F' D F R' F' D' R'",
+  "1-corner#7": "U L' U' L' U L U' L",
+  "1-corner#8": "U B U' B' L' B U B' U' L' U B U' B' L B U B' U' L",
+  "1-corner#9": "U L' U' L U L' U L U L' U' L U' L' U L U2 L' U2 L' U' L U L' U L U' L' U' L U' L' U L U' L",
+  "1-corner#10": "F U L' U' L F'",
+  "1-corner#11": "F R F' D F R' F' D' B D F R F' D' F R' F' B'",
+  "1-corner#12": "F U L' U' L U L' U L U L' U' L U' L' U L U2 F'",
+  "1-corner#13": "F U L' U' L U L' U L U L' U' L U' L' U L U2 F'",
+  "1-corner#14": "R U' R' U R U' R U R U' R' U R' U' R U R2",
+  "1-corner#15": "D F R F' D' F R' F' R F R F' D F R' F' D' R'",
+  "1-corner#16": "U L' U' L U L' U L U L' U' L U' L' U L U2 L' U2 L' U' L U L' U L U' L' U' L U' L' U L U' L",
+  "1-corner#17": "R U B U' R' U B' U' B U B U' R U B' U' R' B'",
+  "1-corner#18": "F U F' R F U' F' R' B R F U F' R' F U' F' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "1-corner#19": "F U F' R F U' F' R' B R F U F' R' F U' F' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "1-corner#20": "U B U' B' L' B U B' U' L' U B U' B' L B U B' U' L",
+  "1-corner#21": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' B U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "1-corner#22": "R U' R' U R U' R U R U' R' U R' U' R U R2",
+  "1-corner#23": "U L' U' L' U L U' L",
+  "2-corners#0": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' B U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' B' L' B R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' B' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "2-corners#1": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#2": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' B U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' B' L' B R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' B' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "2-corners#3": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#4": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#5": "F U F' R F U' F' R' B R F U F' R' F U' F' B F U F' R F U' F' R' B' R F U F' R' F U' F' B' U B F U F' R F U' F' R' B R F U F' R' F U' F' B' F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#6": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#7": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "2-corners#8": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#9": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "2-corners#10": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "2-corners#11": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#13": "F U L' U' L U L' U L U L' U' L U' L' U L U2 B U2 L' U' L U L' U L U' L' U' L U' L' U L U' B' F'",
+  "2-corners#14": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "2-corners#15": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "2-corners#16": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#17": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "2-corners#18": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#20": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' B F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' B' U B R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' B' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "2-corners#21": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#22": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "2-corners#23": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "3-Dlayer#0": "U L' U' L U L' U L U L' U' L U' L' U L U L' U' L U L' U L U' L' U' L U' L' U L U2",
+  "3-Dlayer#1": "U B U' B' L' B U B' U' L",
+  "3-Dlayer#2": "R F U F' R' F U' F' U L' U' F U F' R F U' F' R' L",
+  "3-Dlayer#3": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' L' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U' L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "3-Dlayer#4": "U L' U' L U L' U L U2",
+  "3-Dlayer#5": "R F U F' R' F U' F' U F U F' R F U' F' R' U' L' U R F U F' R' F U' F' U' F U F' R F U' F' R' L",
+  "3-Dlayer#6": "U B U' B' L' B U B' U' L U L' U B U' B' L B U B' U2",
+  "3-Dlayer#7": "R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U' L' U R F U F' R' F U' F' U F U F' R F U' F' R' U' R F U F' R' F U' F' U' F U F' R F U' F' R' L",
+  "3-Dlayer#8": "R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U' L' U R F U F' R' F U' F' U F U F' R F U' F' R' U' R F U F' R' F U' F' U' F U F' R F U' F' R' L",
+  "3-Dlayer#9": "F R F U F' R' F U' F' U F U F' R F U' F' R' U' F'",
+  "3-Dlayer#10": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U L' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "3-Dlayer#11": "U B U' B' L' B U B' U' L",
+  "3-Dlayer#12": "U L' U' L U L' U L U L' U' L U' L' U L U L' U' L U L' U L U' L' U' L U' L' U L U2",
+  "3-Dlayer#13": "U B U' B' L' B U B' U' L",
+  "3-Dlayer#14": "U L' U' L",
+  "3-Dlayer#15": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U L' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "3-Dlayer#16": "F R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' F'",
+  "3-Dlayer#17": "U L' U' L U L' U L U L' U' L U' L' U L U2",
+  "3-Dlayer#18": "U L' U' L U L' U L U L' U' L U' L' U L U2",
+  "3-Dlayer#19": "U L' U' L U L' U L U L' U' L U' L' U L U L' U' L U L' U L U' L' U' L U' L' U L U2",
+  "3-Dlayer#20": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U L' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "3-Dlayer#21": "U B U' B' L' B U B' U' L U L' U B U' B' L B U B' U2",
+  "3-Dlayer#22": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' L' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "3-Dlayer#23": "U B U' B' L' B U B' U' L U L' U B U' B' L B U B' U2",
+  "4-Uorient#0": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "4-Uorient#1": "U B U' B' L' B U B' U' L B L' U B U' B' L B U B' U' B'",
+  "4-Uorient#2": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "4-Uorient#3": "U B U' B' L' B U B' U' L B L' U B U' B' L B U B' U' B'",
+  "4-Uorient#6": "F U F' R F U' F' R' B R F U F' R' F U' F' B' L' B F U F' R F U' F' R' B' R F U F' R' F U' F' L",
+  "4-Uorient#7": "U R F U F' R' F U' F' U' F U F' R F U' F' R'",
+  "4-Uorient#8": "R F U F' R' F U' F' U F U F' R F U' F' R' U'",
+  "4-Uorient#9": "F U F' R F U' F' R'",
+  "4-Uorient#10": "R F U F' R' F U' F'",
+  "4-Uorient#13": "R F U F' R' F U' F' U F U F' R F U' F' R' U' B U R F U F' R' F U' F' U' F U F' R F U' F' R' B' U B R F U F' R' F U' F' U F U F' R F U' F' R' U' B' U R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "4-Uorient#14": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "4-Uorient#15": "U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U' L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "4-Uorient#16": "R F U F' R' F U' F'",
+  "4-Uorient#17": "F2 U F' R F U' F' R' F'",
+  "4-Uorient#18": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "4-Uorient#20": "R F U F' R' F U' F'",
+  "4-Uorient#22": "R F U F' R' F U' F' U F U F' R F U' F' R' U'",
+  "4-Uorient#23": "F U F' R F U' F' R' B R F U F' R' F U' F' B' L' B F U F' R F U' F' R' B' R F U F' R' F U' F' L",
+  "5-solved#12": "U",
+  "5-solved#16": "U2",
+  "5-solved#20": "U",
+  "5-solved#22": "U'",
+  "2-corners#12": "R F U F' R' F U' F' U F U F' R F U' F' R' U' B U R F U F' R' F U' F' U' F U F' R F U' F' R' B'",
+  "2-corners#19": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' L' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' L",
+  "4-Uorient#4": "R F U F' R' F U' F' L' F U F' R F U' F' R' L U L' R F U F' R' F U' F' L F U F' R F U' F' R' U'",
+  "4-Uorient#5": "F U F' R F U' F' R' U R F U F' R' F U' F' U'",
+  "4-Uorient#11": "R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U R F U F' R' F U' F' U F U F' R F U' F' R' U' R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "4-Uorient#12": "F U F' R F U' F' R' U R F U F' R' F U' F' U'",
+  "4-Uorient#19": "R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U R F U F' R' F U' F' U F U F' R F U' F' R' U' R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "4-Uorient#21": "R B R' B' U' B R B' R' U R B R' B' U B R B' R' U'",
+  "5-solved#0": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U2",
+  "5-solved#1": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "5-solved#2": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "5-solved#3": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "5-solved#4": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "5-solved#5": "F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "5-solved#8": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F'",
+  "5-solved#9": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "5-solved#11": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U' L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "5-solved#13": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "5-solved#17": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "5-solved#18": "R F U F' R' F U' F' U F U F' R F U' F' R' U' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' F U F' R' F U' F' U' F U F' R F U' F' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "5-solved#21": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "5-solved#6": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U",
+  "5-solved#7": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U'",
+  "5-solved#10": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U'",
+  "5-solved#14": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U",
+  "5-solved#15": "U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U",
+  "5-solved#19": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U",
+  "5-solved#23": "U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U"
+ },
+ "test_moves": {
+  "test:1-corner#0": "F U L' U' L U L' U L U L' U' L U' L' U L U2 F'",
+  "test:1-corner#1": "F U B U' B' L' B U B' U' L F'",
+  "test:1-corner#2": "F U L' U' L U L' U L U L' U' L U' L' U L U2 F'",
+  "test:1-corner#3": "F R F' D F R' F' D' B D F R F' D' F R' F' B'",
+  "test:1-corner#4": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' B U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "test:1-corner#5": "F U L' U' L U L' U L U L' U' L U' L' U L U2 F'",
+  "test:1-corner#6": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' B U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "test:1-corner#7": "F U L' U' L F'",
+  "test:1-corner#8": "F",
+  "test:1-corner#9": "F U F' R F U' F' R' B R F U F' R' F U' F' B F U F' R F U' F' R' B' R F U F' R' F U' F' B'",
+  "test:1-corner#10": "U' B' U B R B' U' B U R'",
+  "test:1-corner#11": "F U B U' B' L' B U B' U' L F'",
+  "test:2-corners#0": "R F U F' R' F U' F' U F U F' R F U' F' R' U' B U R F U F' R' F U' F' U' F U F' R F U' F' R' B'",
+  "test:2-corners#1": "U R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' U F U F' R F U' F' R' U' B'",
+  "test:2-corners#2": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "test:2-corners#3": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "test:2-corners#4": "F U F' R F U' F' R' B R F U F' R' F U' F' B'",
+  "test:2-corners#5": "U' B F U F' R F U' F' R' B' R F U F' R' F U' F'",
+  "test:2-corners#6": "R F U F' R' F U' F' U F U F' R F U' F' R' U' B U R F U F' R' F U' F' U' F U F' R F U' F' R' B'",
+  "test:2-corners#7": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "test:2-corners#8": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' L' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' L",
+  "test:2-corners#9": "F U F' R F U' F' R' B R F U F' R' F U' F' B F U F' R F U' F' R' B' R F U F' R' F U' F' B' U B F U F' R F U' F' R' B R F U F' R' F U' F' B' F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "test:2-corners#10": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U'",
+  "test:2-corners#11": "D B D' B' F R F' D F R' F' D' B D B' F R F' D' F R' F' R U' R' F R F' D F R' F' B D' B' D F R F' D' F R' F' B D B' D' U",
+  "test:3-Dlayer#0": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' L' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U' L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "test:3-Dlayer#1": "U L' U' L U L' U L U L' U' L U' L' U L U L' U' L U L' U L U' L' U' L U' L' U L U2",
+  "test:3-Dlayer#2": "U L' U' L U L' U L U2",
+  "test:3-Dlayer#3": "U B U' B' L' B U B' U' L U L' U B U' B' L B U B' U2",
+  "test:3-Dlayer#4": "R F U F' R' F U' F' U F U F' R F U' F' R' U' L' U R F U F' R' F U' F' U' F U F' R F U' F' R' L",
+  "test:3-Dlayer#5": "U L' U' L U L' U L U2",
+  "test:3-Dlayer#6": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' L' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L",
+  "test:3-Dlayer#7": "F R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F' U F U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' F' U'",
+  "test:3-Dlayer#8": "U L' U' L U L' U L U L' U' L U' L' U L U L' U' L U L' U L U' L' U' L U' L' U L U2",
+  "test:3-Dlayer#9": "F R F U F' R' F U' F' U F U F' R F U' F' R' U' F'",
+  "test:3-Dlayer#10": "U L' U' L U L' U L U L' U' L U' L' U L U2",
+  "test:3-Dlayer#11": "F R F U F' R' F U' F' U F U F' R F U' F' R' U' F'",
+  "test:4-Uorient#0": "F U F' R F U' F' R' U R F U F' R' F U' F' U F U F' R F U' F' R' U' R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U' R F U F' R' F U' F' U'",
+  "test:4-Uorient#1": "R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U R F U F' R' F U' F' U F U F' R F U' F' R' U' R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "test:4-Uorient#2": "R F U F' R' F U' F' U F U F' R F U' F' R' U' B U R F U F' R' F U' F' U' F U F' R F U' F' R' B' U B R F U F' R' F U' F' U F U F' R F U' F' R' U' B' U R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "test:4-Uorient#3": "F R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F2",
+  "test:4-Uorient#4": "L' F U F' R F U' F' R' B R F U F' R' F U' F' B' L B F U F' R F U' F' R' B' R F U F' R' F U' F'",
+  "test:4-Uorient#5": "R F U F' R' F U' F' U F U F' R F U' F' R' U R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "test:4-Uorient#6": "R B R' B' U' B R B' R' U R B R' B' U B R B' R' U'",
+  "test:4-Uorient#7": "F U F' R F U' F' R' U R F U F' R' F U' F' U'",
+  "test:4-Uorient#8": "R F U F' R' F U' F' U F U F' R F U' F' R' U' B U R F U F' R' F U' F' U' F U F' R F U' F' R' B' U B R F U F' R' F U' F' U F U F' R F U' F' R' U' B' U R F U F' R' F U' F' U' F U F' R F U' F' R' U'",
+  "test:4-Uorient#9": "F R F' R' L U L' F L U' L' F' R F R' L U L' F' L U' L' B' L U L' F L U' L' R F' R' F L U L' F' L U' L' R F R' F' B U B' F R F' R' L U L' F L U' L' F' R F R' L U L' F' L U' L' B L U L' F L U' L' R F' R' F L U L' F' L U' L' R F R' F' U'",
+  "test:4-Uorient#10": "F U F' R F U' F' R' U R F U F' R' F U' F' U'",
+  "test:4-Uorient#11": "U B U' B' L' B U B' U' L B L' U B U' B' L B U B' U' B'",
+  "test:5-solved#0": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "test:5-solved#1": "U2",
+  "test:5-solved#2": "U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R'",
+  "test:5-solved#3": "U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U",
+  "test:5-solved#4": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "test:5-solved#5": "U'",
+  "test:5-solved#6": "U'",
+  "test:5-solved#7": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F'",
+  "test:5-solved#8": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'",
+  "test:5-solved#9": "U2",
+  "test:5-solved#10": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U' R F U F' R' F U' F' U F U F' R F U' F' B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R F U F' R' F U' F' U' F U F' R F U' F' R'",
+  "test:5-solved#11": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'"
+ },
+ "per_group": {
+  "1-corner": [
+   24,
+   24
+  ],
+  "2-corners": [
+   24,
+   24
+  ],
+  "3-Dlayer": [
+   24,
+   24
+  ],
+  "4-Uorient": [
+   24,
+   24
+  ],
+  "5-solved": [
+   24,
+   24
+  ]
+ },
+ "test_per_group": {
+  "1-corner": [
+   12,
+   12
+  ],
+  "2-corners": [
+   12,
+   12
+  ],
+  "3-Dlayer": [
+   12,
+   12
+  ],
+  "4-Uorient": [
+   12,
+   12
+  ],
+  "5-solved": [
+   12,
+   12
+  ]
+ },
+ "library_readable": [
+  {
+   "program": "#(lambda (comm $0 (x U)))",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(setup F)",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(lambda (comm $0 (mirror R)))",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(comm (#(setup F) U) R)",
+   "type": "alg",
+   "moves": "F U F' R F U' F' R'"
+  },
+  {
+   "program": "#(comm R (#(setup F) U))",
+   "type": "alg",
+   "moves": "R F U F' R' F U' F'"
+  },
+  {
+   "program": "#(comm (#(lambda (comm $0 (x U))) R))",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))",
+   "type": "alg",
+   "moves": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F'"
+  },
+  {
+   "program": "#(lambda (comm $0 R))",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(lambda (comm $0 U))",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(lambda (seq $0 U))",
+   "type": "alg -> alg",
+   "moves": ""
+  },
+  {
+   "program": "#(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U))",
+   "type": "alg",
+   "moves": "U B U' B' L' B U B' U' L"
+  },
+  {
+   "program": "#(#(lambda (comm $0 (mirror R))) U)",
+   "type": "alg",
+   "moves": "U L' U' L"
+  },
+  {
+   "program": "#(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R))",
+   "type": "alg",
+   "moves": "F U F' R F U' F' R' B R F U F' R' F U' F' B'"
+  },
+  {
+   "program": "#(#(lambda (comm $0 U)) (#(lambda (comm $0 (mirror R))) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R))))",
+   "type": "alg",
+   "moves": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L' F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' L U L' R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' L F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'"
+  },
+  {
+   "program": "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (mirror R))) U)))",
+   "type": "alg",
+   "moves": "U L' U' L U L' U L U L' U' L U' L' U L U2"
+  },
+  {
+   "program": "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))",
+   "type": "alg",
+   "moves": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'"
+  },
+  {
+   "program": "#(#(lambda (comm $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "type": "alg",
+   "moves": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U F U F' R F U' F' B R' B' R F U F' R' F U' F' B R B' R' U'"
+  },
+  {
+   "program": "#(#(lambda (seq $0 U)) #(#(comm (#(lambda (comm $0 (x U))) R)) #(comm (#(setup F) U) R)))",
+   "type": "alg",
+   "moves": "R B R' B' F U F' R F U' F' R' B R B' F U F' R' F U' F' U"
+  },
+  {
+   "program": "#(#(lambda (comm $0 U)) #(comm R (#(setup F) U)))",
+   "type": "alg",
+   "moves": "R F U F' R' F U' F' U F U F' R F U' F' R' U'"
+  },
+  {
+   "program": "#(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 U)) (#(lambda (comm $0 U)) (#(lambda (comm $0 U)) #(#(lambda (comm $0 (x U))) #(comm (#(setup F) U) R)))))))",
+   "type": "alg",
+   "moves": "F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U B F U F' R F U' F' R' B' R F U F' R' F U' F' U' F U F' R F U' F' R' B R F U F' R' F U' F' B' U' B F U F' R F U' F' R' B' R F U F' R' F U' F' U'"
+  },
+  {
+   "program": "#(#(lambda (comm $0 (mirror R))) #(#(lambda (comm $0 (mirror R))) (#(lambda (comm $0 (x U))) U)))",
+   "type": "alg",
+   "moves": "U B U' B' L' B U B' U' L' U B U' B' L B U B' U' L"
+  }
+ ],
+ "args": {
+  "kind": "stages",
+  "dsl": "ruf",
+  "iterations": 8,
+  "per_task": 1.0,
+  "per_stage": 24,
+  "test_per_stage": 12,
+  "max_len": 8,
+  "per_length": 6,
+  "frontier": 3,
+  "max_new": 3,
+  "structure_penalty": 1.0,
+  "no_compress": false,
+  "recognition": false,
+  "n_dreams": 2000,
+  "steps": 800,
+  "seed": 0,
+  "out": "results/v2_nonn_lib_s0.json"
+ }
+}
