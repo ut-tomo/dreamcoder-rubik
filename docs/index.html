@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DreamCoder × 2×2×2 Cube</title>
+    <title>2×2×2 Cube by DreamCoder</title>
     <meta name="description" content="How DreamCoder solves the 2x2x2 cube, with and without library learning">
     <link rel="stylesheet" href="style.css">
     <script type="importmap">
@@ -13,31 +13,19 @@
 <body>
     <header class="site-header">
         <div class="header-content">
-            <h1 class="site-title">DreamCoder × 2×2×2 Cube</h1>
-            <p class="site-subtitle">Library learning × neural search guidance on the 2×2×2</p>
+            <h1 class="site-title">2×2×2 Cube by DreamCoder</h1>
         </div>
-        <nav class="site-nav">
-            <a href="#about">About</a>
-            <a href="#demo">Demo</a>
-            <a href="#results">Results</a>
-            <a href="#policy">Policies</a>
-            <a href="#setup">Setup</a>
-        </nav>
+        <nav class="site-nav"><a href="#setup">Setup</a><a href="#results">Results</a><a href="#demo">Watch them solve</a><a href="#policy">What each arm learned</a></nav>
     </header>
 
     <main class="main-content">
-        <section id="about" class="content-section">
+        <section id="setup" class="content-section">
             <div class="section-inner">
-                <h2>About</h2>
-                <p>
-                    DreamCoder learns to solve tasks by writing programs in a small language (a DSL). It alternates three phases:
-                    <b>wake</b> searches for programs that solve the tasks; <b>abstraction</b> finds sub-programs that keep recurring in
-                    the solutions and adds them to the DSL as new routines; <b>dreaming</b> trains a neural <i>recognition network</i>
-                    that looks at a task and predicts which building blocks the next search should try first.
-                </p>
-                <p>Here the tasks are stages of solving a 2×2×2 cube. We switch the two learning mechanisms on and off, giving four arms:</p>
+                <h2>Setup</h2>
+
+               <p>DreamCoder-style learning alternates program search (wake), symbolic MDL library compression (abstraction), and neural training on solved tasks and synthetic fantasies (dreaming). We compare staged and full-cube training on the 2×2×2. We switch the two learning mechanisms on and off, giving four arms:</p>
                 <ul>
-                    <li><b class="c-nn_lib">NN + library</b>: full DreamCoder.</li>
+                    <li><b class="c-nn_lib">NN + library</b>: both learning mechanisms.</li>
                     <li><b class="c-nn_nolib">NN only</b>: recognition network, but the DSL never grows.</li>
                     <li><b class="c-nonn_lib">Library only</b>: the DSL grows, and search uses one learned distribution for every task.</li>
                     <li><b class="c-nonn_nolib">Neither</b>: plain best-first enumeration over the base primitives.</li>
@@ -45,21 +33,58 @@
                 <p>
                     Moves use Singmaster notation: <span class="notation-snippet">R</span> turns the right face clockwise,
                     <span class="notation-snippet">R'</span> turns it counterclockwise, <span class="notation-snippet">R2</span> is a half turn.
-                    Colours: up white, down yellow, front green, back blue, right red, left orange.
                 </p>
+            <ul>
+                    <li><b>Programs</b> have a single type, <code>alg</code>: a move sequence treated as a permutation of the 24 stickers.
+                        Running a program applies it to the task's start state.</li>
+                    <li><b>Primitives</b>: face turns <span class="notation-snippet">R U F</span>, the combinators
+                        <code>seq inv setup comm</code>, and the whole-cube symmetries <code>x y z mirror</code> (48 symmetries in total).
+                        No colours, pieces or human solving methods are built in.</li>
+                    <li><b>Invariance</b>: states are compared up to how the whole cube is held. Before a goal is checked, the cube is turned so
+                        the DLB corner is home.</li>
+                    <li><b>Stages</b> (chained subgoals): 1 DRF corner → 2 + DRB corner → 3 whole D layer → 4 + U face one colour → 5 solved.
+                        Each stage starts from a random state where the earlier stages are already done. 24 distinct tasks per stage, except stage 5 (23 possible unsolved starts).</li>
+                                        <li><b>Recognition network</b> (NN arms): an MLP (2 hidden layers of 128, ReLU). The input is the colour of each of the 24 sticker slots (one-hot)
+                        plus the stage id. The output is one log-weight per DSL entry, giving a task-specific unigram grammar (as in the paper's unigram model).
+                        It is trained after every round for 800 Adam steps on <i>replays</i> (solved training tasks and their programs) and
+                        2000 <i>fantasies</i>: a program is sampled from the current DSL, a goal-satisfying end state G is drawn, and the task starts
+                        from G·p⁻¹, so the program is known to solve it. Loss: −log P(program | predicted grammar).</li>
+                    <li><b>Compute matching</b>: NN arms enumerate separately for each task (5 s per task, under that task's predicted grammar).
+                        Plain arms enumerate once for all tasks together, for 5 s × number of tasks. Round 1 of the NN arms uses plain search, because no network is trained yet.</li>
+                    <li><b>Settings</b>: 20 rounds, best 3 programs kept per task, at most 3 new routines per round, structure penalty 1.0.
+                        Stages: 119 training tasks; full-task strategy: 120 uniformly random training cubes. Test: the same 100 distinct random cubes (seed 9999), excluded from all training sets. Three training seeds: 0, 1, 2.</li>
+                </ul><p><b>Two training strategies:</b> stages learns five chained subgoals; full learns only random-cube → solved. End-to-end evaluation chains stage solvers, reorienting after each stage, or searches once for a full solution. NN search receives up to 5 s per stage or 25 s per full cube. Plain search pools that budget across the batch; these are aggregate wall-time budgets, not equal enumeration counts or total training costs.</p><p>This is a pure-Python DreamCoder-style reimplementation, not the official engine: unigram grammar/recognition and simplified MDL compression. No human algorithm library is provided. Search order is learned; expanded move count is not the objective.</p>
+            </div>
+        </section>
+
+        <section id="results" class="content-section">
+            <div class="section-inner">
+                <h2>Results</h2>
+                <p><b>All 24 runs complete</b> (including the 15 relaunched runs), checked 8 November 2026. Each has 20 training rounds and a final end-to-end evaluation. Counts below are complete solves of the same 100 unseen random cubes, not independent stage successes.</p>
+                <p><b>Stages + library: 100/100 in all six runs.</b> Without a library, NN-only solves 16/18/25 and neither solves 17/17/17. Full-task training solves 0/100 in every NN run and 1/100 in every plain-search run. Library learning helps strongly with the staged curriculum, but does not bootstrap full random-cube solving here. Neural guidance has no consistent solve-rate advantage at this budget; all full-task arms solved zero training tasks; NN training therefore relied on fantasies, with no successful task replays.</p>
+                <p>Average moves counts only solved cubes; “–” means no solutions. Long expanded solutions are not speedcubing algorithms. Seeds reuse the same test cubes and are not independent test samples. Use the run selector below to change the training curve, stage-survival chart, policies and playback.</p>
+                <div class="card wide"><table class="summary" id="summary"></table></div>
+                <div class="stats">
+                    <div class="card">
+                        <h3>Training tasks solved over rounds <span class="small" id="curve-run"></span></h3>
+                        <svg id="curve" viewBox="0 0 420 250"></svg>
+                    </div>
+                    <div class="card">
+                        <h3>E2E cubes surviving each stage <span class="small" id="bars-run"></span></h3>
+                        <svg id="bars" viewBox="0 0 420 250"></svg>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="demo" class="content-section">
             <div class="section-inner">
                 <h2>Watch Them Solve</h2>
-                <p>Four versions of the system, trained on the same tasks with the same compute. Pick a task: all four cubes start
-                from the same state and play the solution each version found, one move at a time.
-                <b>Held-out</b> tasks were never seen during training.</p>
+                <p>Select a strategy and seed, then a held-out random cube or training task. All four arms start from the same state. A missing solution means no complete solution was recorded, not that the cube is impossible. Stage solutions reorient the cube between subprograms, exactly as evaluation does. Every exported move sequence is replay-verified against its goal.</p>
 
                 <div class="controls">
                     <label>Run <select id="run"></select></label>
-                    <label>Tasks <select id="split"><option value="test">held-out (test)</option><option value="train">training</option></select></label>
+                    <label>Tasks <select id="split"><option value="test">held-out full cubes</option><option value="train">training</option></select></label>
                     <label>Stage <select id="group"></select></label>
                     <label>Task <select id="task"></select></label>
                     <button id="random">🎲 Random</button>
@@ -74,26 +99,7 @@
                     <button id="play">▶ Play</button>
                     <button id="step">Step ⏭</button>
                     <label>Speed <input type="range" id="speed" min="0.25" max="4" step="0.25" value="1"></label>
-                    <span class="hint">Drag a cube to look around. At the end, the whole cube turns so the back-left-bottom corner is home (goals are checked up to orientation).</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="results" class="content-section">
-            <div class="section-inner">
-                <h2>Results</h2>
-                <p>Both seeds. Training counts are tasks solved at least once during the 8 learning rounds.
-                Held-out counts are fresh tasks solved once at the end, with the same per-task budget.</p>
-                <div class="card wide"><table class="summary" id="summary"></table></div>
-                <div class="stats">
-                    <div class="card">
-                        <h3>Training tasks solved over rounds <span class="small" id="curve-run"></span></h3>
-                        <svg id="curve" viewBox="0 0 420 250"></svg>
-                    </div>
-                    <div class="card">
-                        <h3>Held-out tasks solved per stage <span class="small" id="bars-run"></span></h3>
-                        <svg id="bars" viewBox="0 0 420 250"></svg>
-                    </div>
+                    <span class="hint">Drag a cube to look around. At stage boundaries and the end, the whole cube turns so the back-left-bottom corner is home (goals are checked up to orientation).</span>
                 </div>
             </div>
         </section>
@@ -114,32 +120,6 @@
                     <code>comm a b</code> = a b a⁻¹ b⁻¹, <code>setup a b</code> = a b a⁻¹, and <code>x y z mirror</code> apply the same alg from another side or mirrored.</p>
                     <ol id="library"></ol>
                 </div>
-            </div>
-        </section>
-
-        <section id="setup" class="content-section">
-            <div class="section-inner">
-                <h2>Setup</h2>
-                <ul>
-                    <li><b>Programs</b> have a single type, <code>alg</code>: a move sequence treated as a permutation of the 24 stickers.
-                        Running a program applies it to the task's start state.</li>
-                    <li><b>Primitives</b>: face turns <span class="notation-snippet">R U F</span>, the combinators
-                        <code>seq inv setup comm</code>, and the whole-cube symmetries <code>x y z mirror</code> (48 symmetries in total).
-                        No colours, pieces or human solving methods are built in.</li>
-                    <li><b>Invariance</b>: states are compared up to how the whole cube is held. Before a goal is checked, the cube is turned so
-                        the DLB corner is home.</li>
-                    <li><b>Stages</b> (chained subgoals): 1 DRF corner → 2 + DRB corner → 3 whole D layer → 4 + U face one colour → 5 solved.
-                        Each stage starts from a random state where the earlier stages are already done. 24 tasks per stage.</li>
-                                        <li><b>Recognition network</b> (NN arms): an MLP (2 hidden layers of 128, ReLU). The input is the colour of each of the 24 sticker slots (one-hot)
-                        plus the stage id. The output is one log-weight per DSL entry, giving a task-specific unigram grammar (as in the paper's unigram model).
-                        It is trained after every round for 800 Adam steps on <i>replays</i> (solved training tasks and their programs) and
-                        2000 <i>fantasies</i>: a program is sampled from the current DSL, a goal-satisfying end state G is drawn, and the task starts
-                        from G·p⁻¹, so the program is known to solve it. Loss: −log P(program | predicted grammar).</li>
-                    <li><b>Compute matching</b>: NN arms enumerate separately for each task (1 s per task, under that task's predicted grammar).
-                        Plain arms enumerate once for all tasks together, for 1 s × number of tasks. Round 1 of the NN arms uses plain search, because no network is trained yet.</li>
-                    <li><b>Settings</b>: 8 rounds, best 3 programs kept per task, at most 3 new routines per round, structure penalty 1.0.
-                        Training: 120 tasks (24 per stage). Held-out: 60 fresh tasks (12 per stage). Seeds 0 and 1.</li>
-                </ul>
             </div>
         </section>
     </main>

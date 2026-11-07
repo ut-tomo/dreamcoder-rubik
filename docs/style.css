@@ -142,3 +142,6 @@ table.summary td b { font-size: 1.05em; }
 .pbar .bar span { display: block; height: 100%; }
 .pbar .v { text-align: right; color: #444; }
 @media (max-width: 800px) { .policy-grid { grid-template-columns: 1fr; } }
+
+.card.wide { overflow-x: auto; }
+table.summary { white-space: nowrap; }

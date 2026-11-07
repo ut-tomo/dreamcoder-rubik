@@ -23,62 +23,41 @@ results/             raw results of the runs reported below
 docs/                GitHub Pages site (Three.js viewer)
 ```
 
-## Quick start
+## Reproduce the current experiment (v3)
 
-Python ≥ 3.9. The engine has no dependencies; the recognition model needs PyTorch.
-
-```
-python experiments/run.py --recognition --seed 0 --out results/v2_nn_lib_s0.json         # NN + library
-python experiments/run.py --recognition --no-compress --seed 0 --out results/v2_nn_nolib_s0.json
-python experiments/run.py --seed 0 --out results/v2_nonn_lib_s0.json                     # library only
-python experiments/run.py --no-compress --seed 0 --out results/v2_nonn_nolib_s0.json     # neither
+```sh
+python experiments/run.py --kind stages --recognition --seed 0 --iterations 20 --per-task 5 --out results/v3/stages_nn_lib_s0.json
+# Repeat seeds 0/1/2 and kinds stages/full; drop --recognition and/or add --no-compress for other arms.
 python experiments/export_web.py
 ```
 
-## Method
+## Setup
 
-**Tasks.** Five chained stages: (1) DRF corner, (2) + DRB corner, (3) whole D layer, (4) + U face one colour, (5) solved.
-Each task is a uniformly random reachable state in which the earlier stages hold and the current one does not.
-States are compared up to whole-cube orientation (the cube is turned so the DLB corner is home before every goal check).
-Training: 24 tasks per stage (120). Held-out test: 12 per stage (60), drawn with a different seed.
+Twenty wake–abstraction–dreaming rounds, four arms (neural guidance × library learning), two training strategies, three seeds: 24 runs. Staged training uses 119 distinct subgoal tasks (24 each for stages 1–4, 23 for stage 5); full training uses 120 uniformly random unsolved cubes. Both exclude the fixed 100-cube end-to-end test set (seed 9999).
 
-**Programs.** One type, `alg` (a move sequence, i.e. a permutation). Primitives: `R U F`; `seq`, `inv`,
-`setup a b = a b a⁻¹`, `comm a b = a b a⁻¹ b⁻¹`; the whole-cube symmetries `x y z mirror` (conjugation; 48 in total).
-No colours, pieces or human solving methods are built in. The generative model is a unigram probabilistic grammar.
+Stages: DRF corner → +DRB corner → D layer → +U face orientation → solved. Goals and stage transitions normalize whole-cube orientation with DLB home. Programs use R/U/F, seq/inv/setup/comm and x/y/z/mirror; no human algorithm library is provided. Up to three new MDL routines per round, structure penalty 1.0, frontier size 3. Recognition is a 153-input MLP with two 128-unit ReLU layers, 800 Adam steps per round on successful replays and 2000 fantasies.
 
-**Each of the 8 rounds:**
+NN wake search receives 5 seconds per task; plain search shares 5 seconds × task count across a batch. E2E staged evaluation chains stage solvers with reorientation after each stage, while full evaluation receives 25 seconds per cube (pooled for plain search). This matches nominal aggregate search wall time, not enumeration counts, total training cost or exact per-cube cost. NN models can train on fantasies even when there are no successful replays.
 
-1. *Wake.* Best-first enumeration by decreasing prior (description-length window widened by 1.5 nats, depth ≤ 12);
-   the best 3 solutions per task are kept. Without recognition: one shared enumeration checked against all tasks for
-   1 s × #tasks. With recognition: per-task enumeration under the predicted grammar, 1 s per task (compute-matched).
-2. *Abstraction* (library arms). Candidate routines (closed subterms and one-hole fragments occurring in ≥ 2 tasks) are
-   scored by MDL: Σ_tasks max log P(program | grammar) − 1.0 · Σ routine size, after rewriting all solutions and refitting
-   the grammar. The best candidate is added greedily while the score improves, ≤ 3 per round. Purely symbolic, as in the paper.
-3. *Dreaming* (NN arms). An MLP (153 inputs = 24 sticker slots × 6 colours one-hot + 5-way stage id; 2 × 128 ReLU) outputs a
-   log-weight per library entry, i.e. a task-specific unigram grammar. It is trained for 800 Adam steps (lr 1e-3, batch 64)
-   on replays (solved tasks and their programs) plus 2000 fantasies: a program p is sampled from the current grammar, an end
-   state G satisfying a stage goal is drawn, and the task starts at G·p⁻¹. Loss: −log P(program | predicted grammar).
+## Verified results — 8 November 2026
 
-## Results (seeds 0 / 1)
+All 15 relaunched runs and nine earlier completed runs finished 20 rounds and E2E evaluation. Values below are seeds 0 / 1 / 2, each on the **same 100 unseen random cubes**.
 
-| arm | train solved | held-out solved | avg. moves (held-out) |
+| Strategy | Arm | E2E solved / 100 | Mean moves among solved cubes |
 |---|---|---|---|
-| NN + library | 117 / 120 | **60 / 59** of 60 | 29 / 208 |
-| NN only | 93 / 87 | 39 / 38 | 6.7 / 7.2 |
-| library only | 120 / 120 | **60 / 60** | 141 / 66 |
-| neither | 92 / 87 | 42 / 32 | 5.0 / 3.6 |
+| Stages | NN + library | 100 / 100 / 100 | 465.2 / 997.8 / 192.6 |
+| Stages | NN only | 16 / 18 / 25 | 34.7 / 36.7 / 43.4 |
+| Stages | Library only | 100 / 100 / 100 | 240.7 / 120.1 / 137.3 |
+| Stages | Neither | 17 / 17 / 17 | 19.4 / 19.4 / 19.4 |
+| Full | NN + library | 0 / 0 / 0 | — |
+| Full | NN only | 0 / 0 / 0 | — |
+| Full | Library only | 1 / 1 / 1 | 9 / 9 / 9 |
+| Full | Neither | 1 / 1 / 1 | 9 / 9 / 9 |
 
-(Move counts are averaged over the tasks each arm solved, so arms that only solve easy tasks look short.
-Nothing in the objective prefers short move sequences, which is why library solutions can be very long.)
+Library learning is effective with staged training but cannot bootstrap full random-cube training here: all full-task arms solve zero training tasks. Neural guidance shows no consistent E2E advantage at this budget. Long expanded move sequences reflect a program-probability objective, not move minimization; comparisons of lengths are conditional on solving different subsets. Reusing the test set across seeds does not yield 300 independent test cubes per arm.
 
-- Library learning is what makes the late stages solvable at this budget: without it, stage 5 is almost never solved.
-- At this budget the recognition network does not increase the solve rate: the library arms are at ceiling,
-  and NN only ≈ neither (39/38 vs 42/32). It does learn a task-dependent policy, whose preferred building blocks
-  differ clearly between stages (see the site), but that has not yet translated into more solved tasks.
-- A harder setting (smaller budget, full solves, 3×3×3) is needed to measure the NN's effect on solve rate.
+The exporter requires all 24 final results and replays every exported training and E2E solution (2,023 total), including inter-stage normalization. Only small JSON results were fetched from shared NFS; no raw datasets or checkpoints were copied. Older v2 summaries remain as historical artifacts, not the site's current benchmark.
 
 ## Differences from the paper
 
-See [`pydreamcoder/README.md`](pydreamcoder/README.md). In short: unigram (not bigram) recognition model,
-simplified compressor (no version-space refactoring), pure-Python enumeration.
-The engine is being checked against the official implementation ([ellisk42/ec](https://github.com/ellisk42/ec)).
+This is a pure-Python DreamCoder-style reimplementation, not the official engine: unigram grammar and recognition, simplified MDL compression without version-space refactoring. See [pydreamcoder/README.md](pydreamcoder/README.md). Policy probabilities describe building-block preferences, not causal evidence that the neural network improved solve rate.

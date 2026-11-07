@@ -1,59 +1,42 @@
-"""Export the v2 four-arm results (recognition x library learning) to docs/data.json for the web viewer."""
+"""Export completed v3 summaries only; replay every displayed solution before publishing."""
 import json
-import os
 import sys
-
-HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
-sys.path[:0] = [os.path.join(ROOT, "src"), os.path.join(ROOT, "pydreamcoder", "src")]
-from rubik import cube2, perm as P  # noqa: E402
-from rubik.tasks import STAGES, stage_tasks  # noqa: E402
-
-ARMS = [  # id, label, file stem
-    ("nn_lib", "NN-guided search + library learning", "v2_nn_lib"),
-    ("nn_nolib", "NN-guided search, no library learning", "v2_nn_nolib"),
-    ("nonn_lib", "Plain search + library learning", "v2_nonn_lib"),
-    ("nonn_nolib", "Plain search, no library learning", "v2_nonn_nolib"),
-]
-SEEDS = [0, 1]
-GOALS = {n: g for n, _, g in STAGES}
-
-
-def check(start, moves, group):
-    st = start
-    for m in moves:
-        st = P.compose(st, P.FACE_TURNS[m])
-    return GOALS[group](P.normalize(st))
-
-
-out = {"stickers": [[list(p), list(n)] for p, n in cube2.STICKERS],
-       "arms": [{"id": i, "label": l} for i, l, _ in ARMS], "runs": []}
-for seed in SEEDS:
-    ds = {i: json.load(open(os.path.join(ROOT, "results", f"{stem}_s{seed}.json"))) for i, _, stem in ARMS}
-    a = ds["nn_lib"]["args"]
-    train = stage_tasks(a["per_stage"], seed)
-    test = stage_tasks(a["test_per_stage"], 1000 + seed)
-    tasks = [{"name": t.name, "split": "train", "group": t.meta["stage"], "start": list(t.meta["start"])} for t in train]
-    tasks += [{"name": "test:" + t.name, "split": "test", "group": t.meta["stage"], "start": list(t.meta["start"])} for t in test]
-    arms = {}
-    bad = 0
-    for i, _, _ in ARMS:
-        d = ds[i]
-        sols = {}
-        for k, mv in list(d["solutions_moves"].items()) + list(d.get("test_moves", {}).items()):
-            moves = [] if mv == "(id)" else mv.split()
-            prog = d["frontiers"][k][0] if k in d["frontiers"] else d["test"][k][0]
-            sols[k] = {"moves": moves, "program": prog}
-        for t in tasks:
-            if t["name"] in sols and not check(tuple(t["start"]), sols[t["name"]]["moves"], t["group"]):
-                bad += 1
-        arms[i] = {"solutions": sols,
-                   "history": [{"it": h["iteration"], "solved": h["solved_ever"], "lib": len(h["library"])} for h in d["history"]],
-                   "library": d.get("library_readable", []),
-                   "per_group": d["per_group"], "test_per_group": d["test_per_group"],
-                   "test_solved": len(d.get("test", {})), "test_n": d.get("test_n", 0)}
-    out["runs"].append({"id": f"stages_s{seed}", "label": f"Stages · R/U/F turns · seed {seed}", "args": a,
-                        "tasks": tasks, "arms": arms})
-    print(f"seed {seed}: {len(tasks)} tasks, unverified solutions: {bad}",
-          {i: (sum(v[0] for v in arms[i]['per_group'].values()), arms[i]['test_solved']) for i in arms})
-json.dump(out, open(os.path.join(ROOT, "docs", "data.json"), "w"), separators=(",", ":"))
+from pathlib import Path
+ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(ROOT / 'src'), str(ROOT / 'pydreamcoder/src')]
+from rubik import cube2, perm
+from rubik.tasks import STAGES, stage_tasks, full_random_tasks, random_states
+ARMS = [('nn_lib','NN-guided search + library learning'),('nn_nolib','NN-guided search, no library learning'),('nonn_lib','Plain search + library learning'),('nonn_nolib','Plain search, no library learning')]
+out = dict(stickers=cube2.STICKERS, arms=[dict(id=i,label=l) for i,l in ARMS], runs=[])
+verified = 0
+for kind in ['stages', 'full']:
+    for seed in range(3):
+        ds = {i:json.loads((ROOT / f'results/v3/{kind}_{i}_s{seed}.json').read_text()) for i,_ in ARMS}
+        a = ds['nn_lib']['args']
+        e2e = random_states(a['e2e_n'], a['e2e_seed'])
+        train = stage_tasks(a['per_stage'], seed, exclude=e2e) if kind == 'stages' else full_random_tasks(a['n_full'], seed, exclude=e2e)
+        tasks = [dict(name=t.name, split='train',group=t.meta['stage'],start=t.meta['start']) for t in train]
+        tasks += [dict(name=f'test:{j}',split='test',group='full',start=s) for j,s in enumerate(e2e)]
+        arms = {}
+        for i,d in ds.items():
+            assert len(d['history']) == a['iterations'] and 'e2e' in d, (kind,i,seed,'incomplete')
+            assert d['args']['kind'] == kind and d['args']['seed'] == seed
+            sols = {k:dict(moves=[] if v == '(id)' else v.split(),program=d['frontiers'][k][0]) for k,v in d['solutions_moves'].items()}
+            for j,chunks in d['e2e']['moves'].items():
+                sols['test:'+j] = dict(moves=[m for chunk in chunks for m in chunk.split() if m != '(id)'],program=' → '.join(chunks), boundaries=[sum(len(c.split()) for c in chunks[:k+1]) for k in range(len(chunks))])
+            goals = {n:g for n,_,g in STAGES}; goals['full'] = cube2.solved
+            for t in tasks:
+                if t['name'] not in sols: continue
+                s = tuple(t['start'])
+                for idx,m in enumerate(sols[t['name']]['moves'],1):
+                    s = perm.compose(s,perm.FACE_TURNS[m])
+                    if idx in sols[t['name']].get('boundaries',[]): s = perm.normalize(s)
+                assert goals[t['group']](perm.normalize(s)), (kind,seed,i,t['name'])
+                verified += 1
+            assert len(d['e2e']['moves']) == d['e2e']['solved']
+            lengths = [len(v['moves']) for k,v in sols.items() if k.startswith('test:')]
+            assert not lengths or abs(sum(lengths)/len(lengths)-d['e2e']['mean_len']) < 1e-6
+            arms[i] = dict(solutions=sols, history=[dict(it=h['iteration'],solved=h['solved_ever'],lib=len(h['library'])) for h in d['history']],library=d['library_readable'],per_group=d['per_group'],test_per_group={k:[v,d['e2e']['n']] for k,v in (d['e2e']['reached'] or {'full':d['e2e']['solved']}).items()},test_solved=d['e2e']['solved'],test_n=d['e2e']['n'],policy=d.get('policy',{}))
+        out['runs'].append(dict(id=f'{kind}_s{seed}',label=f'{kind.title()} · seed {seed}',args=a,tasks=tasks,arms=arms))
+(ROOT/'docs/data.json').write_text(json.dumps(out,separators=(',',':')))
+print(f'Exported 24 completed runs; replay-verified {verified} solutions.')

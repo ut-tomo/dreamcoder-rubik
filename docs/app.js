@@ -209,6 +209,13 @@ class Side {
       this.highlight();
       await this.view.animate(moveQuat(pm), p => p[pm.axis] === pm.sign, (pm.q === 2 ? 480 : 330) / speed);
       this.state = applyMove(this.state, m);
+      if ((this.sol.boundaries || []).includes(this.i)) {
+        const M = normalizingRotation(this.state);
+        if (!isIdentity(M)) {
+          await this.view.animate(matrixQuat(M), null, 600 / speed);
+          this.state = applyMatrix(this.state, M);
+        }
+      }
       this.view.setState(this.state);
     } else {
       this.reoriented = true;
@@ -226,6 +233,7 @@ class Side {
 
 // ---------------------------------------------------------------- page
 const GOALS = {
+  "full": "Solve the entire uniformly random cube.",
   "1-corner": "Stage 1: solve the DRF corner (down-right-front).",
   "2-corners": "Stage 2: DRF is solved. Also solve the DRB corner.",
   "3-Dlayer": "Stage 3: DRF and DRB are solved. Solve the whole D (bottom) layer.",
@@ -256,7 +264,7 @@ function fillRuns() { $("run").innerHTML = DATA.runs.map((r, i) => `<option valu
 function fillGroups() {
   const gs = [...new Set(run.tasks.map(t => t.group))];
   $("group").innerHTML = `<option value="">all</option>` + gs.map(g => `<option>${g}</option>`).join("");
-  $("pstage").innerHTML = gs.map(g => `<option>${g}</option>`).join("");
+  $("pstage").innerHTML = Object.keys(run.arms[ARMS[0].id].policy || {}).map(g => `<option>${g}</option>`).join("");
 }
 function fillTasks() {
   const g = $("group").value, only = $("onlyDiff").checked, split = $("split").value;
@@ -268,7 +276,7 @@ function fillTasks() {
 function loadTask() {
   stop();
   const t = run.tasks.find(t => t.name === $("task").value);
-  if (!t) { $("goal").textContent = "No tasks match this filter."; return; }
+  if (!t) { $("goal").textContent = "No tasks match this filter."; sides.forEach(s => s.load(run.tasks[0].start, null)); return; }
   $("goal").innerHTML = GOALS[t.group] + (t.split === "test" ? " <i>(held-out task)</i>" : "") +
     `<br><span class="small">Moves per arm in the list: ${ARMS.map(a => SHORT[a.id]).join(" / ")}</span>`;
   ARMS.forEach((a, i) => sides[i].load(t.start, solOf(a.id, t.name)));
@@ -300,8 +308,8 @@ function drawSummary() {
     }).join("");
     return `<tr><td><b class="c-${a.id}">${SHORT[a.id]}</b></td>${cells}</tr>`;
   }).join("");
-  const head1 = DATA.runs.map(r => `<th colspan="4">${r.label.split("·").pop().trim()}</th>`).join("");
-  const head2 = DATA.runs.map(() => `<th>train</th><th>held-out</th><th>avg moves</th><th>routines</th>`).join("");
+  const head1 = DATA.runs.map(r => `<th colspan="4">${r.label}</th>`).join("");
+  const head2 = DATA.runs.map(() => `<th>train</th><th>E2E solved</th><th>avg moves</th><th>routines</th>`).join("");
   $("summary").innerHTML = `<tr><th>Arm</th>${head1}</tr><tr><th></th>${head2}</tr>${rows}`;
 }
 function drawCurve() {

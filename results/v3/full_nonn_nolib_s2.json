@@ -1,0 +1,252 @@
+{
+ "history": [
+  {
+   "iteration": 0,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 1,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 2,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 3,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 4,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 5,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 6,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 7,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 8,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 9,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 10,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 11,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 12,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 13,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 14,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 15,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 16,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 17,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 18,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  },
+  {
+   "iteration": 19,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0
+  }
+ ],
+ "grammar": "  0.000\t$_\n  0.000\talg\tR\n  0.000\talg\tU\n  0.000\talg\tF\n  0.000\talg -> alg -> alg\tseq\n  0.000\talg -> alg\tinv\n  0.000\talg -> alg -> alg\tsetup\n  0.000\talg -> alg -> alg\tcomm\n  0.000\talg -> alg\tx\n  0.000\talg -> alg\ty\n  0.000\talg -> alg\tz\n  0.000\talg -> alg\tmirror",
+ "frontiers": {},
+ "solutions_moves": {},
+ "e2e": {
+  "n": 100,
+  "solved": 1,
+  "mean_len": 9.0,
+  "reached": {},
+  "moves": {
+   "45": [
+    "U R U' R' U' R U R' U"
+   ]
+  }
+ },
+ "per_group": {
+  "full": [
+   0,
+   120
+  ]
+ },
+ "library_readable": [],
+ "args": {
+  "kind": "full",
+  "dsl": "ruf",
+  "iterations": 20,
+  "per_task": 5.0,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "frontier": 3,
+  "max_new": 3,
+  "structure_penalty": 1.0,
+  "no_compress": true,
+  "recognition": false,
+  "n_dreams": 2000,
+  "steps": 800,
+  "seed": 2,
+  "out": "results/v3/full_nonn_nolib_s2.json"
+ },
+ "policy": {
+  "full": [
+   [
+    "R",
+    0.09090909090909106
+   ],
+   [
+    "U",
+    0.09090909090909106
+   ],
+   [
+    "F",
+    0.09090909090909106
+   ],
+   [
+    "seq",
+    0.09090909090909106
+   ],
+   [
+    "inv",
+    0.09090909090909106
+   ],
+   [
+    "setup",
+    0.09090909090909106
+   ],
+   [
+    "comm",
+    0.09090909090909106
+   ],
+   [
+    "x",
+    0.09090909090909106
+   ],
+   [
+    "y",
+    0.09090909090909106
+   ],
+   [
+    "z",
+    0.09090909090909106
+   ],
+   [
+    "mirror",
+    0.09090909090909106
+   ]
+  ]
+ }
+}

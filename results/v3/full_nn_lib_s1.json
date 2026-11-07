@@ -1,0 +1,308 @@
+{
+ "history": [
+  {
+   "iteration": 0,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.0,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 6.7
+  },
+  {
+   "iteration": 1,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.6,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 4.2
+  },
+  {
+   "iteration": 2,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.9,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.4
+  },
+  {
+   "iteration": 3,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.6,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 4.3
+  },
+  {
+   "iteration": 4,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.5,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 4.1
+  },
+  {
+   "iteration": 5,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.3,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 4.1
+  },
+  {
+   "iteration": 6,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.8
+  },
+  {
+   "iteration": 7,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.8
+  },
+  {
+   "iteration": 8,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.3,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.6
+  },
+  {
+   "iteration": 9,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.8
+  },
+  {
+   "iteration": 10,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.5,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.8
+  },
+  {
+   "iteration": 11,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.4,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.7
+  },
+  {
+   "iteration": 12,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.7,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.5
+  },
+  {
+   "iteration": 13,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.5
+  },
+  {
+   "iteration": 14,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.4
+  },
+  {
+   "iteration": 15,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.4,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.8
+  },
+  {
+   "iteration": 16,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.6
+  },
+  {
+   "iteration": 17,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.2,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 3.4
+  },
+  {
+   "iteration": 18,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.1,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 2.7
+  },
+  {
+   "iteration": 19,
+   "solved_this_iter": 0,
+   "solved_ever": 0,
+   "n_tasks": 120,
+   "library": [],
+   "wake_seconds": 600.7,
+   "n_replays": 0,
+   "n_dreams": 2000,
+   "dream_seconds": 2.8
+  }
+ ],
+ "grammar": "  0.000\t$_\n  0.000\talg\tR\n  0.000\talg\tU\n  0.000\talg\tF\n  0.000\talg -> alg -> alg\tseq\n  0.000\talg -> alg\tinv\n  0.000\talg -> alg -> alg\tsetup\n  0.000\talg -> alg -> alg\tcomm\n  0.000\talg -> alg\tx\n  0.000\talg -> alg\ty\n  0.000\talg -> alg\tz\n  0.000\talg -> alg\tmirror",
+ "frontiers": {},
+ "solutions_moves": {},
+ "e2e": {
+  "n": 100,
+  "solved": 0,
+  "mean_len": 0.0,
+  "reached": {},
+  "moves": {}
+ },
+ "per_group": {
+  "full": [
+   0,
+   120
+  ]
+ },
+ "library_readable": [],
+ "args": {
+  "kind": "full",
+  "dsl": "ruf",
+  "iterations": 20,
+  "per_task": 5.0,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "frontier": 3,
+  "max_new": 3,
+  "structure_penalty": 1.0,
+  "no_compress": false,
+  "recognition": true,
+  "n_dreams": 2000,
+  "steps": 800,
+  "seed": 1,
+  "out": "results/v3/full_nn_lib_s1.json"
+ },
+ "policy": {
+  "full": [
+   [
+    "F",
+    0.11709309276522628
+   ],
+   [
+    "U",
+    0.11112577855240026
+   ],
+   [
+    "R",
+    0.11090469948775256
+   ],
+   [
+    "setup",
+    0.10844844955757044
+   ],
+   [
+    "seq",
+    0.09620957489757331
+   ],
+   [
+    "comm",
+    0.09012358060445418
+   ],
+   [
+    "y",
+    0.07740130030050733
+   ],
+   [
+    "mirror",
+    0.07369389783039579
+   ],
+   [
+    "inv",
+    0.07215726586841094
+   ],
+   [
+    "z",
+    0.07183631550628497
+   ],
+   [
+    "x",
+    0.07100604462942382
+   ]
+  ]
+ }
+}

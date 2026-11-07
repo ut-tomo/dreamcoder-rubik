@@ -38,17 +38,48 @@ def _task(name, start, goal, meta):
     return Task(name, talg, check, meta=meta)
 
 
-def stage_tasks(per_stage=24, seed=0):
+def stage_tasks(per_stage=24, seed=0, exclude=()):
+    """per_stage distinct start states per stage, none of them in `exclude`.
+    A stage whose state space is smaller than per_stage gets fewer tasks
+    (stage 5 has only 23 possible starts)."""
     rng = random.Random(seed)
+    exclude = set(exclude)
     out = []
     for i, (name, fixed, goal) in enumerate(STAGES):
         prev = STAGES[i - 1][2] if i else (lambda s: True)
-        n = 0
-        while n < per_stage:
+        seen, n, misses = set(), 0, 0
+        while n < per_stage and misses < 5000:
             s = sample.sample_with(fixed, rng, lambda s: prev(s) and not goal(s))
+            if s in seen or s in exclude:
+                misses += 1
+                continue
+            seen.add(s)
             out.append(_task(f"{name}#{n}", s, goal, {"stage": name, "stage_idx": i, "start": s}))
             n += 1
     return out
+
+
+def random_states(n, seed, exclude=()):
+    """n distinct, uniformly random, unsolved reachable states (DLB home)."""
+    rng = random.Random(seed)
+    exclude, out = set(exclude), []
+    while len(out) < n:
+        s = sample.sample([], rng)
+        if s not in exclude and not cube2.solved(s):
+            exclude.add(s)
+            out.append(s)
+    return out
+
+
+def full_random_tasks(n=120, seed=0, exclude=()):
+    """Full task only: uniformly random cubes, goal = solved."""
+    return [_task(f"full#{j}", s, cube2.solved, {"stage": "full", "stage_idx": 4, "start": s})
+            for j, s in enumerate(random_states(n, seed, exclude))]
+
+
+def stage_task(k, start, name):
+    name_k, _, goal = STAGES[k]
+    return _task(name, start, goal, {"stage": name_k, "stage_idx": k, "start": start})
 
 
 def full_tasks(lengths=range(1, 9), per_length=6, seed=0):
