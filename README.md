@@ -18,7 +18,8 @@ src/rubik/           the cube domain
   tasks.py             task sets (stages, full solve) and the recognition-model hooks (features, fantasies)
 experiments/
   run.py               one training run (any of the four arms)
-  export_web.py        results/ → docs/data.json
+  export_web.py        results/ → docs/data.json (incl. per-stage program pools for the Try-it demo)
+  verify_try.cjs       checks the Try-it solver on random scrambles
 results/             raw results of the runs reported below
 docs/                GitHub Pages site (Three.js viewer)
 ```

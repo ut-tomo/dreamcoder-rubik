@@ -181,10 +181,18 @@ class Side {
     this.movesEl = el.querySelector(".moves");
     this.progEl = el.querySelector(".prog");
   }
-  load(start, sol) {
+  load(start, sol, opts = {}) {
     this.start = start; this.sol = sol; this.i = 0; this.state = start.slice(); this.reoriented = false;
+    this.failMsg = opts.fail || null;
     this.view.setState(this.state);
     const ov = this.el.querySelector(".overlay"); if (ov) ov.remove();
+    if (opts.idle) { this.sol = null; this.statusEl.textContent = opts.idle; this.movesEl.textContent = ""; this.progEl.textContent = ""; return; }
+    if (sol && opts.fail) {
+      this.statusEl.innerHTML = `<span class="no">✗ stuck</span> · ${opts.fail}`;
+      this.movesEl.innerHTML = sol.moves.map(m => `<span>${m}</span>`).join(" ") || "<i>(no moves before getting stuck)</i>";
+      this.progEl.textContent = sol.program;
+      return;
+    }
     if (!sol) {
       this.statusEl.innerHTML = `<span class="no">✗ not solved</span>`;
       this.movesEl.textContent = "";
@@ -226,69 +234,99 @@ class Side {
         this.state = applyMatrix(this.state, M);
         this.view.setState(this.state);
       }
-      this.statusEl.innerHTML += " · goal reached";
+      if (this.failMsg) {
+        const d = document.createElement("div"); d.className = "overlay"; d.textContent = "Stuck: " + this.failMsg;
+        this.el.querySelector(".canvas").appendChild(d);
+      } else this.statusEl.innerHTML += " · goal reached";
     }
   }
 }
 
 // ---------------------------------------------------------------- page
-const GOALS = {
-  "full": "Solve the entire uniformly random cube.",
-  "1-corner": "Stage 1: solve the DRF corner (down-right-front).",
-  "2-corners": "Stage 2: DRF is solved. Also solve the DRB corner.",
-  "3-Dlayer": "Stage 3: DRF and DRB are solved. Solve the whole D (bottom) layer.",
-  "4-Uorient": "Stage 4: the D layer is solved. Also make the U (top) face one colour.",
-  "5-solved": "Stage 5: the D layer is solved and the U face is one colour. Solve the cube.",
-};
 const SHORT = { nn_lib: "NN + library", nn_nolib: "NN only", nonn_lib: "Library only", nonn_nolib: "Neither" };
+const STRAT = { stages: "Subtask curriculum", full: "Full task only" };
+const STAGE_TEXT = { "1-corner": "stage 1 (one bottom corner)", "2-corners": "stage 2 (second bottom corner)", "3-Dlayer": "stage 3 (bottom layer)",
+  "4-Uorient": "stage 4 (top face one colour)", "5-solved": "stage 5 (solve the cube)", "full": "the full solve" };
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
-let DATA, run, ARMS, sides, SLOTS, playing = false, busy = false;
-const STRAT = { stages: "Subtask curriculum", full: "Full task only" };
+let DATA, run, ARMS, side, playing = false, busy = false, cube, scr = [];
 
-function buildSides() {
-  SLOTS = [];
-  $("duel").innerHTML = ["stages", "full"].map(k => `<h3 class="strat">${STRAT[k]}</h3>` + ARMS.map(a => {
-    SLOTS.push([k, a.id]);
-    return `<div class="side ${a.id}" id="side-${k}-${a.id}">
-      <h3 class="c-${a.id}">${SHORT[a.id]}</h3>
-      <div class="canvas"></div><div class="status"></div><div class="moves"></div>
-      <details><summary>Program</summary><code class="prog"></code></details>
-    </div>`; }).join("")).join("");
-  sides = SLOTS.map(([k, id]) => new Side($(`side-${k}-${id}`)));
+// stage goals (same as src/rubik/cube2.py + tasks.py), checked on the orientation-normalized cube
+const posKey = p => p.join(",");
+const cornerSolved = (s, pos) => STICKERS.every(([p], i) => posKey(p) !== posKey(pos) || s[i] === i);
+const DRF = [1, -1, 1], DRB = [1, -1, -1], DLF = [-1, -1, 1];
+const dLayer = s => STICKERS.every(([p], i) => p[1] !== -1 || s[i] === i);
+const uOriented = s => STICKERS.every(([, n], i) => n[1] !== 1 || FACE_OF[s[i]] === "U");
+const solvedS = s => s.every((v, i) => v === i);
+const GOAL = {
+  "1-corner": s => cornerSolved(s, DRF), "2-corners": s => cornerSolved(s, DRF) && cornerSolved(s, DRB),
+  "3-Dlayer": dLayer, "4-Uorient": s => dLayer(s) && uOriented(s), "5-solved": solvedS, "full": solvedS };
+const normalize = s => applyMatrix(s, normalizingRotation(s));
+const applySeq = (s, mv) => { for (const m of mv) s = applyMove(s, m); return s; };
+
+// Use this run's own programs: per stage, the shortest stored program that reaches the stage goal.
+function solveWith(kind, armId, seed, start) {
+  const pools = DATA.runs.find(r => r.id === `${kind}_s${seed}`).arms[armId].pools;
+  let s = normalize(start); const moves = [], bounds = [], parts = [];
+  for (const g of Object.keys(pools)) {
+    if (GOAL[g](s)) { parts.push(`${g}: already done`); continue; }
+    const hit = pools[g].find(p => GOAL[g](normalize(applySeq(s, p.split(" ")))));
+    if (hit === undefined) return { moves, bounds, parts, fail: STAGE_TEXT[g], stuck: g, tried: pools[g].length };
+    const mv = hit.split(" ");
+    s = normalize(applySeq(s, mv)); moves.push(...mv); bounds.push(moves.length);
+    parts.push(`${g}: ${hit}`);
+  }
+  return { moves, bounds, parts };
+}
+
+const FACE_MOVES = ["R", "L", "U", "D", "F", "B"].flatMap(f => [f, f + "'", f + "2"]);
+function setScramble(list) {
+  scr = list; cube = applySeq(SOLVED24(), scr);
+  $("scrShow").textContent = scr.length ? `Scramble (${scr.length}): ${scr.join(" ")}` : "Solved cube. Add some moves.";
+  stop(); side.view.root.rotation.set(side.view.pitch, side.view.yaw, 0, "XYZ");
+  side.load(cube, null, { idle: "Scramble the cube, then press Solve." });
+  $("tTitle").textContent = "Your cube"; drawAll8();
+}
+const SOLVED24 = () => STICKERS.map((_, i) => i);
+function randomScramble() {
+  const out = []; let last = "";
+  while (out.length < 25) { const m = FACE_MOVES[Math.floor(Math.random() * FACE_MOVES.length)]; if (m[0] === last) continue; out.push(m); last = m[0]; }
+  return out;
+}
+function solveNow() {
+  stop();
+  const k = $("tStrat").value, a = $("tArm").value, seed = $("tSeed").value;
+  const r = solveWith(k, a, seed, cube);
+  $("tTitle").innerHTML = `<span class="c-${a}">${SHORT[a]}</span> · ${STRAT[k]} · seed ${seed}`;
+  const start = normalize(cube);
+  const sol = { moves: r.moves, boundaries: r.bounds, program: r.parts.join("\n") };
+  side.load(start, sol, r.stuck ? { fail: `none of its ${r.tried} stored programs for ${r.fail} works on this cube` } : {});
+}
+function drawAll8() {
+  if (!scr.length) { $("all8").innerHTML = "<tr><td>Scramble the cube first.</td></tr>"; return; }
+  const seed = $("tSeed").value;
+  const rows = ["stages", "full"].flatMap(k => ARMS.map(a => {
+    const r = solveWith(k, a.id, seed, cube);
+    const res = r.stuck ? `<span class="no">✗ stuck at ${r.stuck === "full" ? "full solve" : "stage " + r.stuck[0]}</span>` : `<span class="ok">✓ ${r.moves.length} moves</span>`;
+    return `<tr><td>${STRAT[k]}</td><td><b class="c-${a.id}">${SHORT[a.id]}</b></td><td>${res}</td></tr>`;
+  })).join("");
+  $("all8").innerHTML = `<tr><th>Strategy</th><th>Arm</th><th>Seed ${seed}</th></tr>` + rows;
 }
 const runOf = (k, seed) => DATA.runs.find(r => r.id === `${k}_s${seed}`);
-const solOf = (armId, name) => run.arms[armId].solutions[name];
-const slotSol = ([k, id], name) => runOf(k, $("seed").value).arms[id].solutions[name];
-function fillRuns() { $("run").innerHTML = DATA.runs.map((r, i) => `<option value="${i}">${r.label}</option>`).join(""); }
 function fillGroups() {
   $("pstage").innerHTML = Object.keys(run.arms[ARMS[0].id].policy || {}).map(g => `<option>${g}</option>`).join("");
 }
-function fillTasks() {
-  const only = $("onlyDiff").checked;
-  const ts = runOf("stages", $("seed").value).tasks.filter(t => t.split === "test" &&
-    (!only || new Set(SLOTS.map(s => !!slotSol(s, t.name))).size > 1));
-  $("task").innerHTML = ts.map(t => `<option value="${t.name}">cube ${t.name.replace("test:", "")}  (${SLOTS.filter(s => slotSol(s, t.name)).length}/8 solved)</option>`).join("");
-  loadTask();
-}
-function loadTask() {
-  stop();
-  const t = runOf("stages", $("seed").value).tasks.find(t => t.name === $("task").value);
-  if (!t) { $("goal").textContent = "No cubes match this filter."; return; }
-  $("goal").innerHTML = "Goal: solve this randomly scrambled test cube (never seen in training).";
-  SLOTS.forEach((s, i) => sides[i].load(t.start, slotSol(s, t.name)));
-}
 async function stepAll() {
   if (busy) return; busy = true;
-  const sp = +$("speed").value;
-  await Promise.all(sides.map(s => s.step(sp)));
+  await side.step(+$("speed").value);
   busy = false;
 }
 async function play() {
   if (playing) { stop(); return; }
-  if (sides.every(s => s.done)) loadTask();
+  if (!side.sol) solveNow();
+  if (side.done) solveNow();
   playing = true; $("play").textContent = "⏸ Pause";
-  while (playing && !sides.every(s => s.done)) { await stepAll(); await new Promise(r => setTimeout(r, 120 / +$("speed").value)); }
+  while (playing && !side.done) { await stepAll(); await new Promise(r => setTimeout(r, 120 / +$("speed").value)); }
   stop();
 }
 function stop() { playing = false; $("play").textContent = "▶ Play"; }
@@ -373,21 +411,31 @@ async function main() {
   FACE_OF = STICKERS.map(([, n]) => { const ax = n.findIndex(v => v); return Object.keys(FACES).find(f => FACES[f][0] === ax && FACES[f][1] === n[ax]); });
   buildRotations();
   ARMS = DATA.arms;
-  buildSides();
-  fillRuns();
+  side = new Side($("tside"));
+  $("tArm").innerHTML = ARMS.map(a => `<option value="${a.id}">${SHORT[a.id]}</option>`).join("");
+  $("pad").innerHTML = FACE_MOVES.map(m => `<button data-m="${m}">${m}</button>`).join("");
+  $("pad").onclick = e => { const m = e.target.dataset && e.target.dataset.m; if (m) setScramble([...scr, m]); };
+  $("randomScr").onclick = () => setScramble(randomScramble());
+  $("undoScr").onclick = () => setScramble(scr.slice(0, -1));
+  $("resetScr").onclick = () => setScramble([]);
+  $("applyScr").onclick = () => {
+    const toks = $("scrText").value.replace(/’/g, "'").trim().split(/\s+/).filter(Boolean);
+    const bad = toks.filter(t => !FACE_MOVES.includes(t));
+    if (bad.length) { $("scrShow").textContent = `Unknown move(s): ${bad.join(" ")}. Use R L U D F B with ' or 2.`; return; }
+    setScramble(toks);
+  };
+  $("solve").onclick = solveNow;
+  $("tSeed").onchange = drawAll8;
+  $("reset").onclick = () => side.sol ? solveNow() : null;
+  $("play").onclick = play;
+  $("step").onclick = () => { stop(); if (!side.sol) solveNow(); stepAll(); };
+  $("run").innerHTML = DATA.runs.map((r, i) => `<option value="${i}">${r.label}</option>`).join("");
   $("run").onchange = selectRun;
-  $("seed").onchange = fillTasks;
-  $("onlyDiff").onchange = fillTasks;
-  $("task").onchange = loadTask;
   $("pstage").onchange = drawPolicy;
   $("libarm").onchange = drawLibrary;
-  $("random").onclick = () => { const o = $("task").options; if (o.length) { $("task").selectedIndex = Math.floor(Math.random() * o.length); loadTask(); } };
-  $("reset").onclick = loadTask;
-  $("play").onclick = play;
-  $("step").onclick = () => { stop(); stepAll(); };
   drawSummary();
   selectRun();
-  $("onlyDiff").checked = true; fillTasks();
   $("pstage").value = "5-solved"; drawPolicy();
+  setScramble(randomScramble());
 }
 main();

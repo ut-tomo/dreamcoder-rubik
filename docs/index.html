@@ -15,10 +15,61 @@
         <div class="header-content">
             <h1 class="site-title">2×2×2 Cube by DreamCoder</h1>
         </div>
-        <nav class="site-nav"><a href="#setup">Setup</a><a href="#results">Results</a><a href="#demo">Watch them solve</a><a href="#policy">What each arm learned</a></nav>
+        <nav class="site-nav"><a href="#try">Try it</a><a href="#setup">Setup</a><a href="#results">Results</a><a href="#policy">What each arm learned</a></nav>
     </header>
 
     <main class="main-content">
+        <section id="try" class="content-section">
+            <div class="section-inner">
+                <h2>Try It: Can the Model Solve Your Cube?</h2>
+                <p>Scramble the cube yourself or randomly, pick a trained model, and press <b>Solve</b>.</p>
+                <div class="controls">
+                    <span class="lbl">Scramble</span>
+                    <div class="pad" id="pad"></div>
+                    <button id="randomScr">🎲 Random scramble</button>
+                    <button id="undoScr">↶ Undo</button>
+                    <button id="resetScr">Reset to solved</button>
+                </div>
+                <div class="controls">
+                    <label>Or type moves <input id="scrText" placeholder="e.g. R U R' F2 D L'" size="28"></label>
+                    <button id="applyScr">Apply</button>
+                    <span class="small" id="scrShow"></span>
+                </div>
+                <div class="controls">
+                    <label>Training strategy <select id="tStrat"><option value="stages">Subtask curriculum</option><option value="full">Full task only</option></select></label>
+                    <label>Arm <select id="tArm"></select></label>
+                    <label>Seed <select id="tSeed"><option>0</option><option>1</option><option>2</option></select></label>
+                    <button id="solve" class="primary">▶ Solve</button>
+                </div>
+                <div class="try-grid">
+                    <div class="side" id="tside">
+                        <h3 id="tTitle">Your cube</h3>
+                        <div class="canvas big"></div><div class="status"></div><div class="moves"></div>
+                        <details><summary>Stages</summary><code class="prog"></code></details>
+                        <div class="player">
+                            <button id="reset">⏮ Reset</button>
+                            <button id="play">▶ Play</button>
+                            <button id="step">Step ⏭</button>
+                            <label>Speed <input type="range" id="speed" min="0.25" max="4" step="0.25" value="1"></label>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>All 8 configurations on this cube</h3>
+                        <table class="summary" id="all8"></table>
+                        <p class="small" style="margin-top:12px">Drag the cube to look around.</p>
+                    </div>
+                </div>
+                <div class="goal" style="margin-top:18px"><b>How this works.</b> The site is static, so it cannot rerun the training search in your browser.
+                Instead it uses every program the chosen run found during its training and testing. For the subtask models, the page goes stage by stage (1 corner → 2 corners → bottom layer → top colour → solved).
+                At each stage it tries that run's own stage programs, shortest first, and keeps the first one that actually reaches the stage goal on your cube.
+                Each program is checked by simulating it. If none works, the model is <b>stuck</b> at that stage.
+                For full-task models there is only one stage, the whole solve.
+                On 1,000 fresh random cubes this reproduces the results table closely (library arms: 94–100%; no-library arms: 8–24%; full task: 0%).
+                The live search could occasionally solve a case that none of the stored programs covers, so these numbers are a slight underestimate.
+                The cube is first turned as a whole so its back-left-bottom corner is in place. A 2×2×2 has no centre pieces, so this corner defines the orientation.</div>
+            </div>
+        </section>
+
         <section id="setup" class="content-section">
             <div class="section-inner">
                 <h2>Setup</h2>
@@ -94,31 +145,6 @@ Each stage's training tasks start from a random state in which the earlier stage
                         <h3>E2E cubes surviving each stage <span class="small" id="bars-run"></span></h3>
                         <svg id="bars" viewBox="0 0 420 250"></svg>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo" class="content-section">
-            <div class="section-inner">
-                <h2>Watch Them Solve</h2>
-                <p>Pick a seed and one of the 100 test cubes. All 8 configurations (top row: subtask curriculum, bottom row: full task only) start from the same scrambled state. Stage solutions turn the whole cube between stages so the fixed corner is back in place, exactly as in evaluation. Every move sequence shown was replay-verified.</p>
-
-                <div class="controls">
-                    <label>Seed <select id="seed"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select></label>
-                    <label>Test cube <select id="task"></select></label>
-                    <button id="random">🎲 Random</button>
-                    <label class="chk"><input type="checkbox" id="onlyDiff"> only cubes where the configurations disagree</label>
-                </div>
-
-                <div class="goal" id="goal"></div>
-                <div class="duel" id="duel"></div>
-
-                <div class="player">
-                    <button id="reset">⏮ Reset</button>
-                    <button id="play">▶ Play</button>
-                    <button id="step">Step ⏭</button>
-                    <label>Speed <input type="range" id="speed" min="0.25" max="4" step="0.25" value="1"></label>
-                    <span class="hint">Drag a cube to look around. At stage boundaries and the end, the whole cube turns so the back-left-bottom corner is home (goals are checked up to orientation).</span>
                 </div>
             </div>
         </section>

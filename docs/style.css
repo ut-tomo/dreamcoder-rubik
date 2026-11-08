@@ -146,3 +146,14 @@ table.summary td b { font-size: 1.05em; }
 
 .card.wide { overflow-x: auto; }
 table.summary { white-space: nowrap; }
+
+.pad { display: grid; grid-template-columns: repeat(9, auto); gap: 4px; }
+.pad button { padding: 4px 8px; min-width: 40px; font-family: 'Fira Code', Consolas, monospace; }
+.lbl { font-weight: 600; }
+input { font: inherit; padding: 6px 10px; border: 1px solid #d1d5db; border-radius: 8px; }
+button.primary { background: #ffc107; }
+.try-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 18px; align-items: start; }
+.try-grid .side { border-top-color: #303e61; }
+.canvas.big { aspect-ratio: auto; height: 380px; }
+.moves .stage-sep { color: #999; margin: 0 4px; }
+@media (max-width: 800px) { .try-grid { grid-template-columns: 1fr; } .pad { grid-template-columns: repeat(6, auto); } }
