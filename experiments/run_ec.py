@@ -91,10 +91,13 @@ params = dict(solver="pyfast", compressor="pyvs", useRecognitionModel=rec, noCon
               storeTaskMetrics=False)
 def write_manifest():
     import hashlib, platform, subprocess as sp
-    try:
-        commit = sp.run(["git", "-C", ROOT, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
-    except Exception:
-        commit = None
+    commit = os.environ.get("SOURCE_COMMIT")  # the shared server copy is not a git checkout
+    if not commit:
+        try:
+            commit = sp.run(["git", "-C", ROOT, "rev-parse", "HEAD"], stdout=sp.PIPE, stderr=sp.PIPE,
+                            universal_newlines=True).stdout.strip() or None
+        except Exception:
+            commit = None
     m = {"args": vars(a), "params": {k: (v if isinstance(v, (int, float, str, bool, type(None))) else str(v))
                                       for k, v in params.items()},
          "train_tasks": [t.name for t in tasks],
