@@ -55,7 +55,7 @@ def primitives(variant="ruf"):
 
 
 def register_all():
-    """Entry point for the PyPy solver/compressor processes (PYEC_PRIMITIVE_MODULES=rubik.ec_domain:register_all)."""
+    """Entry point for the PyPy solver/compressor processes (PYREPRO_PRIMITIVE_MODULES=rubik.ec_domain:register_all)."""
     primitives("ruf")
     register_helmholtz()
 
@@ -65,7 +65,7 @@ def cube_helmholtz_hash(timeout, request, inputs):
     Dreaming.ml): a program's behaviour is the permutation it applies; programs with the same permutation
     share one dream frontier (exact sticker permutation, not reduced modulo whole-cube rotation, like the
 official hashes which use raw outputs). The identity has no use as a dream and is dropped."""
-    from pyec.helmholtz import run_with_timeout
+    from pyrepro.helmholtz import run_with_timeout
 
     def h(p):
         ok, a = run_with_timeout(timeout, lambda: p.evaluate([]))
@@ -80,7 +80,7 @@ official hashes which use raw outputs). The identity has no use as a dream and i
 
 def register_helmholtz():
     try:
-        from pyec.helmholtz import register_special_helmholtz
+        from pyrepro.helmholtz import register_special_helmholtz
     except ImportError:
         return
     register_special_helmholtz("cube", cube_helmholtz_hash)
@@ -180,7 +180,7 @@ def make_feature_extractor():
     register_helmholtz()
 
     class CubeFeatureExtractor(nn.Module):
-        special = "cube"  # pyec.helmholtz behaviour hash (only used with --biasOptimal)
+        special = "cube"  # pyrepro.helmholtz behaviour hash (only used with --biasOptimal)
 
         def __init__(self, tasks, testingTasks=[], cuda=False):
             super(CubeFeatureExtractor, self).__init__()

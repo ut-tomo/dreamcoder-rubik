@@ -1,4 +1,4 @@
-"""v5: the 8 cube arms on the official DreamCoder frontend (pydreamcoder/ec = ellisk42/ec @ cb0e63f, Python)
+"""v5: the 8 cube arms on the official DreamCoder frontend (validated dreamcoder-pyrepro/ec = ellisk42/ec @ cb0e63f, Python)
 with the faithful pure-Python solver (pyfast) and compressor (pyvs).
 
     arms: recognition (contextual/bigram network, official) on/off  x  library learning (compression) on/off
@@ -18,12 +18,14 @@ stages: 5 chained stage tasks with 5 s each; full: one 25 s search.
 import argparse, collections, json, math, os, random, sys, time
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-PD = os.path.join(ROOT, "pydreamcoder")
+PD = os.path.abspath(os.environ.get("DREAMCODER_BACKEND_ROOT", os.path.join(ROOT, "..", "dreamcoder-pyrepro")))
+if not os.path.isfile(os.path.join(PD, "pyrepro", "backend.py")):
+    raise RuntimeError("DREAMCODER_BACKEND_ROOT must point to the validated dreamcoder-pyrepro checkout")
 for p in (os.path.join(ROOT, "src"), PD, os.path.join(PD, "ec")):
     if p not in sys.path:
         sys.path.insert(0, p)
-os.environ.setdefault("PYEC_PRIMITIVE_MODULES", "rubik.ec_domain:register_all")
-os.environ["PYEC_EXTRA_PATH"] = os.path.join(ROOT, "src")
+os.environ.setdefault("PYREPRO_PRIMITIVE_MODULES", "rubik.ec_domain:register_all")
+os.environ["PYREPRO_EXTRA_PATH"] = os.path.join(ROOT, "src")
 sys.setrecursionlimit(20000)
 
 from dreamcoder.dreamcoder import ecIterator  # noqa: E402
@@ -47,9 +49,13 @@ ap.add_argument("-RS", "--recognitionSteps", type=int, default=5000)
 ap.add_argument("-R", "--recognitionTimeout", type=int, default=3600)
 ap.add_argument("--seed", type=int, default=0)
 ap.add_argument("--biasOptimal", action="store_true",
-                help="bias-optimal recognition training with Helmholtz dreams from pyec.helmholtz")
+                help="bias-optimal recognition training with Helmholtz dreams from pyrepro.helmholtz")
 ap.add_argument("--out", required=True)
 a = ap.parse_args()
+if a.biasOptimal:
+    os.environ["PYREPRO_HELMHOLTZ"] = "1"
+else:
+    os.environ.pop("PYREPRO_HELMHOLTZ", None)
 
 def seed_everything(seed):
     """Python, NumPy and PyTorch RNGs (the official frontend only seeds its task batcher). Wall-clock
@@ -104,8 +110,9 @@ def write_manifest():
          "train_tasks_sha1": hashlib.sha1("\n".join(D.state_key(t) for t in tasks).encode()).hexdigest()
          if hasattr(D, "state_key") else None,
          "e2e_sha1": hashlib.sha1(repr(E2E).encode()).hexdigest(),
-         "git_commit": commit, "host": platform.node(), "python": sys.version,
-         "pypy": os.environ.get("PYEC_PYPY"), "started": time.strftime("%Y-%m-%dT%H:%M:%S")}
+         "git_commit": commit, "backend_root": PD,
+         "backend_commit": sp.check_output(["git", "-C", PD, "rev-parse", "HEAD"]).decode().strip(), "host": platform.node(), "python": sys.version,
+         "pypy": os.environ.get("PYREPRO_PYPY"), "started": time.strftime("%Y-%m-%dT%H:%M:%S")}
     json.dump(m, open(a.out[:-5] + ".manifest.json", "w"), indent=1)
 
 
