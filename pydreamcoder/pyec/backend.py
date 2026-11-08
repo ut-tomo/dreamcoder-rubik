@@ -122,11 +122,22 @@ def solveForTask_pyfast(_=None, elapsedTime=0., CPUs=1, g=None, tasks=None, lowe
         msg = _dumps({"g": g, "tasks": tasks, "maximumFrontiers": mfs, "lowerBound": lowerBound,
                       "upperBound": upperBound, "budgetIncrement": budgetIncrement, "timeout": timeout,
                       "nc": CPUs, "evaluationTimeout": evaluationTimeout, "sent_at": time.time()})
-        s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-        s.connect(_SERVER["path"])
-        send_msg(s, msg)
-        hits, pc = _loads(recv_msg(s))
-        s.close()
+        t_job = time.time()
+        try:
+            s = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+            s.connect(_SERVER["path"])
+            send_msg(s, msg)
+            hits, pc = _loads(recv_msg(s))
+            s.close()
+        except (EOFError, OSError) as e:
+            # The PyPy worker can die from interpreter-level faults (observed: "Fatal RPython error:
+            # AssertionError" in the JIT). The algorithm is interpreter-independent, so redo this job
+            # in-process under CPython with the remaining time budget instead of aborting the run.
+            eprint("(pyec) PyPy solver worker failed (%r); rerunning this job in-process" % (e,))
+            from pyec.enumerator import enumerate_for_tasks
+            hits, pc = enumerate_for_tasks(g, tasks, mfs, lowerBound, upperBound, budgetIncrement,
+                                           max(0., timeout - (time.time() - t_job)), nc=CPUs,
+                                           evaluationTimeout=evaluationTimeout)
     elif use_pypy:
         msg = _dumps({"g": g, "tasks": tasks, "maximumFrontiers": mfs, "lowerBound": lowerBound,
                           "upperBound": upperBound, "budgetIncrement": budgetIncrement, "timeout": timeout,

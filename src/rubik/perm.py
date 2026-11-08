@@ -155,6 +155,9 @@ class Alg(tuple):
     def __repr__(self):
         return " ".join(self[1]) or "(id)"
 
+    def __reduce__(self):  # picklable (tuple subclass with a 2-argument __new__)
+        return (Alg, (self[0], self[1]))
+
 
 def move(m):
     return Alg(FACE_TURNS[m], (m,))
