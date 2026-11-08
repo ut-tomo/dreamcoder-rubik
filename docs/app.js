@@ -182,7 +182,7 @@ class Side {
     this.progEl = el.querySelector(".prog");
   }
   load(start, sol, opts = {}) {
-    this.start = start; this.sol = sol; this.i = 0; this.state = start.slice(); this.reoriented = false;
+    this.start = start; this.sol = sol; this.i = 0; this.state = start.slice(); this.reoriented = false; this.preoriented = false;
     this.failMsg = opts.fail || null;
     this.view.setState(this.state);
     const ov = this.el.querySelector(".overlay"); if (ov) ov.remove();
@@ -206,12 +206,30 @@ class Side {
     this.movesEl.innerHTML = sol.moves.map(m => `<span>${m}</span>`).join(" ") || "<i>(no moves)</i>";
     this.progEl.textContent = sol.program;
   }
+  note(t) {
+    let n = this.el.querySelector(".note");
+    if (!n) { n = document.createElement("div"); n.className = "note small"; this.statusEl.after(n); }
+    n.textContent = t; clearTimeout(this._nt); this._nt = setTimeout(() => { n.textContent = ""; }, 2500);
+  }
   get done() { return !this.sol || (this.i >= this.sol.moves.length && this.reoriented); }
   highlight() {
     [...this.movesEl.children].forEach((s, k) => { s.className = k < this.i - 1 ? "done" : k === this.i - 1 ? "cur" : ""; });
   }
   async step(speed) {
     if (this.done) return;
+    if (!this.preoriented) {
+      // the solver works on the cube held with its back-left-bottom corner in place; turn the whole cube
+      // there visibly instead of silently recolouring it
+      this.preoriented = true;
+      const M = normalizingRotation(this.state);
+      if (!isIdentity(M)) {
+        this.note("turning the whole cube (not a move) so the back-left-bottom corner is in its home spot");
+        await this.view.animate(matrixQuat(M), null, 700 / speed);
+        this.state = applyMatrix(this.state, M);
+        this.view.setState(this.state);
+      }
+      return;
+    }
     if (this.i < this.sol.moves.length) {
       const m = this.sol.moves[this.i++], pm = parseMove(m);
       this.highlight();
@@ -219,7 +237,9 @@ class Side {
       this.state = applyMove(this.state, m);
       if ((this.sol.boundaries || []).includes(this.i)) {
         const M = normalizingRotation(this.state);
+        this.view.setState(this.state);
         if (!isIdentity(M)) {
+          this.note("stage done; turning the whole cube (not a move) back to the reference orientation");
           await this.view.animate(matrixQuat(M), null, 600 / speed);
           this.state = applyMatrix(this.state, M);
         }
@@ -298,7 +318,7 @@ function solveNow() {
   const k = $("tStrat").value, a = $("tArm").value, seed = $("tSeed").value;
   const r = solveWith(k, a, seed, cube);
   $("tTitle").innerHTML = `<span class="c-${a}">${SHORT[a]}</span> · ${STRAT[k]} · seed ${seed}`;
-  const start = normalize(cube);
+  const start = cube.slice();
   const sol = { moves: r.moves, boundaries: r.bounds, program: r.parts.join("\n") };
   side.load(start, sol, r.stuck ? { fail: `none of its ${r.tried} stored programs for ${r.fail} works on this cube` } : {});
 }
