@@ -87,7 +87,7 @@ os.makedirs(os.path.dirname(os.path.abspath(a.out)), exist_ok=True)
 ckdir = a.out[:-5] + "_ckpt"
 os.makedirs(ckdir, exist_ok=True)
 
-params = dict(solver="pyfast", compressor="pyvs", useRecognitionModel=rec, noConsolidation=not lib,
+params = dict(cuda=False, solver="pyfast", compressor="pyvs", useRecognitionModel=rec, noConsolidation=not lib,
               contextual=rec, biasOptimal=rec and a.biasOptimal, auxiliaryLoss=rec, recognitionSteps=a.recognitionSteps,
               recognitionTimeout=a.recognitionTimeout, helmholtzRatio=0.5,
               featureExtractor=D.make_feature_extractor() if rec else None, activation="tanh",
