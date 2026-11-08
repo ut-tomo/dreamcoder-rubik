@@ -22,38 +22,60 @@
         <section id="setup" class="content-section">
             <div class="section-inner">
                 <h2>Setup</h2>
+<h3>The idea in one paragraph</h3>
+<p>Instead of training a network that outputs moves, DreamCoder <b>writes small programs</b> that turn a scrambled cube into a goal state.
+It repeats three phases for 20 rounds:</p>
+<ol>
+<li><b>Wake (search):</b> for each training task, try programs from most to least likely under the current "grammar" (a probability for each building block), until one reaches the goal or the time budget runs out.</li>
+<li><b>Abstraction (library learning):</b> look at all solutions found so far, find sub-programs that keep recurring, and add them to the language as new named routines (shown as <code>#(…)</code>). Later searches can then use a whole routine as one step, so long solutions become short programs.</li>
+<li><b>Dreaming (neural guidance):</b> train a recognition network that looks at a cube and predicts which building blocks are likely to be useful, so the next search tries them first.</li>
+</ol>
+<p>Search can only learn from tasks it actually solves. If nothing is solved, there is nothing to compress into routines and no real examples to train the network on. This is why the choice of training tasks matters so much below.</p>
 
-               <p>DreamCoder-style learning alternates program search (wake), symbolic MDL library compression (abstraction), and neural training on solved tasks and synthetic fantasies (dreaming). We compare staged and full-cube training on the 2×2×2. We switch the two learning mechanisms on and off, giving four arms:</p>
-                <ul>
-                    <li><b class="c-nn_lib">NN + library</b>: both learning mechanisms.</li>
-                    <li><b class="c-nn_nolib">NN only</b>: recognition network, but the DSL never grows.</li>
-                    <li><b class="c-nonn_lib">Library only</b>: the DSL grows, and search uses one learned distribution for every task.</li>
-                    <li><b class="c-nonn_nolib">Neither</b>: plain best-first enumeration over the base primitives.</li>
-                </ul>
-                <p>
-                    Moves use Singmaster notation: <span class="notation-snippet">R</span> turns the right face clockwise,
-                    <span class="notation-snippet">R'</span> turns it counterclockwise, <span class="notation-snippet">R2</span> is a half turn.
-                </p>
-            <ul>
-                    <li><b>Programs</b> have a single type, <code>alg</code>: a move sequence treated as a permutation of the 24 stickers.
-                        Running a program applies it to the task's start state.</li>
-                    <li><b>Primitives</b>: face turns <span class="notation-snippet">R U F</span>, the combinators
-                        <code>seq inv setup comm</code>, and the whole-cube symmetries <code>x y z mirror</code> (48 symmetries in total).
-                        No colours, pieces or human solving methods are built in.</li>
-                    <li><b>Invariance</b>: states are compared up to how the whole cube is held. Before a goal is checked, the cube is turned so
-                        the DLB corner is home.</li>
-                    <li><b>Stages</b> (chained subgoals): 1 DRF corner → 2 + DRB corner → 3 whole D layer → 4 + U face one colour → 5 solved.
-                        Each stage starts from a random state where the earlier stages are already done. 24 distinct tasks per stage, except stage 5 (23 possible unsolved starts).</li>
-                                        <li><b>Recognition network</b> (NN arms): an MLP (2 hidden layers of 128, ReLU). The input is the colour of each of the 24 sticker slots (one-hot)
-                        plus the stage id. The output is one log-weight per DSL entry, giving a task-specific unigram grammar (as in the paper's unigram model).
-                        It is trained after every round for 800 Adam steps on <i>replays</i> (solved training tasks and their programs) and
-                        2000 <i>fantasies</i>: a program is sampled from the current DSL, a goal-satisfying end state G is drawn, and the task starts
-                        from G·p⁻¹, so the program is known to solve it. Loss: −log P(program | predicted grammar).</li>
-                    <li><b>Compute matching</b>: NN arms enumerate separately for each task (5 s per task, under that task's predicted grammar).
-                        Plain arms enumerate once for all tasks together, for 5 s × number of tasks. Round 1 of the NN arms uses plain search, because no network is trained yet.</li>
-                    <li><b>Settings</b>: 20 rounds, best 3 programs kept per task, at most 3 new routines per round, structure penalty 1.0.
-                        Stages: 119 training tasks; full-task strategy: 120 uniformly random training cubes. Test: the same 100 distinct random cubes (seed 9999), excluded from all training sets. Three training seeds: 0, 1, 2.</li>
-                </ul><p><b>Two training strategies:</b> stages learns five chained subgoals; full learns only random-cube → solved. End-to-end evaluation chains stage solvers, reorienting after each stage, or searches once for a full solution. NN search receives up to 5 s per stage or 25 s per full cube. Plain search pools that budget across the batch; these are aggregate wall-time budgets, not equal enumeration counts or total training costs.</p><p>This is a pure-Python DreamCoder-style reimplementation, not the official engine: unigram grammar/recognition and simplified MDL compression. No human algorithm library is provided. Search order is learned; expanded move count is not the objective.</p>
+<h3>The four arms</h3>
+<p>We switch abstraction and neural guidance on and off independently:</p>
+<ul>
+<li><b class="c-nn_lib">NN + library</b>: full DreamCoder.</li>
+<li><b class="c-nn_nolib">NN only</b>: the network guides search, but the language never gains new routines.</li>
+<li><b class="c-nonn_lib">Library only</b>: the language grows, but every task is searched with the same learned probabilities.</li>
+<li><b class="c-nonn_nolib">Neither</b>: plain enumeration over the base building blocks, which is a brute-force baseline.</li>
+</ul>
+
+<h3>Two training strategies</h3>
+<ul>
+<li><b>Full task only:</b> 120 random scrambled cubes, each with the goal "solved". The model has to discover a whole solution at once.</li>
+<li><b>Subtask curriculum ("stages"):</b> solving is split into five chained subgoals, roughly how a beginner solves the cube:
+<ol>
+<li>place one bottom corner (DRF),</li>
+<li>place a second bottom corner (DRB),</li>
+<li>complete the whole bottom layer,</li>
+<li>make the top face one colour,</li>
+<li>solve the cube.</li>
+</ol>
+Each stage's training tasks start from a random state in which the earlier stages are already done. There are 24 tasks per stage (stage 5 has only 23 possible starts), 119 tasks in total. Only the subgoal definitions are given. The model is not told how to reach them.</li>
+</ul>
+
+<h3>How we test</h3>
+<p>Every run is evaluated on the <b>same 100 random scrambled cubes</b>, none of which appear in any training set. A cube counts as solved only if it ends fully solved. In the stage strategy, the learned solvers are chained: stage 1's program runs, then stage 2's program runs on the result, and so on. If any stage fails, the cube fails. We report how many of the 100 cubes are solved and the average solution length in face turns. Each configuration is trained with 3 seeds (0, 1, 2).</p>
+
+<h3>The cube language (DSL)</h3>
+<p>Moves use standard notation: <span class="notation-snippet">R</span> turns the right face clockwise, <span class="notation-snippet">R'</span> counterclockwise, <span class="notation-snippet">R2</span> a half turn.</p>
+<ul>
+<li>A program is a move sequence. Running it applies it to the task's starting cube.</li>
+<li>Building blocks: the face turns <span class="notation-snippet">R U F</span>, plus four ways to combine sequences:
+<code>seq a b</code> (do a, then b), <code>inv a</code> (undo a), <code>setup a b</code> = a b a⁻¹, and <code>comm a b</code> = a b a⁻¹ b⁻¹ (the commutator, a classic cube-solving tool).
+<code>x y z mirror</code> apply a sequence from another side, or mirrored.</li>
+<li>No piece names, colours or human algorithms are built in.</li>
+<li>Goals are checked regardless of how the whole cube is held. Before each check, the cube is rotated so its back-left-bottom corner is in place. A 2×2×2 has no centre pieces, so this corner fixes the orientation.</li>
+</ul>
+
+<h3>Model and hyperparameters</h3>
+<ul>
+<li><b>Recognition network</b> (NN arms): an MLP with 2 hidden layers of 128 units (ReLU). Input: the colour of each of the 24 stickers (one-hot) plus the stage id. Output: one weight per building block, giving a probability for each block that depends on the cube in front of it. After every round it is trained for 800 Adam steps on solved tasks plus 2000 "dreams": a random program is sampled from the current language and run backwards from a goal state, which gives a task whose solution is known.</li>
+<li><b>Search budget:</b> 5 s per task (NN arms search each task separately; the other arms search all tasks together with the same total time). At test time: 5 s per stage, or 25 s per cube for the full strategy.</li>
+<li><b>Library:</b> at most 3 new routines per round, best 3 programs kept per task, structure penalty 1.0.</li>
+<li><b>Implementation:</b> a pure-Python reimplementation of DreamCoder (unigram grammar, simplified compression), checked against the official OCaml code on its list-processing benchmark. It is not the official engine.</li>
+</ul>
             </div>
         </section>
 
