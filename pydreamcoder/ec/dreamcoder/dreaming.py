@@ -14,6 +14,10 @@ from dreamcoder.utilities import tuplify, timing, eprint, get_root_dir, mean
 def helmholtzEnumeration(g, request, inputs, timeout, _=None,
                          special=None, evaluationTimeout=None):
     """Returns json (as text)"""
+    if os.environ.get("PYEC_HELMHOLTZ"):
+        from pyec.helmholtz import helmholtzEnumeration as pyecHelmholtzEnumeration
+        return pyecHelmholtzEnumeration(g, request, inputs, timeout, special=special,
+                                        evaluationTimeout=evaluationTimeout)
     message = {"request": request.json(),
                "timeout": timeout,
                "DSL": g.json(),

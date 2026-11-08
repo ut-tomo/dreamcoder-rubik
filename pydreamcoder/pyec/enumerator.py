@@ -213,12 +213,66 @@ class CG(object):
             self.contextual = {}
             for l, t, p in g.productions:
                 self.contextual[p] = [G0] * len(arguments_of(from_official(t)))
-        for pr in self.no_context.library:
-            if pr.program.isPrimitive and pr.program.name == "REAL":
-                raise NotImplementedError("free parameters (REAL) not supported by this port")
-        if any(p.isPrimitive and p.name in ("fix1", "fix2") for _, _, p in
-               (g.noParent.productions if isinstance(g, ContextualGrammar) else g.productions)):
-            raise NotImplementedError("recursion primitives (fix1/fix2 enumeration) not ported")
+        prods = g.noParent.productions if isinstance(g, ContextualGrammar) else g.productions
+        # names of recursion primitives present (OCaml grammar_has_recursion tests no_context only)
+        self.recursion = {p.name for _, _, p in prods if p.isPrimitive and p.name in ("fix1", "fix2")}
+        # OCaml number_of_free_parameters counts these primitives; pruning only matters if present
+        self.has_free_parameters = any(p.isPrimitive and p.name in FREE_PARAMETER_PRIMITIVES
+                                       for _, _, p in prods)
+
+
+FREE_PARAMETER_PRIMITIVES = ("REAL", "STRING", "r_const")
+
+
+def number_of_free_parameters(p):
+    """program.ml number_of_free_parameters"""
+    if p.isPrimitive:
+        return 1 if p.name in FREE_PARAMETER_PRIMITIVES else 0
+    if p.isInvented:
+        return number_of_free_parameters(p.body)
+    if p.isAbstraction:
+        return number_of_free_parameters(p.body)
+    if p.isApplication:
+        return number_of_free_parameters(p.f) + number_of_free_parameters(p.x)
+    return 0
+
+
+def recursive_request(cg, request):
+    """enumeration.ml enumerate_programs: request' = request -> request when the grammar has fix<arity>.
+    Returns (request', number_of_arguments or 0)."""
+    n = len(arguments_of(request))
+    if ("fix%d" % n) in cg.recursion:
+        return ('->', request, request), n
+    return request, 0
+
+
+def _bound_at_height0(body, depth=0):
+    """program.ml variable_is_bound ~height:0"""
+    if body.isIndex:
+        return body.i == depth
+    if body.isAbstraction:
+        return _bound_at_height0(body.body, depth + 1)
+    if body.isApplication:
+        return _bound_at_height0(body.f, depth) or _bound_at_height0(body.x, depth)
+    return False
+
+
+def unfix(p, n):
+    """the k' continuation of enumerate_programs: re-insert the fix point operator at the top level"""
+    if not n:
+        return p
+    from dreamcoder.program import Primitive
+    if not p.isAbstraction:
+        raise Exception("enumerated recursive definition that does not start with a lambda")
+    body = p.body
+    if not _bound_at_height0(body):
+        return body  # remove unused recursion
+    if n == 1:
+        return Abstraction(Application(Application(Primitive.GLOBALS["fix1"], Index(0)), p))
+    if n == 2:
+        return Abstraction(Abstraction(Application(Application(Application(
+            Primitive.GLOBALS["fix2"], Index(1)), Index(0)), p)))
+    raise Exception("number_of_arguments not supported by fix point")
 
 
 def lse(xs):
@@ -708,14 +762,29 @@ def make_scorer(tasks, timeout):
     return score
 
 
+def make_post(cg, nrec, mfp):
+    """Program post-processing shared by every enumeration path: maxFreeParameters filter (equivalent to
+    OCaml's incremental pruning, since the count only grows along a derivation) and the fix-point rewrite."""
+    prune = cg.has_free_parameters and mfp is not None
+
+    def post(p):
+        if prune and number_of_free_parameters(p) > mfp:
+            return None
+        return unfix(p, nrec)
+    return post
+
+
 def _run_fringe(args):
-    (cg, lb, ub, states, tasks, maxfs, eval_timeout, deadline, start) = args
+    (cg, lb, ub, states, tasks, maxfs, eval_timeout, deadline, start, post) = args
     hits = [Hits(m) for m in maxfs]
     en = Enumerator(cg, deadline)
     count = [0]
     score = make_scorer(tasks, eval_timeout)
 
     def k(p, prior):
+        p = post(p)
+        if p is None:
+            return
         count[0] += 1
         for j, ll in enumerate(score(p)):
             if ll > NEG_INF and ll == ll:
@@ -732,18 +801,22 @@ _POOL_ARGS = None
 
 
 def _pool_run(i):
-    cg, lb, ub, fringe, tasks, maxfs, et, deadline, start = _POOL_ARGS
-    return _run_fringe((cg, lb, ub, [fringe[i]], tasks, maxfs, et, deadline, start))
+    cg, lb, ub, fringe, tasks, maxfs, et, deadline, start, post = _POOL_ARGS
+    return _run_fringe((cg, lb, ub, [fringe[i]], tasks, maxfs, et, deadline, start, post))
 
 
 def enumerate_for_tasks(g, tasks, maxFrontiers, lowerBound, upperBound, budgetIncrement, timeout, nc=1,
-                        evaluationTimeout=None, shatter_factor=10):
+                        evaluationTimeout=None, shatter_factor=10, maxFreeParameters=99):
     """Returns ([[hit dicts]] per task, number enumerated)."""
     global _POOL_ARGS
     start = time.time()
     deadline = start + timeout
     cg = CG(g)
-    request = from_official(tasks[0].request)
+    # enumeration.py sends maxParameters only when the task defines it; solver.ml defaults to 99
+    if getattr(tasks[0], 'maxParameters', None) is not None:
+        maxFreeParameters = tasks[0].maxParameters
+    request, nrec = recursive_request(cg, from_official(tasks[0].request))
+    post = make_post(cg, nrec, maxFreeParameters)
     hits = [Hits(m) for m in maxFrontiers]
     total = 0
     lb = lowerBound
@@ -756,14 +829,15 @@ def enumerate_for_tasks(g, tasks, maxFrontiers, lowerBound, upperBound, budgetIn
         results = []
         if nc > 1 and len(fringe) > 1:
             import multiprocessing as mp
-            _POOL_ARGS = (cg, lb, ub, fringe, tasks, maxFrontiers, evaluationTimeout, deadline, start)
+            _POOL_ARGS = (cg, lb, ub, fringe, tasks, maxFrontiers, evaluationTimeout, deadline, start, post)
             with mp.get_context('fork').Pool(nc) as pool:
                 results = list(pool.imap_unordered(_pool_run, range(len(fringe)), chunksize=1))
             _POOL_ARGS = None
         else:
-            results = [_run_fringe((cg, lb, ub, fringe, tasks, maxFrontiers, evaluationTimeout, deadline, start))]
+            results = [_run_fringe((cg, lb, ub, fringe, tasks, maxFrontiers, evaluationTimeout, deadline, start,
+                                    post))]
         # finished programs from the best-first phase are evaluated by the parent
-        fin = _run_fringe_finished(finished, tasks, maxFrontiers, evaluationTimeout, start)
+        fin = _run_fringe_finished(finished, tasks, maxFrontiers, evaluationTimeout, start, post)
         results.append(fin)
         for heaps, n in results:
             total += n
@@ -781,12 +855,14 @@ def enumerate_for_tasks(g, tasks, maxFrontiers, lowerBound, upperBound, budgetIn
     return out, total
 
 
-def _run_fringe_finished(finished, tasks, maxfs, eval_timeout, start):
+def _run_fringe_finished(finished, tasks, maxfs, eval_timeout, start, post):
     hits = [Hits(m) for m in maxfs]
     n = 0
     score = make_scorer(tasks, eval_timeout)
     for s in finished:
-        p = _to_program(s.skeleton)
+        p = post(_to_program(s.skeleton))
+        if p is None:
+            continue
         n += 1
         for j, ll in enumerate(score(p)):
             if ll > NEG_INF and ll == ll:
@@ -794,16 +870,23 @@ def _run_fringe_finished(finished, tasks, maxfs, eval_timeout, start):
     return [h.heap for h in hits], n
 
 
-def count_programs(g, request, lb, ub, timeout=1e9):
-    """Benchmark helper: number of programs in the band and elapsed time (single core, no evaluation)."""
+def count_programs(g, request, lb, ub, timeout=1e9, maxFreeParameters=99, collect=None):
+    """Number of programs in the band and elapsed time (single core, no evaluation). If collect is a list,
+    (program string, -ll) pairs are appended, after the same post-processing as enumerate_for_tasks."""
     cg = CG(g)
-    req = from_official(request)
+    req, nrec = recursive_request(cg, from_official(request))
+    post = make_post(cg, nrec, maxFreeParameters)
     en = Enumerator(cg, time.time() + timeout)
     n = [0]
     t = time.time()
 
     def k(p, c, ll):
+        p = post(p)
+        if p is None:
+            return
         n[0] += 1
+        if collect is not None:
+            collect.append((str(p), -ll))
     try:
         en.programs(cg.no_context, EMPTY, req, [], lb, ub, 9999, k)
     except Timeout:

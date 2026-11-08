@@ -46,10 +46,23 @@ ap.add_argument("--no-recognition", action="store_true")
 ap.add_argument("-RS", "--recognitionSteps", type=int, default=5000)
 ap.add_argument("-R", "--recognitionTimeout", type=int, default=3600)
 ap.add_argument("--seed", type=int, default=0)
+ap.add_argument("--biasOptimal", action="store_true",
+                help="bias-optimal recognition training with Helmholtz dreams from pyec.helmholtz")
 ap.add_argument("--out", required=True)
 a = ap.parse_args()
 
-random.seed(a.seed)
+def seed_everything(seed):
+    """Python, NumPy and PyTorch RNGs (the official frontend only seeds its task batcher). Wall-clock
+    enumeration budgets still make runs nondeterministic; seeds fix tasks, dreams' RNG and NN init."""
+    import numpy as np
+    import torch
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.set_num_threads(int(os.environ.get("OMP_NUM_THREADS", "1")))
+
+
+seed_everything(a.seed)
 assert P.self_test()
 E2E = D.random_states(a.e2e_n, a.e2e_seed)
 if a.kind == "stages":
@@ -69,13 +82,31 @@ ckdir = a.out[:-5] + "_ckpt"
 os.makedirs(ckdir, exist_ok=True)
 
 params = dict(solver="pyfast", compressor="pyvs", useRecognitionModel=rec, noConsolidation=not lib,
-              contextual=rec, biasOptimal=False, auxiliaryLoss=rec, recognitionSteps=a.recognitionSteps,
+              contextual=rec, biasOptimal=rec and a.biasOptimal, auxiliaryLoss=rec, recognitionSteps=a.recognitionSteps,
               recognitionTimeout=a.recognitionTimeout, helmholtzRatio=0.5,
               featureExtractor=D.make_feature_extractor() if rec else None, activation="tanh",
               topK=2, maximumFrontier=5, pseudoCounts=30.0, aic=1.0, structurePenalty=1.5, arity=3,
               evaluationTimeout=None, enumerationTimeout=a.enumerationTimeout, testingTimeout=0,
               iterations=a.iterations, CPUs=a.CPUs, seed=a.seed, outputPrefix=os.path.join(ckdir, "cube"),
               storeTaskMetrics=False)
+def write_manifest():
+    import hashlib, platform, subprocess as sp
+    try:
+        commit = sp.run(["git", "-C", ROOT, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+    except Exception:
+        commit = None
+    m = {"args": vars(a), "params": {k: (v if isinstance(v, (int, float, str, bool, type(None))) else str(v))
+                                      for k, v in params.items()},
+         "train_tasks": [t.name for t in tasks],
+         "train_tasks_sha1": hashlib.sha1("\n".join(D.state_key(t) for t in tasks).encode()).hexdigest()
+         if hasattr(D, "state_key") else None,
+         "e2e_sha1": hashlib.sha1(repr(E2E).encode()).hexdigest(),
+         "git_commit": commit, "host": platform.node(), "python": sys.version,
+         "pypy": os.environ.get("PYEC_PYPY"), "started": time.strftime("%Y-%m-%dT%H:%M:%S")}
+    json.dump(m, open(a.out[:-5] + ".manifest.json", "w"), indent=1)
+
+
+write_manifest()
 hist = []
 t0 = time.time()
 result = None

@@ -44,4 +44,14 @@ edit("dreamcoder/dreamcoder.py",
 edit("dreamcoder/dreamcoder.py",
      '''choices=["pypy","rust","vs","pypy_vs","ocaml","vs_factored","memorize"])''',
      '''choices=["pypy","rust","vs","pypy_vs","ocaml","vs_factored","memorize","pyvs"])''')
+# 4. Helmholtz (bias-optimal) dreams: pyec.helmholtz, port of the OCaml ./helmholtz binary (opt-in)
+edit("dreamcoder/dreaming.py",
+     '''    """Returns json (as text)"""
+    message = {"request": request.json(),''',
+     '''    """Returns json (as text)"""
+    if os.environ.get("PYEC_HELMHOLTZ"):
+        from pyec.helmholtz import helmholtzEnumeration as pyecHelmholtzEnumeration
+        return pyecHelmholtzEnumeration(g, request, inputs, timeout, special=special,
+                                        evaluationTimeout=evaluationTimeout)
+    message = {"request": request.json(),''')
 print("patched", root)

@@ -57,6 +57,33 @@ def primitives(variant="ruf"):
 def register_all():
     """Entry point for the PyPy solver/compressor processes (PYEC_PRIMITIVE_MODULES=rubik.ec_domain:register_all)."""
     primitives("ruf")
+    register_helmholtz()
+
+
+def cube_helmholtz_hash(timeout, request, inputs):
+    """Special Helmholtz behaviour for --biasOptimal (the cube analogue of the official tower/LOGO hashes in
+    Dreaming.ml): a program's behaviour is the permutation it applies; programs with the same permutation
+    share one dream frontier (exact sticker permutation, not reduced modulo whole-cube rotation, like the
+official hashes which use raw outputs). The identity has no use as a dream and is dropped."""
+    from pyec.helmholtz import run_with_timeout
+
+    def h(p):
+        ok, a = run_with_timeout(timeout, lambda: p.evaluate([]))
+        if not ok or a is None:
+            return None
+        key = tuple(a.perm)
+        if key == P.ID:
+            return None
+        return (key,), 0.
+    return h
+
+
+def register_helmholtz():
+    try:
+        from pyec.helmholtz import register_special_helmholtz
+    except ImportError:
+        return
+    register_special_helmholtz("cube", cube_helmholtz_hash)
 
 
 class CubeTask(Task):
@@ -150,8 +177,10 @@ def make_feature_extractor():
     import torch.nn as nn
     from dreamcoder.recognition import variable
 
+    register_helmholtz()
+
     class CubeFeatureExtractor(nn.Module):
-        special = None
+        special = "cube"  # pyec.helmholtz behaviour hash (only used with --biasOptimal)
 
         def __init__(self, tasks, testingTasks=[], cuda=False):
             super(CubeFeatureExtractor, self).__init__()
