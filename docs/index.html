@@ -82,10 +82,9 @@ Each stage's training tasks start from a random state in which the earlier stage
         <section id="results" class="content-section">
             <div class="section-inner">
                 <h2>Results</h2>
-                <p><b>All 24 runs complete</b> (including the 15 relaunched runs), checked 8 November 2026. Each has 20 training rounds and a final end-to-end evaluation. Counts below are complete solves of the same 100 unseen random cubes, not independent stage successes.</p>
-                <p><b>Stages + library: 100/100 in all six runs.</b> Without a library, NN-only solves 16/18/25 and neither solves 17/17/17. Full-task training solves 0/100 in every NN run and 1/100 in every plain-search run. Library learning helps strongly with the staged curriculum, but does not bootstrap full random-cube solving here. Neural guidance has no consistent solve-rate advantage at this budget; all full-task arms solved zero training tasks; NN training therefore relied on fantasies, with no successful task replays.</p>
-                <p>Average moves counts only solved cubes; “–” means no solutions. Long expanded solutions are not speedcubing algorithms. Seeds reuse the same test cubes and are not independent test samples. Use the run selector below to change the training curve, stage-survival chart, policies and playback.</p>
+                <p>Each of the 8 configurations (4 arms × 2 training strategies) was trained with 3 seeds and then tested on the <b>same 100 randomly scrambled cubes</b>, none of which were used in training. The table shows the percentage of those cubes each configuration solved completely (mean over seeds, per-seed values in brackets) and the average length of its solutions.</p>
                 <div class="card wide"><table class="summary" id="summary"></table></div>
+                <div class="controls" style="margin-top:20px"><label>Run for the charts and policies below <select id="run"></select></label></div>
                 <div class="stats">
                     <div class="card">
                         <h3>Training tasks solved over rounds <span class="small" id="curve-run"></span></h3>
@@ -102,15 +101,13 @@ Each stage's training tasks start from a random state in which the earlier stage
         <section id="demo" class="content-section">
             <div class="section-inner">
                 <h2>Watch Them Solve</h2>
-                <p>Select a strategy and seed, then a held-out random cube or training task. All four arms start from the same state. A missing solution means no complete solution was recorded, not that the cube is impossible. Stage solutions reorient the cube between subprograms, exactly as evaluation does. Every exported move sequence is replay-verified against its goal.</p>
+                <p>Pick a seed and one of the 100 test cubes. All 8 configurations (top row: subtask curriculum, bottom row: full task only) start from the same scrambled state. Stage solutions turn the whole cube between stages so the fixed corner is back in place, exactly as in evaluation. Every move sequence shown was replay-verified.</p>
 
                 <div class="controls">
-                    <label>Run <select id="run"></select></label>
-                    <label>Tasks <select id="split"><option value="test">held-out full cubes</option><option value="train">training</option></select></label>
-                    <label>Stage <select id="group"></select></label>
-                    <label>Task <select id="task"></select></label>
+                    <label>Seed <select id="seed"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select></label>
+                    <label>Test cube <select id="task"></select></label>
                     <button id="random">🎲 Random</button>
-                    <label class="chk"><input type="checkbox" id="onlyDiff"> only tasks where the arms disagree</label>
+                    <label class="chk"><input type="checkbox" id="onlyDiff"> only cubes where the configurations disagree</label>
                 </div>
 
                 <div class="goal" id="goal"></div>

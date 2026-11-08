@@ -243,43 +243,40 @@ const GOALS = {
 const SHORT = { nn_lib: "NN + library", nn_nolib: "NN only", nonn_lib: "Library only", nonn_nolib: "Neither" };
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
-let DATA, run, ARMS, sides, playing = false, busy = false;
+let DATA, run, ARMS, sides, SLOTS, playing = false, busy = false;
+const STRAT = { stages: "Subtask curriculum", full: "Full task only" };
 
 function buildSides() {
-  $("duel").innerHTML = ARMS.map(a => `
-    <div class="side ${a.id}" id="side-${a.id}">
-      <h3 class="c-${a.id}">${SHORT[a.id]}<span class="tag">${a.label}</span></h3>
+  SLOTS = [];
+  $("duel").innerHTML = ["stages", "full"].map(k => `<h3 class="strat">${STRAT[k]}</h3>` + ARMS.map(a => {
+    SLOTS.push([k, a.id]);
+    return `<div class="side ${a.id}" id="side-${k}-${a.id}">
+      <h3 class="c-${a.id}">${SHORT[a.id]}</h3>
       <div class="canvas"></div><div class="status"></div><div class="moves"></div>
       <details><summary>Program</summary><code class="prog"></code></details>
-    </div>`).join("");
-  sides = ARMS.map(a => new Side($("side-" + a.id)));
+    </div>`; }).join("")).join("");
+  sides = SLOTS.map(([k, id]) => new Side($(`side-${k}-${id}`)));
 }
+const runOf = (k, seed) => DATA.runs.find(r => r.id === `${k}_s${seed}`);
 const solOf = (armId, name) => run.arms[armId].solutions[name];
-
-function taskLabel(t) {
-  const marks = ARMS.map(a => { const s = solOf(a.id, t.name); return s ? s.moves.length : "✗"; }).join(" / ");
-  return `${t.name.replace("test:", "")} — ${marks}`;
-}
+const slotSol = ([k, id], name) => runOf(k, $("seed").value).arms[id].solutions[name];
 function fillRuns() { $("run").innerHTML = DATA.runs.map((r, i) => `<option value="${i}">${r.label}</option>`).join(""); }
 function fillGroups() {
-  const gs = [...new Set(run.tasks.map(t => t.group))];
-  $("group").innerHTML = `<option value="">all</option>` + gs.map(g => `<option>${g}</option>`).join("");
   $("pstage").innerHTML = Object.keys(run.arms[ARMS[0].id].policy || {}).map(g => `<option>${g}</option>`).join("");
 }
 function fillTasks() {
-  const g = $("group").value, only = $("onlyDiff").checked, split = $("split").value;
-  const ts = run.tasks.filter(t => t.split === split && (!g || t.group === g) &&
-    (!only || new Set(ARMS.map(a => !!solOf(a.id, t.name))).size > 1));
-  $("task").innerHTML = ts.map(t => `<option value="${t.name}">${taskLabel(t)}</option>`).join("");
+  const only = $("onlyDiff").checked;
+  const ts = runOf("stages", $("seed").value).tasks.filter(t => t.split === "test" &&
+    (!only || new Set(SLOTS.map(s => !!slotSol(s, t.name))).size > 1));
+  $("task").innerHTML = ts.map(t => `<option value="${t.name}">cube ${t.name.replace("test:", "")}  (${SLOTS.filter(s => slotSol(s, t.name)).length}/8 solved)</option>`).join("");
   loadTask();
 }
 function loadTask() {
   stop();
-  const t = run.tasks.find(t => t.name === $("task").value);
-  if (!t) { $("goal").textContent = "No tasks match this filter."; sides.forEach(s => s.load(run.tasks[0].start, null)); return; }
-  $("goal").innerHTML = GOALS[t.group] + (t.split === "test" ? " <i>(held-out task)</i>" : "") +
-    `<br><span class="small">Moves per arm in the list: ${ARMS.map(a => SHORT[a.id]).join(" / ")}</span>`;
-  ARMS.forEach((a, i) => sides[i].load(t.start, solOf(a.id, t.name)));
+  const t = runOf("stages", $("seed").value).tasks.find(t => t.name === $("task").value);
+  if (!t) { $("goal").textContent = "No cubes match this filter."; return; }
+  $("goal").innerHTML = "Goal: solve this randomly scrambled test cube (never seen in training).";
+  SLOTS.forEach((s, i) => sides[i].load(t.start, slotSol(s, t.name)));
 }
 async function stepAll() {
   if (busy) return; busy = true;
@@ -298,19 +295,14 @@ function stop() { playing = false; $("play").textContent = "▶ Play"; }
 
 // ---------------- results
 function drawSummary() {
-  const rows = ARMS.map(a => {
-    const cells = DATA.runs.map(r => {
-      const A = r.arms[a.id];
-      const tr = Object.values(A.per_group).reduce((s, v) => s + v[0], 0), trn = Object.values(A.per_group).reduce((s, v) => s + v[1], 0);
-      const sols = Object.entries(A.solutions).filter(([k]) => k.startsWith("test:"));
-      const len = sols.length ? (sols.reduce((s, [, v]) => s + v.moves.length, 0) / sols.length).toFixed(1) : "–";
-      return `<td>${tr}/${trn}</td><td><b>${A.test_solved}/${A.test_n}</b></td><td>${len}</td><td>${A.library.length}</td>`;
-    }).join("");
-    return `<tr><td><b class="c-${a.id}">${SHORT[a.id]}</b></td>${cells}</tr>`;
-  }).join("");
-  const head1 = DATA.runs.map(r => `<th colspan="4">${r.label}</th>`).join("");
-  const head2 = DATA.runs.map(() => `<th>train</th><th>E2E solved</th><th>avg moves</th><th>routines</th>`).join("");
-  $("summary").innerHTML = `<tr><th>Arm</th>${head1}</tr><tr><th></th>${head2}</tr>${rows}`;
+  const rows = ["stages", "full"].flatMap(k => ARMS.map(a => {
+    const rs = [0, 1, 2].map(s => runOf(k, s).arms[a.id]);
+    const pct = rs.map(A => 100 * A.test_solved / A.test_n), mean = pct.reduce((x, y) => x + y, 0) / pct.length;
+    const sols = rs.flatMap(A => Object.entries(A.solutions).filter(([n]) => n.startsWith("test:")).map(([, v]) => v.moves.length));
+    const len = sols.length ? (sols.reduce((x, y) => x + y, 0) / sols.length).toFixed(0) : "–";
+    return `<tr><td>${STRAT[k]}</td><td><b class="c-${a.id}">${SHORT[a.id]}</b></td><td><b>${mean.toFixed(0)}%</b> <span class="small">(${pct.map(p => p.toFixed(0)).join(" / ")})</span></td><td>${len}</td></tr>`;
+  })).join("");
+  $("summary").innerHTML = `<tr><th>Training strategy</th><th>Arm</th><th>Test cubes solved</th><th>Avg. solution length (moves)</th></tr>${rows}`;
 }
 function drawCurve() {
   $("curve-run").textContent = "(" + run.label.split("·").pop().trim() + ")";
@@ -371,7 +363,7 @@ function drawLibrary() {
 }
 function selectRun() {
   run = DATA.runs[+$("run").value];
-  fillGroups(); fillTasks(); drawCurve(); drawBars(); drawPolicy(); drawLibrary();
+  fillGroups(); drawCurve(); drawBars(); drawPolicy(); drawLibrary();
 }
 
 async function main() {
@@ -384,8 +376,7 @@ async function main() {
   buildSides();
   fillRuns();
   $("run").onchange = selectRun;
-  $("split").onchange = fillTasks;
-  $("group").onchange = fillTasks;
+  $("seed").onchange = fillTasks;
   $("onlyDiff").onchange = fillTasks;
   $("task").onchange = loadTask;
   $("pstage").onchange = drawPolicy;
@@ -396,8 +387,7 @@ async function main() {
   $("step").onclick = () => { stop(); stepAll(); };
   drawSummary();
   selectRun();
-  // open on an informative case: held-out stage 5 tasks where the arms disagree
-  $("group").value = "5-solved"; $("onlyDiff").checked = true; fillTasks();
+  $("onlyDiff").checked = true; fillTasks();
   $("pstage").value = "5-solved"; drawPolicy();
 }
 main();

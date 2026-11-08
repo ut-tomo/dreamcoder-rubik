@@ -77,7 +77,8 @@ button:active { transform: scale(0.97); }
 .goal { background: #fff; border-left: 5px solid #ffc107; border-radius: 8px; padding: 12px 16px; margin-bottom: 18px;
     box-shadow: 0 1px 4px rgba(16,24,40,0.06); }
 
-.duel { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.duel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.duel .strat { grid-column: 1 / -1; margin: 10px 0 0; }
 .side { background: var(--panel); border-radius: 15px; padding: 16px; border-top: 6px solid; min-width: 0; }
 .side h3 { font-size: 1.25em; }
 .canvas { position: relative; width: 100%; aspect-ratio: 1.6; background: #dfe3e8; border-radius: 10px; overflow: hidden; cursor: grab; }
@@ -119,7 +120,7 @@ svg text { font: 12px 'Segoe UI', sans-serif; fill: #333; }
 .site-footer .small { margin-top: 18px; }
 
 @media (max-width: 800px) {
-    .duel, .stats { grid-template-columns: 1fr; }
+    .duel, .stats { grid-template-columns: 1fr 1fr; }
     #library { columns: 1; }
     .site-title { font-size: 1.8em; }
     .site-nav { gap: 10px; }
