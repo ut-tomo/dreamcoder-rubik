@@ -1,0 +1,26 @@
+diff -r -x __pycache__ /mnt/home/unno/lab/rubiks_project/dreamcoder-ec/dreamcoder/compression.py dreamcoder/compression.py
+49a50,56
+>         elif backend == "pyvs":
+>             from pyec.backend import pyvsInduce
+>             kwargs.pop('iteration')
+>             kwargs.pop('topk_use_only_likelihood')
+>             kwargs['topI'] = 300
+>             kwargs['bs'] = 1000000
+>             g, newFrontiers = pyvsInduce(*args, **kwargs)
+diff -r -x __pycache__ /mnt/home/unno/lab/rubiks_project/dreamcoder-ec/dreamcoder/dreamcoder.py dreamcoder/dreamcoder.py
+855c855,856
+<             "python"],
+---
+>             "python",
+>             "pyfast"],
+871c872
+<         choices=["pypy","rust","vs","pypy_vs","ocaml","vs_factored","memorize"])
+---
+>         choices=["pypy","rust","vs","pypy_vs","ocaml","vs_factored","memorize","pyvs"])
+diff -r -x __pycache__ /mnt/home/unno/lab/rubiks_project/dreamcoder-ec/dreamcoder/enumeration.py dreamcoder/enumeration.py
+29a30,32
+>     from pyec.backend import solveForTask_pyfast, start_server
+>     if solver == "pyfast":
+>         start_server(g, tasks, evaluationTimeout)  # persistent, JIT-warmed PyPy fork-server (no per-call interpreter start-up)
+30a34
+>                "pyfast": solveForTask_pyfast,
