@@ -1,0 +1,535 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [
+    "#(setup R U)"
+   ],
+   "hits_top_down": 4,
+   "elapsed": 636.4096899032593
+  },
+  {
+   "iteration": 2,
+   "solved": 6,
+   "n_tasks": 120,
+   "library": [
+    "#(setup R U)"
+   ],
+   "hits_top_down": 6,
+   "elapsed": 4451.072939872742
+  },
+  {
+   "iteration": 3,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(setup R U)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 8262.927846431732
+  },
+  {
+   "iteration": 4,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 9145.613171100616
+  },
+  {
+   "iteration": 5,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 9476.233259916306
+  },
+  {
+   "iteration": 6,
+   "solved": 9,
+   "n_tasks": 120,
+   "library": [
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 9,
+   "elapsed": 9807.826504707336
+  },
+  {
+   "iteration": 7,
+   "solved": 10,
+   "n_tasks": 120,
+   "library": [
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 10,
+   "elapsed": 13641.040625810623
+  },
+  {
+   "iteration": 8,
+   "solved": 11,
+   "n_tasks": 120,
+   "library": [
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 11,
+   "elapsed": 17473.8737783432
+  },
+  {
+   "iteration": 9,
+   "solved": 11,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 11,
+   "elapsed": 17974.870674848557
+  },
+  {
+   "iteration": 10,
+   "solved": 12,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 12,
+   "elapsed": 18255.8907392025
+  },
+  {
+   "iteration": 11,
+   "solved": 12,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 12,
+   "elapsed": 18535.8277490139
+  },
+  {
+   "iteration": 12,
+   "solved": 14,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 14,
+   "elapsed": 18886.182220697403
+  },
+  {
+   "iteration": 13,
+   "solved": 14,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 14,
+   "elapsed": 19245.967767477036
+  },
+  {
+   "iteration": 14,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 19616.30443739891
+  },
+  {
+   "iteration": 15,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 20000.162054777145
+  },
+  {
+   "iteration": 16,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 20376.82498216629
+  },
+  {
+   "iteration": 17,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 20743.32442331314
+  },
+  {
+   "iteration": 18,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 21139.37815451622
+  },
+  {
+   "iteration": 19,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 21500.233583927155
+  },
+  {
+   "iteration": 20,
+   "solved": 15,
+   "n_tasks": 120,
+   "library": [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    "#(comm F)",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    "#(setup R U)"
+   ],
+   "hits_top_down": 15,
+   "elapsed": 21844.048280239105
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 0,
+  "biasOptimal": true,
+  "out": "results/v7_verified/full_nn_lib_s0.json"
+ },
+ "params": {
+  "cuda": false,
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": false,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 0,
+  "outputPrefix": "results/v7_verified/full_nn_lib_s0_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    -1.231934611494916,
+    "alg",
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))"
+   ],
+   [
+    -1.0601712875469311,
+    "alg -> alg",
+    "#(comm F)"
+   ],
+   [
+    -1.14231838983007,
+    "alg -> alg -> alg",
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))"
+   ],
+   [
+    -1.0865490247638125,
+    "alg",
+    "#(setup R U)"
+   ],
+   [
+    -0.9369864887904908,
+    "alg",
+    "R"
+   ],
+   [
+    -1.0324756528480923,
+    "alg",
+    "U"
+   ],
+   [
+    -1.1417742339968404,
+    "alg",
+    "F"
+   ],
+   [
+    -0.9132282864179655,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    -1.201151169816265,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    -1.2303979378106926,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    -1.1710832427598934,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    -1.2878246961651194,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    -1.2882996938964721,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    -1.1697808780550814,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    -1.2011602880602479,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#8": "F D R D' R D R D' R' D F' D' R D R' D' R' D R' D' F D R D' R D R D' R' D F D' R D R' D' R' D R' D' F2 R D R' D' R' D R' D' R F D R D' R D R D' R' D F' D' R D R' D' R' D R' D' F D R D' R D R D' R' D F D' R D R' D' R' D R' D' F2 R D R' D' R' D R' D' R' D R D'",
+  "full#9": "R F U F' U' R' U F U' F' R F U F' U' R U F U' F' R2 F'",
+  "full#15": "D R D' F D F' D'",
+  "full#30": "F R F' R' U F R F' R' U' F D R D' R D R D' R' D F' D' R D R' D' R' D R' D' F R U R' U R U R' U' R F' R' U R U' R' U' R U' R' D R D' R D R D' R' D F D' R D R' D' R' D R' D' F'",
+  "full#43": "R D R D' U R U R' U' R U' D R' D'",
+  "full#46": "U R U R' U R U' R' U' R F",
+  "full#54": "U F R U R' U R U R' U' R F' R' U R U' R' U' R U' R' U' R U R' U R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U' R U R' U R U R' U' R F R' U R U' R' U' R U' R' F'",
+  "full#65": "F' L' F L U' F' L' F L U F' L' F L U' F' L' F L U' R U R'",
+  "full#76": "R U F' U' F' L' F' L F",
+  "full#78": "F R U R' U R U R' U' R F' R' U R U' R' U' R U' R'",
+  "full#79": "F R' F' U' R' U F U' R U",
+  "full#90": "U R U R U' F R",
+  "full#102": "F R F' R' F2 D R D' R D R D' R' D F' D' R D R' D' R' D R' D' F' D R D' R D R D' R' D F D' R D R' D' R' D R' D' F'",
+  "full#112": "R U R' U' F D R D' R D R D' R' D F' D' R D R' D' R' D R' D' U R U' R'",
+  "full#119": "F' R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F' R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U F2 R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F' R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U' R F' R' U F R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F R U R' U R U R' U' R F R' U R U' R' U' R U' R' F2 U' F R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F R U R' U R U R' U' R F R' U R U' R' U' R U' R' F2 U F' R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F' R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U F2 R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F' R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U' R F' R' U F R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F R U R' U R U R' U' R F R' U R U' R' U' R U' R' F2 U' F R U R' U R U R' U' R F' R' U R U' R' U' R U' R' F R U R' U R U R' U' R F R' U R U' R' U' R U' R' F2 U' R"
+ },
+ "solutions": {
+  "full#8": "(z (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) (inv (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) (#(comm F) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))))) #(setup R U)))",
+  "full#9": "(inv (seq F (comm R (comm R (#(comm F) U)))))",
+  "full#15": "(z (seq #(setup R U) (#(comm F) R)))",
+  "full#30": "(#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) (#(comm F) R) (setup (z #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))))",
+  "full#43": "(seq R (setup (z #(setup R U)) (seq (comm U #(setup R U)) R)))",
+  "full#46": "(seq U (seq (comm #(setup R U) U) (seq R F)))",
+  "full#54": "(inv (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R)) (seq (inv (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R)) #(setup R U))) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R)))))",
+  "full#65": "(#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) (mirror (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) (#(comm F) R) U)) #(setup R U))",
+  "full#76": "(inv (seq (mirror (#(comm F) R)) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) F (inv R))))",
+  "full#78": "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+  "full#79": "(z (seq F (mirror (seq U (#(comm F) #(setup R U))))))",
+  "full#90": "(seq U (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) R (seq F R)))",
+  "full#102": "(z (seq (#(comm F) U) (#(comm F) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R)))))",
+  "full#112": "(setup (comm R U) (z #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))))",
+  "full#119": "(#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) (#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) (#(comm F) #(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))) R)) R)"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 11,
+  "mean_len": 31.545454545454547,
+  "reached": {},
+  "moves": {
+   "19": [
+    "R U R U' R2 U2 R' F R U' R'"
+   ],
+   "21": [
+    "F R U R' F' R U' R' U F R U R' F' R U' R' U' R F U F' U F U' F'"
+   ],
+   "28": [
+    "R U R U' R U R' F R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U R' U' R' F' R U R U' F R U R' U R U R' U' R F' R' U R U' R' U' R U' R'"
+   ],
+   "32": [
+    "U' R U2 R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' U' R U R' U R U R' U' R F R' U R U' R' U' R U' R' F' R U' R' U F' U' F'"
+   ],
+   "35": [
+    "F R D R D' R D R D' R' D F' D' R D R' D' R' D R' D' F R' F' D R D' R D R D' R' D F D' R D R' D' R' D R' D' F' U F R D R D' R D R D' R' D F' D' R D R' D' R' D R' D' F R' F' D R D' R D R D' R' D F D' R D R' D' R' D R' D' F' U' R"
+   ],
+   "40": [
+    "R U R' U R U R' F U F' U' F U' F' R U R'"
+   ],
+   "45": [
+    "U R U' R' U' R U R' U"
+   ],
+   "58": [
+    "F' R U' R' U F' U' F' U' F' R U' R' U F' U' F'"
+   ],
+   "82": [
+    "R U R U' F R F' R' U F R U R' F' R U' F R' F'"
+   ],
+   "98": [
+    "R U R' U R U R' U' R F R U R' U R U R' U' R F' R' U R U' R' U' R U' R'"
+   ],
+   "99": [
+    "R D R D' U F2 U F' U' F' U' F U F U' F2 R D R' D'"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   15,
+   120
+  ]
+ },
+ "library_readable": [
+  {
+   "program": "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+   "type": "alg",
+   "logProbability": -1.231934611494916,
+   "moves": "F R U R' U R U R' U' R F' R' U R U' R' U' R U' R'"
+  },
+  {
+   "program": "#(comm F)",
+   "type": "alg -> alg",
+   "logProbability": -1.0601712875469311,
+   "moves": ""
+  },
+  {
+   "program": "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+   "type": "alg -> alg -> alg",
+   "logProbability": -1.14231838983007,
+   "moves": ""
+  },
+  {
+   "program": "#(setup R U)",
+   "type": "alg",
+   "logProbability": -1.0865490247638125,
+   "moves": "R U R'"
+  }
+ ],
+ "policy": {
+  "5-solved": [
+   [
+    "#(lambda (lambda (seq $1 (seq (setup U $1) $0))))",
+    0.3649235544645392
+   ],
+   [
+    "inv",
+    0.20190837044624715
+   ],
+   [
+    "z",
+    0.12663123419992808
+   ],
+   [
+    "seq",
+    0.0778425351952612
+   ],
+   [
+    "mirror",
+    0.06857483556020712
+   ],
+   [
+    "x",
+    0.038021273261226445
+   ],
+   [
+    "setup",
+    0.03132112220704465
+   ],
+   [
+    "#(comm F)",
+    0.031007833547429572
+   ],
+   [
+    "comm",
+    0.028228271382055727
+   ],
+   [
+    "y",
+    0.020440525821123396
+   ],
+   [
+    "#(#(comm F) (#(lambda (lambda (seq $1 (seq (setup U $1) $0)))) #(setup R U) R))",
+    0.010171803896343862
+   ],
+   [
+    "F",
+    0.0002489767236040727
+   ]
+  ]
+ }
+}

@@ -1,0 +1,334 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 22.739572763442993
+  },
+  {
+   "iteration": 2,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 32.97908568382263
+  },
+  {
+   "iteration": 3,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 40.598729848861694
+  },
+  {
+   "iteration": 4,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 50.08266592025757
+  },
+  {
+   "iteration": 5,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 61.134562253952026
+  },
+  {
+   "iteration": 6,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 71.20877623558044
+  },
+  {
+   "iteration": 7,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 81.49791026115417
+  },
+  {
+   "iteration": 8,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 90.09724617004395
+  },
+  {
+   "iteration": 9,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 97.42643070220947
+  },
+  {
+   "iteration": 10,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 106.55582523345947
+  },
+  {
+   "iteration": 11,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 115.44469547271729
+  },
+  {
+   "iteration": 12,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 123.68428349494934
+  },
+  {
+   "iteration": 13,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 132.26753330230713
+  },
+  {
+   "iteration": 14,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 140.33904790878296
+  },
+  {
+   "iteration": 15,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 149.89161443710327
+  },
+  {
+   "iteration": 16,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 159.50743532180786
+  },
+  {
+   "iteration": 17,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 168.8893804550171
+  },
+  {
+   "iteration": 18,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 177.6755998134613
+  },
+  {
+   "iteration": 19,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 186.9130036830902
+  },
+  {
+   "iteration": 20,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 195.19924402236938
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 1,
+  "biasOptimal": false,
+  "out": "results/v7_verified/full_nonn_lib_s1.json"
+ },
+ "params": {
+  "cuda": false,
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": false,
+  "noConsolidation": false,
+  "contextual": false,
+  "biasOptimal": false,
+  "auxiliaryLoss": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": null,
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 1,
+  "outputPrefix": "results/v7_verified/full_nonn_lib_s1_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {},
+ "solutions": {},
+ "e2e": {
+  "n": 100,
+  "solved": 0,
+  "mean_len": 0.0,
+  "reached": {},
+  "moves": {}
+ },
+ "per_group": {
+  "5-solved": [
+   0,
+   120
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "5-solved": [
+   [
+    "R",
+    0.09090909090909106
+   ],
+   [
+    "U",
+    0.09090909090909106
+   ],
+   [
+    "F",
+    0.09090909090909106
+   ],
+   [
+    "seq",
+    0.09090909090909106
+   ],
+   [
+    "inv",
+    0.09090909090909106
+   ],
+   [
+    "setup",
+    0.09090909090909106
+   ],
+   [
+    "comm",
+    0.09090909090909106
+   ],
+   [
+    "x",
+    0.09090909090909106
+   ],
+   [
+    "y",
+    0.09090909090909106
+   ],
+   [
+    "z",
+    0.09090909090909106
+   ],
+   [
+    "mirror",
+    0.09090909090909106
+   ]
+  ]
+ }
+}

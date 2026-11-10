@@ -27,7 +27,7 @@ run_one() {
   [ "$nn" = nonn ] && flags="$flags --no-recognition"
   [ "$nn" = nn ] && flags="$flags --biasOptimal"
   [ "$lib" = nolib ] && flags="$flags --no-consolidation"
-  cd "$ROOT" && SOURCE_COMMIT=${SOURCE_COMMIT:-} PYREPRO_PYPY=/mnt/home/unno/miniforge/envs/pypy/bin/pypy3 OMP_NUM_THREADS=1 \
+  cd "$ROOT" && SOURCE_COMMIT=${SOURCE_COMMIT:-} PYREPRO_PYPY=/mnt/home/unno/miniforge/envs/pypy/bin/pypy3 PYREPRO_COMPRESS_TIMEOUT=${PYREPRO_COMPRESS_TIMEOUT:-3600} PYREPRO_COMPRESS_MEM_GB=${PYREPRO_COMPRESS_MEM_GB:-48} OMP_NUM_THREADS=1 \
     nice -n 5 $PY experiments/run_ec.py --kind $kind --seed $seed --iterations 20 -t 5 -c 4 $flags \
     --out $OUT/$name.json > "$LOGS/$name.log" 2>&1
   echo "finished $name rc=$? $(date +%FT%T) on $(hostname)"

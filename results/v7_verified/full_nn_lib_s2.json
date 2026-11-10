@@ -1,0 +1,423 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 322.70410990715027
+  },
+  {
+   "iteration": 2,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 568.3517801761627
+  },
+  {
+   "iteration": 3,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 811.1402797698975
+  },
+  {
+   "iteration": 4,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 1057.8078043460846
+  },
+  {
+   "iteration": 5,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 1297.5974321365356
+  },
+  {
+   "iteration": 6,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 1548.053223848343
+  },
+  {
+   "iteration": 7,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 1790.5532486438751
+  },
+  {
+   "iteration": 8,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 2042.0013179779053
+  },
+  {
+   "iteration": 9,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 2393.9772820472717
+  },
+  {
+   "iteration": 10,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 6195.043236255646
+  },
+  {
+   "iteration": 11,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 9987.004478693008
+  },
+  {
+   "iteration": 12,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 13781.616135835648
+  },
+  {
+   "iteration": 13,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 17577.443341493607
+  },
+  {
+   "iteration": 14,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 4,
+   "elapsed": 18778.05212521553
+  },
+  {
+   "iteration": 15,
+   "solved": 5,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 5,
+   "elapsed": 19134.69178724289
+  },
+  {
+   "iteration": 16,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 19480.649074554443
+  },
+  {
+   "iteration": 17,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 19840.835997581482
+  },
+  {
+   "iteration": 18,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 20196.588005781174
+  },
+  {
+   "iteration": 19,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 20544.42326068878
+  },
+  {
+   "iteration": 20,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(setup (mirror F) R)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 20812.017996311188
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 2,
+  "biasOptimal": true,
+  "out": "results/v7_verified/full_nn_lib_s2.json"
+ },
+ "params": {
+  "cuda": false,
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": false,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 2,
+  "outputPrefix": "results/v7_verified/full_nn_lib_s2_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    -0.7438950090958083,
+    "alg",
+    "#(setup (mirror F) R)"
+   ],
+   [
+    -0.6579835712660018,
+    "alg",
+    "R"
+   ],
+   [
+    -0.658001196590412,
+    "alg",
+    "U"
+   ],
+   [
+    -0.6188239593801241,
+    "alg",
+    "F"
+   ],
+   [
+    -0.6542571871886675,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    -0.7735586052297512,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    -0.6813656546578062,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    -0.6560667427338576,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    -0.8041255927339082,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    -0.7712608182039835,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    -0.8084084499336481,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    -0.7130982558430818,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#15": "F R U R U' R' F' R' F R F R U R' U' R' F'",
+  "full#23": "F R' F' U' R U F R U' R' U",
+  "full#38": "F' R F L' U' L U F' R' F U F U' F'",
+  "full#40": "R L F L' F L F' L' F' U'",
+  "full#50": "F' R' F R U R' F' R2 F",
+  "full#69": "R' U R U' F' R F R",
+  "full#76": "U' F L' F' U F L F' U F L' F' U' F L F' U R"
+ },
+ "solutions": {
+  "full#15": "(setup (comm (seq F (setup R U)) R) F)",
+  "full#23": "(seq F (comm (inv (seq F R)) (x #(setup (mirror F) R))))",
+  "full#38": "(seq (setup #(setup (mirror F) R) (mirror (comm R U))) (comm U F))",
+  "full#40": "(seq (seq R (comm (comm (y F) F) F)) (mirror U))",
+  "full#50": "(seq (setup (comm (mirror F) (inv R)) U) #(setup (mirror F) R))",
+  "full#69": "(seq (seq (comm (inv R) U) #(setup (mirror F) R)) R)",
+  "full#76": "(seq (setup (mirror (comm U #(setup (mirror F) R))) U) R)"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 14,
+  "mean_len": 12.071428571428571,
+  "reached": {},
+  "moves": {
+   "5": [
+    "L' F L R L' F' L U F' R2 F"
+   ],
+   "20": [
+    "R F U F' R' F U' F U F' R F U'"
+   ],
+   "26": [
+    "R2 F' R F U' R U R U' R' U R'"
+   ],
+   "33": [
+    "F' R F R U F' R F L' F L"
+   ],
+   "36": [
+    "U F' R F U' F' R' F U F R F' U'"
+   ],
+   "39": [
+    "U2 F' R' F U' F' U' F' R' F"
+   ],
+   "43": [
+    "U' R U L U' R' U L' R' U R U'"
+   ],
+   "45": [
+    "U R U' R' U' R U R' U"
+   ],
+   "50": [
+    "F U2 F U' F R F'"
+   ],
+   "56": [
+    "F L' F' U F L F' U' F' U F R"
+   ],
+   "61": [
+    "R U2 B' R B U' B' R' B R' B' R B U B' R' B U2 F' R F"
+   ],
+   "64": [
+    "F' R F R F' R' F R' F U' F' U' F U F' U"
+   ],
+   "71": [
+    "R F D F D' F D F' D' F2 R' F"
+   ],
+   "73": [
+    "R' U' R U F R U' R' U R"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   7,
+   120
+  ]
+ },
+ "library_readable": [
+  {
+   "program": "#(setup (mirror F) R)",
+   "type": "alg",
+   "logProbability": -0.7438950090958083,
+   "moves": "F' R F"
+  }
+ ],
+ "policy": {
+  "5-solved": [
+   [
+    "seq",
+    0.7285836434708363
+   ],
+   [
+    "inv",
+    0.09161963520026813
+   ],
+   [
+    "setup",
+    0.06433076874434421
+   ],
+   [
+    "x",
+    0.03650252564490462
+   ],
+   [
+    "mirror",
+    0.02961078814020224
+   ],
+   [
+    "comm",
+    0.028927905722355738
+   ],
+   [
+    "y",
+    0.009660105243096802
+   ],
+   [
+    "z",
+    0.008765006004511156
+   ],
+   [
+    "U",
+    0.0006216496845789976
+   ],
+   [
+    "#(setup (mirror F) R)",
+    0.0005109070379426826
+   ],
+   [
+    "R",
+    0.0004939617173845334
+   ],
+   [
+    "F",
+    0.0003731033895747418
+   ]
+  ]
+ }
+}

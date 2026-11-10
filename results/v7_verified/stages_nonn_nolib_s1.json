@@ -1,0 +1,694 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 19.72806453704834
+  },
+  {
+   "iteration": 2,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 30.72067403793335
+  },
+  {
+   "iteration": 3,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 39.68220138549805
+  },
+  {
+   "iteration": 4,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 48.73945474624634
+  },
+  {
+   "iteration": 5,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 57.82661056518555
+  },
+  {
+   "iteration": 6,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 66.14013934135437
+  },
+  {
+   "iteration": 7,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 75.02858829498291
+  },
+  {
+   "iteration": 8,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 85.73254466056824
+  },
+  {
+   "iteration": 9,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 96.06302547454834
+  },
+  {
+   "iteration": 10,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 104.48098540306091
+  },
+  {
+   "iteration": 11,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 113.21734738349915
+  },
+  {
+   "iteration": 12,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 121.86795902252197
+  },
+  {
+   "iteration": 13,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 132.07163858413696
+  },
+  {
+   "iteration": 14,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 141.43290972709656
+  },
+  {
+   "iteration": 15,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 150.82659554481506
+  },
+  {
+   "iteration": 16,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 160.63555693626404
+  },
+  {
+   "iteration": 17,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 169.72995948791504
+  },
+  {
+   "iteration": 18,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 178.22412204742432
+  },
+  {
+   "iteration": 19,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 186.57992553710938
+  },
+  {
+   "iteration": 20,
+   "solved": 57,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 57,
+   "elapsed": 195.17765974998474
+  }
+ ],
+ "args": {
+  "kind": "stages",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": true,
+  "no_recognition": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 1,
+  "biasOptimal": false,
+  "out": "results/v7_verified/stages_nonn_nolib_s1.json"
+ },
+ "params": {
+  "cuda": false,
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": false,
+  "noConsolidation": true,
+  "contextual": false,
+  "biasOptimal": false,
+  "auxiliaryLoss": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": null,
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 1,
+  "outputPrefix": "results/v7_verified/stages_nonn_nolib_s1_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "1-corner#0": "R2",
+  "1-corner#1": "F L' F' L",
+  "1-corner#2": "F",
+  "1-corner#3": "R F R'",
+  "1-corner#4": "F' R'",
+  "1-corner#5": "F R F' R'",
+  "1-corner#6": "R F R'",
+  "1-corner#7": "L' F L F'",
+  "1-corner#8": "L' F L F'",
+  "1-corner#9": "R'",
+  "1-corner#10": "F' R'",
+  "1-corner#11": "R",
+  "1-corner#12": "R F R'",
+  "1-corner#13": "D R D' R'",
+  "1-corner#14": "F R F' R'",
+  "1-corner#15": "F",
+  "1-corner#16": "U F",
+  "1-corner#17": "R",
+  "1-corner#18": "R'",
+  "1-corner#19": "F",
+  "1-corner#20": "F L' F' L",
+  "1-corner#21": "R F",
+  "1-corner#22": "D R D' R'",
+  "1-corner#23": "F R F' R'",
+  "2-corners#4": "R' U R U'",
+  "2-corners#6": "R2 F R2",
+  "2-corners#7": "U R' U' R",
+  "2-corners#9": "R' U R U'",
+  "2-corners#10": "R' U R U'",
+  "2-corners#12": "F D F' D'",
+  "2-corners#14": "F R F'",
+  "2-corners#15": "F R F'",
+  "2-corners#17": "U R' U' R",
+  "2-corners#18": "F D F' D'",
+  "2-corners#20": "R' U R U'",
+  "2-corners#22": "F R F'",
+  "3-Dlayer#0": "F U' F' U",
+  "3-Dlayer#3": "L' U L U'",
+  "3-Dlayer#5": "U F U' F'",
+  "3-Dlayer#6": "F U2 F' U2",
+  "3-Dlayer#7": "U' F U F'",
+  "3-Dlayer#9": "L' U L U'",
+  "3-Dlayer#12": "U F U' F'",
+  "3-Dlayer#13": "U F U' F'",
+  "3-Dlayer#14": "U' F U F'",
+  "3-Dlayer#15": "F U' F' U",
+  "3-Dlayer#16": "F U' F' U",
+  "3-Dlayer#17": "U' F U F'",
+  "3-Dlayer#18": "U' F U F'",
+  "3-Dlayer#19": "L' U L U'",
+  "3-Dlayer#20": "F U' F' U",
+  "3-Dlayer#22": "U F U' F'",
+  "3-Dlayer#23": "F U2 F' U2",
+  "4-Uorient#15": "U F R F' R' U' R F R' F'",
+  "5-solved#6": "U",
+  "5-solved#14": "U'",
+  "5-solved#17": "U2"
+ },
+ "solutions": {
+  "1-corner#0": "(seq R R)",
+  "1-corner#1": "(comm F (mirror R))",
+  "1-corner#2": "F",
+  "1-corner#3": "(setup R F)",
+  "1-corner#4": "(inv (seq R F))",
+  "1-corner#5": "(comm F R)",
+  "1-corner#6": "(setup R F)",
+  "1-corner#7": "(comm (mirror R) F)",
+  "1-corner#8": "(comm (mirror R) F)",
+  "1-corner#9": "(inv R)",
+  "1-corner#10": "(inv (seq R F))",
+  "1-corner#11": "R",
+  "1-corner#12": "(setup R F)",
+  "1-corner#13": "(comm (z R) R)",
+  "1-corner#14": "(comm F R)",
+  "1-corner#15": "F",
+  "1-corner#16": "(seq U F)",
+  "1-corner#17": "R",
+  "1-corner#18": "(inv R)",
+  "1-corner#19": "F",
+  "1-corner#20": "(comm F (mirror R))",
+  "1-corner#21": "(seq R F)",
+  "1-corner#22": "(comm (z R) R)",
+  "1-corner#23": "(comm F R)",
+  "2-corners#4": "(comm (inv R) U)",
+  "2-corners#6": "(setup (seq R R) F)",
+  "2-corners#7": "(comm U (inv R))",
+  "2-corners#9": "(comm (inv R) U)",
+  "2-corners#10": "(comm (inv R) U)",
+  "2-corners#12": "(comm F (z R))",
+  "2-corners#14": "(setup F R)",
+  "2-corners#15": "(setup F R)",
+  "2-corners#17": "(comm U (inv R))",
+  "2-corners#18": "(comm F (z R))",
+  "2-corners#20": "(comm (inv R) U)",
+  "2-corners#22": "(setup F R)",
+  "3-Dlayer#0": "(comm F (inv U))",
+  "3-Dlayer#3": "(comm (mirror R) U)",
+  "3-Dlayer#5": "(comm U F)",
+  "3-Dlayer#6": "(comm F (seq U U))",
+  "3-Dlayer#7": "(comm (inv U) F)",
+  "3-Dlayer#9": "(comm (mirror R) U)",
+  "3-Dlayer#12": "(comm U F)",
+  "3-Dlayer#13": "(comm U F)",
+  "3-Dlayer#14": "(comm (inv U) F)",
+  "3-Dlayer#15": "(comm F (inv U))",
+  "3-Dlayer#16": "(comm F (inv U))",
+  "3-Dlayer#17": "(comm (inv U) F)",
+  "3-Dlayer#18": "(comm (inv U) F)",
+  "3-Dlayer#19": "(comm (mirror R) U)",
+  "3-Dlayer#20": "(comm F (inv U))",
+  "3-Dlayer#22": "(comm U F)",
+  "3-Dlayer#23": "(comm F (seq U U))",
+  "4-Uorient#15": "(comm U (comm F R))",
+  "5-solved#6": "U",
+  "5-solved#14": "(inv U)",
+  "5-solved#17": "(seq U U)"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 6,
+  "mean_len": 20.666666666666668,
+  "reached": {
+   "1-corner": 100,
+   "2-corners": 81,
+   "3-Dlayer": 72,
+   "4-Uorient": 55,
+   "5-solved": 6
+  },
+  "moves": {
+   "43": [
+    "U R U' R' U R U R' U2",
+    "R' U R U'",
+    "F B R B' R' F' R B R' B'"
+   ],
+   "59": [
+    "R2",
+    "U F U' R U F' U'",
+    "F U' F' U",
+    "F U F' R F U' F' R'"
+   ],
+   "65": [
+    "U F U' R U F' U'",
+    "U L' U' L",
+    "L F U F' U' L'",
+    "U"
+   ],
+   "67": [
+    "R F R'",
+    "U' F R F' U F R' F'",
+    "U L' U' L",
+    "L U F U' F' L'",
+    "U2"
+   ],
+   "93": [
+    "F2",
+    "U' F R F' U F R' F'",
+    "U' F U F' U F U' F'",
+    "F U R U' R' F'",
+    "U2"
+   ],
+   "97": [
+    "R F",
+    "F R F' U F R' F' U'",
+    "F R U R' U' F'",
+    "U"
+   ]
+  }
+ },
+ "per_group": {
+  "1-corner": [
+   24,
+   24
+  ],
+  "2-corners": [
+   12,
+   24
+  ],
+  "3-Dlayer": [
+   17,
+   24
+  ],
+  "4-Uorient": [
+   1,
+   24
+  ],
+  "5-solved": [
+   3,
+   23
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "1-corner": [
+   [
+    "R",
+    0.09090909090909087
+   ],
+   [
+    "U",
+    0.09090909090909087
+   ],
+   [
+    "F",
+    0.09090909090909087
+   ],
+   [
+    "seq",
+    0.09090909090909087
+   ],
+   [
+    "inv",
+    0.09090909090909087
+   ],
+   [
+    "setup",
+    0.09090909090909087
+   ],
+   [
+    "comm",
+    0.09090909090909087
+   ],
+   [
+    "x",
+    0.09090909090909087
+   ],
+   [
+    "y",
+    0.09090909090909087
+   ],
+   [
+    "z",
+    0.09090909090909087
+   ],
+   [
+    "mirror",
+    0.09090909090909087
+   ]
+  ],
+  "2-corners": [
+   [
+    "R",
+    0.09090909090909087
+   ],
+   [
+    "U",
+    0.09090909090909087
+   ],
+   [
+    "F",
+    0.09090909090909087
+   ],
+   [
+    "seq",
+    0.09090909090909087
+   ],
+   [
+    "inv",
+    0.09090909090909087
+   ],
+   [
+    "setup",
+    0.09090909090909087
+   ],
+   [
+    "comm",
+    0.09090909090909087
+   ],
+   [
+    "x",
+    0.09090909090909087
+   ],
+   [
+    "y",
+    0.09090909090909087
+   ],
+   [
+    "z",
+    0.09090909090909087
+   ],
+   [
+    "mirror",
+    0.09090909090909087
+   ]
+  ],
+  "3-Dlayer": [
+   [
+    "R",
+    0.09090909090909087
+   ],
+   [
+    "U",
+    0.09090909090909087
+   ],
+   [
+    "F",
+    0.09090909090909087
+   ],
+   [
+    "seq",
+    0.09090909090909087
+   ],
+   [
+    "inv",
+    0.09090909090909087
+   ],
+   [
+    "setup",
+    0.09090909090909087
+   ],
+   [
+    "comm",
+    0.09090909090909087
+   ],
+   [
+    "x",
+    0.09090909090909087
+   ],
+   [
+    "y",
+    0.09090909090909087
+   ],
+   [
+    "z",
+    0.09090909090909087
+   ],
+   [
+    "mirror",
+    0.09090909090909087
+   ]
+  ],
+  "4-Uorient": [
+   [
+    "R",
+    0.09090909090909087
+   ],
+   [
+    "U",
+    0.09090909090909087
+   ],
+   [
+    "F",
+    0.09090909090909087
+   ],
+   [
+    "seq",
+    0.09090909090909087
+   ],
+   [
+    "inv",
+    0.09090909090909087
+   ],
+   [
+    "setup",
+    0.09090909090909087
+   ],
+   [
+    "comm",
+    0.09090909090909087
+   ],
+   [
+    "x",
+    0.09090909090909087
+   ],
+   [
+    "y",
+    0.09090909090909087
+   ],
+   [
+    "z",
+    0.09090909090909087
+   ],
+   [
+    "mirror",
+    0.09090909090909087
+   ]
+  ],
+  "5-solved": [
+   [
+    "R",
+    0.09090909090909087
+   ],
+   [
+    "U",
+    0.09090909090909087
+   ],
+   [
+    "F",
+    0.09090909090909087
+   ],
+   [
+    "seq",
+    0.09090909090909087
+   ],
+   [
+    "inv",
+    0.09090909090909087
+   ],
+   [
+    "setup",
+    0.09090909090909087
+   ],
+   [
+    "comm",
+    0.09090909090909087
+   ],
+   [
+    "x",
+    0.09090909090909087
+   ],
+   [
+    "y",
+    0.09090909090909087
+   ],
+   [
+    "z",
+    0.09090909090909087
+   ],
+   [
+    "mirror",
+    0.09090909090909087
+   ]
+  ]
+ }
+}

@@ -1,0 +1,1459 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 107,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 107,
+   "elapsed": 188.08629369735718
+  },
+  {
+   "iteration": 2,
+   "solved": 112,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 112,
+   "elapsed": 277.3482115268707
+  },
+  {
+   "iteration": 3,
+   "solved": 114,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 114,
+   "elapsed": 366.6517581939697
+  },
+  {
+   "iteration": 4,
+   "solved": 115,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 115,
+   "elapsed": 451.87043952941895
+  },
+  {
+   "iteration": 5,
+   "solved": 117,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 117,
+   "elapsed": 541.7250261306763
+  },
+  {
+   "iteration": 6,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 628.9488935470581
+  },
+  {
+   "iteration": 7,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 723.3395149707794
+  },
+  {
+   "iteration": 8,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 817.1204388141632
+  },
+  {
+   "iteration": 9,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 911.9353799819946
+  },
+  {
+   "iteration": 10,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 1013.6138970851898
+  },
+  {
+   "iteration": 11,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 1124.3769767284393
+  },
+  {
+   "iteration": 12,
+   "solved": 118,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 118,
+   "elapsed": 1227.8997485637665
+  },
+  {
+   "iteration": 13,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1321.8595757484436
+  },
+  {
+   "iteration": 14,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1411.6803019046783
+  },
+  {
+   "iteration": 15,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1498.6745238304138
+  },
+  {
+   "iteration": 16,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1585.581398010254
+  },
+  {
+   "iteration": 17,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1676.4969692230225
+  },
+  {
+   "iteration": 18,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1770.06796336174
+  },
+  {
+   "iteration": 19,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1868.9754428863525
+  },
+  {
+   "iteration": 20,
+   "solved": 119,
+   "n_tasks": 119,
+   "library": [],
+   "hits_top_down": 119,
+   "elapsed": 1968.129602432251
+  }
+ ],
+ "args": {
+  "kind": "stages",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": true,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 2,
+  "biasOptimal": true,
+  "out": "results/v7_verified/stages_nn_nolib_s2.json"
+ },
+ "params": {
+  "cuda": false,
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": true,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 2,
+  "outputPrefix": "results/v7_verified/stages_nn_nolib_s2_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "1-corner#0": "R",
+  "1-corner#1": "U F",
+  "1-corner#2": "F R U R' F' R U' R'",
+  "1-corner#3": "F'",
+  "1-corner#4": "R'",
+  "1-corner#5": "R U' R' U",
+  "1-corner#6": "R U' R' U",
+  "1-corner#7": "R'",
+  "1-corner#8": "F L' F' L",
+  "1-corner#9": "R",
+  "1-corner#10": "R",
+  "1-corner#11": "R F",
+  "1-corner#12": "D R D' R'",
+  "1-corner#13": "F' R'",
+  "1-corner#14": "F",
+  "1-corner#15": "F R F",
+  "1-corner#16": "U F",
+  "1-corner#17": "F",
+  "1-corner#18": "F L' F' L",
+  "1-corner#19": "D R D' R'",
+  "1-corner#20": "R U R' U R U' R' U'",
+  "1-corner#21": "R U' R' U",
+  "1-corner#22": "R'",
+  "1-corner#23": "R",
+  "2-corners#0": "R' U2 R U2",
+  "2-corners#1": "U R' U' R",
+  "2-corners#2": "R' U R U'",
+  "2-corners#3": "F R F'",
+  "2-corners#4": "R' U2 R U2",
+  "2-corners#5": "U2 R' U' R U' R' U R U'",
+  "2-corners#6": "U2 R' U' R U' R' U R U'",
+  "2-corners#7": "R' U2 R U2",
+  "2-corners#8": "F R F' U F R' F' U'",
+  "2-corners#9": "R' U R F R F'",
+  "2-corners#10": "R' U2 R U2",
+  "2-corners#11": "U' B U B'",
+  "2-corners#12": "R' U R U' R' U R",
+  "2-corners#13": "U F U' R U F' U'",
+  "2-corners#14": "F R F'",
+  "2-corners#15": "R' U2 R U2",
+  "2-corners#16": "U B U' B'",
+  "2-corners#17": "U F U' R U F' U'",
+  "2-corners#18": "F R F' U F R' F' U'",
+  "2-corners#19": "R2 B R' B' R' B R B' R B R' B' R B R B' R2",
+  "2-corners#20": "F2 R F' R2 F'",
+  "2-corners#21": "U2 R' U' R U' R' U R U'",
+  "2-corners#22": "F D F' D'",
+  "2-corners#23": "R F' R F R'",
+  "3-Dlayer#0": "U L' U' L U' L' U L",
+  "3-Dlayer#1": "U L' U' L U' L' U L",
+  "3-Dlayer#2": "F U F' U F U' F' U'",
+  "3-Dlayer#3": "U L' U' L",
+  "3-Dlayer#4": "U F U' F'",
+  "3-Dlayer#5": "F U F' U F U' F' U'",
+  "3-Dlayer#6": "U2 L' U' L U' L' U L U'",
+  "3-Dlayer#7": "F U F' U'",
+  "3-Dlayer#8": "U' F U F' U F U' F' U",
+  "3-Dlayer#9": "U F U' F'",
+  "3-Dlayer#10": "U L' U' L",
+  "3-Dlayer#11": "U2 L' U' L U' L' U L U'",
+  "3-Dlayer#12": "U F U' F' U F U F' U2",
+  "3-Dlayer#13": "U L' U' L U' L' U L",
+  "3-Dlayer#14": "U2 L' U' L U' L' U L U'",
+  "3-Dlayer#15": "U L' U' L U' L' U L",
+  "3-Dlayer#16": "U' F U F'",
+  "3-Dlayer#17": "U' F U F' U F U' F' U",
+  "3-Dlayer#18": "U F U' F' U F U F' U'",
+  "3-Dlayer#19": "U2 L' U' L U' L' U L U'",
+  "3-Dlayer#20": "F U2 F' U2",
+  "3-Dlayer#21": "U L' U' L",
+  "3-Dlayer#22": "U L' U' L U' L' U L",
+  "3-Dlayer#23": "U F U' F' U F U' F'",
+  "4-Uorient#0": "R F R' F' U' F R F' R'",
+  "4-Uorient#1": "F R U R' U' F'",
+  "4-Uorient#2": "F U R U' R' F'",
+  "4-Uorient#3": "U R B R' B' U' B R B' R' U R B R' B' U B R B' R' U2",
+  "4-Uorient#4": "U R B R' B' U' B R B' R'",
+  "4-Uorient#5": "L' F' U' F L F' U F",
+  "4-Uorient#6": "U' R F R' F' U F R F' R'",
+  "4-Uorient#7": "F R U R' U' F'",
+  "4-Uorient#8": "U' R F R' F' U F R F' R'",
+  "4-Uorient#9": "F R U R' U' F' U F U R U' R' F' U'",
+  "4-Uorient#10": "U R F R' F' U' F R F' R'",
+  "4-Uorient#11": "U R F R' F' U' F R F' R'",
+  "4-Uorient#12": "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+  "4-Uorient#13": "R F R' F' U F R F' R' U'",
+  "4-Uorient#14": "L U F U' F' L'",
+  "4-Uorient#15": "R' L' F' L F R F' L' F L",
+  "4-Uorient#16": "U' R F R' F' U F R F' R'",
+  "4-Uorient#17": "L F U F' U' L'",
+  "4-Uorient#18": "F R U R' U' F'",
+  "4-Uorient#19": "F' L' F L U L' F' L F U' F' L' F L U' L' F' L F U",
+  "4-Uorient#20": "R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U",
+  "4-Uorient#21": "U' L' U L R L' U' L U R'",
+  "4-Uorient#22": "U R B R' B' U' B R B' R'",
+  "4-Uorient#23": "R U' L' U L R' L' U' L U",
+  "5-solved#0": "U' L' F' L F L' F' L F U' F' L' F L U F' L' F L",
+  "5-solved#1": "F U F' U R F R' F' U' F R F' R' F U' F'",
+  "5-solved#2": "U' L' F' L F U F' L' F L R F R' F' U F R F' R'",
+  "5-solved#3": "U",
+  "5-solved#4": "R F R' F' U R F R' F' U' F R F' R' F R F' R'",
+  "5-solved#5": "U F U F' U R F R' F' U' F R F' R' F U' F'",
+  "5-solved#6": "F L F' L' F R F' L F L' R' F'",
+  "5-solved#7": "U R F R' F' U R F R' F' U' F R F' R' F R F' R'",
+  "5-solved#8": "F' U' F U R U R' U2 F' U F U R U' R'",
+  "5-solved#9": "U R F R' F' R F R' F' U F R F' R' U' F R F' R'",
+  "5-solved#10": "U2",
+  "5-solved#11": "L R F R' F' U F R F' R' U' F U R F R' F' U' F R F' R' F' L'",
+  "5-solved#12": "U'",
+  "5-solved#13": "F U F' U R F R' F' U' F R F' R' F U' F' U F U F' R F R' F' U F R F' R' U' F U' F'",
+  "5-solved#14": "L' F' L F R' U' R F' L' F L R' U R",
+  "5-solved#15": "U F2 L F' L' U L F L' F' U' R U F L F' L' U' L F L' F' R' F'",
+  "5-solved#16": "F U F' U' L' U' L U2 F U' F' U' L' U L",
+  "5-solved#17": "U F U F' R F R' F' U F R F' R' U' F U' F'",
+  "5-solved#18": "R F R' F' R F R' F' U F R F' R' U' F R F' R'",
+  "5-solved#19": "U R F R' F' U' F R F' R' L' F' L F U' F' L' F L",
+  "5-solved#20": "F2 U F' U' R U F U' F' R' U R F U F' U' R' U F U' F' U' F'",
+  "5-solved#21": "U' F' U F U' L' U L' U' L U L F' U' F U L' U' L' U L U' L U",
+  "5-solved#22": "R F R' F' U R F R' F' U' F R F' R' F R F' R' U R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+ },
+ "solutions": {
+  "1-corner#0": "R",
+  "1-corner#1": "(seq U F)",
+  "1-corner#2": "(comm F (setup R U))",
+  "1-corner#3": "(inv F)",
+  "1-corner#4": "(inv R)",
+  "1-corner#5": "(comm R (inv U))",
+  "1-corner#6": "(comm R (inv U))",
+  "1-corner#7": "(inv R)",
+  "1-corner#8": "(comm F (mirror R))",
+  "1-corner#9": "R",
+  "1-corner#10": "R",
+  "1-corner#11": "(seq R F)",
+  "1-corner#12": "(comm (z R) R)",
+  "1-corner#13": "(inv (seq R F))",
+  "1-corner#14": "F",
+  "1-corner#15": "(seq (seq F R) F)",
+  "1-corner#16": "(seq U F)",
+  "1-corner#17": "F",
+  "1-corner#18": "(comm F (mirror R))",
+  "1-corner#19": "(comm (z R) R)",
+  "1-corner#20": "(comm (comm R U) U)",
+  "1-corner#21": "(comm R (inv U))",
+  "1-corner#22": "(inv R)",
+  "1-corner#23": "R",
+  "2-corners#0": "(comm (inv R) (seq U U))",
+  "2-corners#1": "(comm U (inv R))",
+  "2-corners#2": "(comm (inv R) U)",
+  "2-corners#3": "(setup F R)",
+  "2-corners#4": "(comm (inv R) (seq U U))",
+  "2-corners#5": "(comm U (comm U (inv R)))",
+  "2-corners#6": "(comm U (comm U (inv R)))",
+  "2-corners#7": "(comm (inv R) (seq U U))",
+  "2-corners#8": "(comm (setup F R) U)",
+  "2-corners#9": "(seq (setup (inv R) U) (setup F R))",
+  "2-corners#10": "(comm (inv R) (seq U U))",
+  "2-corners#11": "(comm (inv U) (x U))",
+  "2-corners#12": "(setup (inv R) (seq (comm U R) U))",
+  "2-corners#13": "(setup (setup U F) R)",
+  "2-corners#14": "(setup F R)",
+  "2-corners#15": "(comm (inv R) (seq U U))",
+  "2-corners#16": "(comm U (x U))",
+  "2-corners#17": "(setup (setup U F) R)",
+  "2-corners#18": "(comm (setup F R) U)",
+  "2-corners#19": "(setup (comm R (comm R (x U))) R)",
+  "2-corners#20": "(setup F (seq (comm F R) (inv R)))",
+  "2-corners#21": "(comm U (comm U (inv R)))",
+  "2-corners#22": "(comm F (z R))",
+  "2-corners#23": "(setup (inv (setup R F)) R)",
+  "3-Dlayer#0": "(comm U (mirror (comm R U)))",
+  "3-Dlayer#1": "(comm U (mirror (comm R U)))",
+  "3-Dlayer#2": "(comm (comm F U) U)",
+  "3-Dlayer#3": "(comm U (mirror R))",
+  "3-Dlayer#4": "(comm U F)",
+  "3-Dlayer#5": "(comm (comm F U) U)",
+  "3-Dlayer#6": "(comm U (comm U (mirror R)))",
+  "3-Dlayer#7": "(comm F U)",
+  "3-Dlayer#8": "(setup (comm (inv U) F) U)",
+  "3-Dlayer#9": "(comm U F)",
+  "3-Dlayer#10": "(comm U (mirror R))",
+  "3-Dlayer#11": "(comm U (comm U (mirror R)))",
+  "3-Dlayer#12": "(comm (comm U F) U)",
+  "3-Dlayer#13": "(comm U (mirror (comm R U)))",
+  "3-Dlayer#14": "(comm U (comm U (mirror R)))",
+  "3-Dlayer#15": "(comm U (mirror (comm R U)))",
+  "3-Dlayer#16": "(comm (inv U) F)",
+  "3-Dlayer#17": "(setup (comm (inv U) F) U)",
+  "3-Dlayer#18": "(setup (comm U F) U)",
+  "3-Dlayer#19": "(comm U (comm U (mirror R)))",
+  "3-Dlayer#20": "(comm F (seq U U))",
+  "3-Dlayer#21": "(comm U (mirror R))",
+  "3-Dlayer#22": "(comm U (mirror (comm R U)))",
+  "3-Dlayer#23": "(seq (comm U F) (comm U F))",
+  "4-Uorient#0": "(inv (setup (comm R F) U))",
+  "4-Uorient#1": "(setup F (comm R U))",
+  "4-Uorient#2": "(setup F (comm U R))",
+  "4-Uorient#3": "(comm (comm U (x (comm R U))) U)",
+  "4-Uorient#4": "(comm U (comm R (x U)))",
+  "4-Uorient#5": "(mirror (comm R (setup F U)))",
+  "4-Uorient#6": "(comm (inv U) (comm R F))",
+  "4-Uorient#7": "(setup F (comm R U))",
+  "4-Uorient#8": "(comm (inv U) (comm R F))",
+  "4-Uorient#9": "(comm (setup F (comm R U)) U)",
+  "4-Uorient#10": "(comm U (comm R F))",
+  "4-Uorient#11": "(comm U (comm R F))",
+  "4-Uorient#12": "(comm U (comm (comm R F) U))",
+  "4-Uorient#13": "(comm (comm R F) U)",
+  "4-Uorient#14": "(setup (y F) (comm U F))",
+  "4-Uorient#15": "(comm (inv R) (mirror (comm R F)))",
+  "4-Uorient#16": "(comm (inv U) (comm R F))",
+  "4-Uorient#17": "(setup (y F) (comm F U))",
+  "4-Uorient#18": "(setup F (comm R U))",
+  "4-Uorient#19": "(comm U (mirror (comm U (comm F R))))",
+  "4-Uorient#20": "(comm U (comm (mirror U) (comm R F)))",
+  "4-Uorient#21": "(comm (mirror (comm U R)) R)",
+  "4-Uorient#22": "(comm U (comm R (x U)))",
+  "4-Uorient#23": "(comm R (mirror (comm U R)))",
+  "5-solved#0": "(mirror (seq U (setup (comm R F) (comm (comm R F) U))))",
+  "5-solved#1": "(setup (setup F U) (comm U (comm R F)))",
+  "5-solved#2": "(seq (mirror (comm U (comm R F))) (setup (comm R F) U))",
+  "5-solved#3": "U",
+  "5-solved#4": "(comm (setup (comm R F) U) (comm R F))",
+  "5-solved#5": "(seq U (setup (setup F U) (comm U (comm R F))))",
+  "5-solved#6": "(setup F (comm (mirror (comm (inv R) F)) R))",
+  "5-solved#7": "(seq U (setup (comm R F) (comm U (comm R F))))",
+  "5-solved#8": "(comm (mirror (comm F U)) (comm R U))",
+  "5-solved#9": "(seq U (setup (comm R F) (comm (comm R F) U)))",
+  "5-solved#10": "(seq U U)",
+  "5-solved#11": "(setup (y F) (comm (comm (comm R F) U) F))",
+  "5-solved#12": "(inv U)",
+  "5-solved#13": "(setup (setup (setup F U) (comm U (comm R F))) U)",
+  "5-solved#14": "(mirror (comm (comm R F) (setup (y F) U)))",
+  "5-solved#15": "(seq U (setup F (comm (comm (y (comm R F)) U) R)))",
+  "5-solved#16": "(comm (comm F U) (mirror (comm R U)))",
+  "5-solved#17": "(seq U (setup (setup F U) (comm (comm R F) U)))",
+  "5-solved#18": "(setup (comm R F) (comm (comm R F) U))",
+  "5-solved#19": "(mirror (seq (mirror (comm U (comm R F))) (setup (comm R F) U)))",
+  "5-solved#20": "(setup F (comm (comm (comm F U) R) U))",
+  "5-solved#21": "(mirror (comm (comm U F) (comm (comm U R) R)))",
+  "5-solved#22": "(setup (comm (setup (comm R F) U) (comm R F)) U)"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 100,
+  "mean_len": 48.36,
+  "reached": {
+   "1-corner": 100,
+   "2-corners": 100,
+   "3-Dlayer": 100,
+   "4-Uorient": 100,
+   "5-solved": 100
+  },
+  "moves": {
+   "0": [
+    "F L' F' L",
+    "R F' R F R'",
+    "F L' F' L U2 L' U' F L F'",
+    "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "F' U' F U' L' F' L F U F' L' F L F' U F"
+   ],
+   "1": [
+    "U F2",
+    "F R' F'",
+    "R F R' F' U F U' R F' R'",
+    "U R B R' B' U' B R B' R'",
+    "F2 U F' U' R U F U' F' R' U R F U F' U' R' U F U' F' U' F'"
+   ],
+   "2": [
+    "R'",
+    "U B U' B' U B U B' U'",
+    "U F U' F'",
+    "U2 R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U R F R' F' U F R F' R' U2",
+    "R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "3": [
+    "F' L'",
+    "R2 B R' B' R' B R B' R B R' B' R B R B' R2",
+    "U' F U F'",
+    "R F R' F' U F R F' R'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "4": [
+    "R B R' B'",
+    "U F U' F' U B U' B' F U F' U'",
+    "F U F'",
+    "U B' R' B R U' R' B' R B U B' R' B R U R' B' R B U'",
+    "L R F R' F' U F R F' R' U' F U R F R' F' U' F R F' R' F' L'"
+   ],
+   "5": [
+    "R' F",
+    "U R' U' R U R' U' R",
+    "U' F U F'",
+    "L U F U' F' L'",
+    "R F R' F' U R F R' F' U' F R F' R' F R F' R'"
+   ],
+   "6": [
+    "R B R' B'",
+    "F R F' U F R' F'",
+    "F U F' U' F U F'",
+    "R F U F' R' F U' F' U F U F' R F U' F' R'",
+    "U R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "7": [
+    "R U R' U R U' R'",
+    "F U2 R' U' R F'",
+    "U L' U' L U' L' U L",
+    "R U' L' U L R' L' U' L U"
+   ],
+   "8": [
+    "U2 F",
+    "R' U R U R' U' R",
+    "U F U' F' U L' R U R' U' L U R U' R' U' R U R' U' L' U R U' R' L F U F' U'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "9": [
+    "R B R' B'",
+    "R F R' F' U F U' R F' R'",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "U2"
+   ],
+   "10": [
+    "R2",
+    "U' R U R U' R' U",
+    "L' U L U' L' U' L U",
+    "U R F R' F' U' F R F' R' U R F R' F' U F R F' R' U'",
+    "F U F' U R F R' F' U' F R F' R' F U' F' U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "11": [
+    "R U R' F",
+    "U B U' B' U B U B' U'",
+    "F U F'",
+    "F R U F U' F' R' F U F' U' F'",
+    "U R F R' F' U' F R F' R' L' F' L F U' F' L' F L"
+   ],
+   "12": [
+    "F R F R' F' R F' R'",
+    "U B U' B' U2 F U' F' U' F U F' U' B U B' U'",
+    "L' U L",
+    "F R F U F' R' F U' F2 U F2 U F' R F U' F' R' F'",
+    "U R F R' F' U' F R F' R' L' F' L F U' F' L' F L"
+   ],
+   "13": [
+    "F2",
+    "R U R' B U' B' U R U' R'",
+    "U F U' F' U F U F' U'",
+    "R U' L' U L R' L' U' L U",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "14": [
+    "R2",
+    "R' U R",
+    "U F U' F' U F U' F'",
+    "F R U R' U' F'",
+    "U'"
+   ],
+   "15": [
+    "F'",
+    "U B U' B'",
+    "F L F' L' U L F L' F' U F L F' L' U' L F L' F'",
+    "U2"
+   ],
+   "16": [
+    "U2 F U'",
+    "U R' U' R",
+    "U F U' F' U F U F' U'",
+    "L' F' L F U' L' F' L F U F' L' F L F' L' F L"
+   ],
+   "17": [
+    "R2 U R' U' R' U R U' R'",
+    "F R F' U F R' F'",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "18": [
+    "R2 F",
+    "F U2 R' U' R F'",
+    "F U F' U F U' F'",
+    "R B R' B' U B R B' R'",
+    "F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "19": [
+    "R B R' B'",
+    "F U2 R' U' R F'",
+    "U F U' F'",
+    "U R B R' B' U' B R B' R' U R B R' B' U B R B' R' U'",
+    "U' L' F' L F U F' L' F L R F R' F' U F R F' R'"
+   ],
+   "20": [
+    "U2 F",
+    "F R' F'",
+    "F U2 F'",
+    "L U F U' F' L'",
+    "U"
+   ],
+   "21": [
+    "F R",
+    "R' U R",
+    "U L' U' L",
+    "U2 R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U'",
+    "U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "22": [
+    "U F",
+    "U R' U' R",
+    "U F U' F' U F U F' U'",
+    "U' L' F' L F U F' L' F L",
+    "U'"
+   ],
+   "23": [
+    "R F R' F'",
+    "U B U' B' U B U B' U' B U' B' U' B U B'",
+    "F U F' U F U' F'",
+    "R B R' B' U B R B' R'"
+   ],
+   "24": [
+    "R2 U R2 U'",
+    "F U B U' B' F' U F B U B' U' F'",
+    "U F U' F' U F U F' U'",
+    "U2 R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U R F R' F' U F R F' R' U2",
+    "U' L' F' L F U F' L' F L R F R' F' U F R F' R'"
+   ],
+   "25": [
+    "F R'",
+    "F R' F'",
+    "F U F' U F U' F'",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "26": [
+    "R2",
+    "R F' R F R'",
+    "R F R' F' U F U' R F' R'",
+    "L U F U' F' L'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "27": [
+    "R F R'",
+    "F U F' U' F U F'",
+    "R2 U R' U' R' U R U R U' R2",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "28": [
+    "F' R F",
+    "R' U R",
+    "L' U L",
+    "L U F U' F' L'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "29": [
+    "R F R' F'",
+    "U R' U' R",
+    "F U F' U F U' F'",
+    "L U F U' F' L'",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "30": [
+    "R'",
+    "F R F' U F R' F'",
+    "U L' U' L",
+    "U R F R' F' U F R F' R'",
+    "U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "31": [
+    "U F U' F",
+    "U2 B U' B' U' B U B' F U' F' U B U' B' U B U B' U2",
+    "U L' U' L U' L' U L",
+    "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "R F R' F' U R F R' F' U' F R F' R' F R F' R'"
+   ],
+   "32": [
+    "F U' F U F' U' F' U",
+    "F R2 F R' F2",
+    "F U' F'",
+    "F U R U' R' F'",
+    "F' U' F U' L' F' L F U F' L' F L F' U F"
+   ],
+   "33": [
+    "U2 F",
+    "R' U2 F U' F' R",
+    "U F U' F' U F U F' U'",
+    "R B R' B' U B R B' R'",
+    "U'"
+   ],
+   "34": [
+    "R'",
+    "U2 R' U' R",
+    "R' F R",
+    "F L F' L' U L F L' F' U F L F' L' U' L F L' F'",
+    "U R F R' F' U' F R F' R' L' F' L F U' F' L' F L"
+   ],
+   "35": [
+    "R B R' B'",
+    "U R' U' R",
+    "U L' U' L",
+    "R B R' B' U B R B' R'",
+    "F2 U F' U' R U F U' F' R' U R F U F' U' R' U F U' F' U' F'"
+   ],
+   "36": [
+    "U R'",
+    "U R' U' R U R' U' R",
+    "F L F' L' U L F L' F'",
+    "F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "37": [
+    "R U' R'",
+    "U R' U R U' R' U' R U R' U R U R' U' R U'",
+    "U F U' F' U F U F' U'",
+    "L U F U' F' L'",
+    "U R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "38": [
+    "U R",
+    "F R F'",
+    "U2 F U' F' U F U F' U'",
+    "L' R2 U R' U' R' U R U' R' L R U R' U' R U R U' R2",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "39": [
+    "F2",
+    "U F2 U' F2 R F2 U F2 U'",
+    "F U F' U F U' F'",
+    "U R B R' B' U' B R B' R'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "40": [
+    "R U' R'",
+    "U2 L' U' L U' L' U L U'",
+    "U L' F' L F U' F' L' F L",
+    "U2"
+   ],
+   "41": [
+    "U F2",
+    "U B U' B'",
+    "L' U L",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "42": [
+    "U F",
+    "F L F' L' R2 F R' F' R' F R F' R' L F L' F'",
+    "U F U' F' U F U F' U'",
+    "U F R U R' U' F'",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "43": [
+    "R2 U R' U' R' U R U' R'",
+    "U2 R' U' R U'",
+    "F R U R' U' F' U F U R U' R' F'",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "44": [
+    "U F",
+    "F R' F'",
+    "U F U' F' U2 L' U' L F U F' U'",
+    "R F U F' R' F U' F' U F U F' R F U' F' R'",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "45": [
+    "L' F' L F",
+    "F R F'",
+    "U L' U' L U L' U L U L' U' L U' L' U L U'",
+    "U B' L' B L U' L' B' L B U B' L' B L U L' B' L B U'"
+   ],
+   "46": [
+    "F U",
+    "U R' U' R U R' U' R",
+    "U F U' F'",
+    "R U' L' U L R' L' U' L U",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "47": [
+    "U R",
+    "R' U2 F U' F' R",
+    "U F U' F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "48": [
+    "R U R' F",
+    "U F U' R U F' U'",
+    "U' F U F'",
+    "F L F' L' U L F L' F'",
+    "U' L' F' L F U F' L' F L R F R' F' U F R F' R'"
+   ],
+   "49": [
+    "R U' R' U",
+    "U' R' U' R U' R' U R U'",
+    "U L' U' L",
+    "F R U R' U' F'",
+    "U R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "50": [
+    "U2 F",
+    "F R F R' F2",
+    "U L' U' L U' L' U L",
+    "U L' F' L F U' F' L' F L",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "51": [
+    "F'",
+    "U B U' B' U B U B' U'",
+    "U F U' F' U F U F' U'",
+    "U B' L' B L U' L' B' L B U B' L' B L U L' B' L B U'",
+    "U"
+   ],
+   "52": [
+    "F'",
+    "F' R F R' F",
+    "U' F U F'",
+    "R U' L' U L R' L' U' L U",
+    "U'"
+   ],
+   "53": [
+    "R2 F",
+    "F R F'",
+    "F R U' L' U' L U' L' U L U' L' U' L U L' U L U2 R' U2 L' U' L U' L' U L U L' U' L U L' U L U F' U' L' U' L U' L' U L U' L' U' L U L' U L U2 R U2 L' U' L U' L' U L U L' U' L U L' U L U R'",
+    "F' U' F U' L' F' L F U F' L' F L F' U F"
+   ],
+   "54": [
+    "F' R'",
+    "R' U R",
+    "L' U L",
+    "U L' R U R' U' L U R U' R' U' R U R' U' L' U R U' R' L",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "55": [
+    "F2",
+    "U2 B U' B' U' B U B' F U' F' U B U' B' U B U B' U2",
+    "U2 L' U' L U' L' U L U'",
+    "F L F' L' U L F L' F'",
+    "U"
+   ],
+   "56": [
+    "U R",
+    "R' U2 F U' F' U' F U F' U' R",
+    "U F U' F' U F U F' U'",
+    "F R U R' U' F'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "57": [
+    "R2 F",
+    "F R F' U F R' F'",
+    "U L' U' L",
+    "U L2 U' L U L U' L' U' L' U L2",
+    "U"
+   ],
+   "58": [
+    "R U R' F",
+    "U F U' F' U F U' F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "59": [
+    "R2",
+    "U F U' R U F' U'",
+    "F U' F' U",
+    "U L' F' L F U' F' L' F L",
+    "F2 U F' U' R U F U' F' R' U R F U F' U' R' U F U' F' U' F'"
+   ],
+   "60": [
+    "F2",
+    "F R' F'",
+    "F U F' U F U' F'",
+    "L U F U' F' L'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "61": [
+    "R B R' B'",
+    "U R' U' R U R' U' R",
+    "U L' U' L U' L' U L",
+    "U R B R' B' U' B R B' R'",
+    "U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "62": [
+    "U2 F",
+    "U R U B U' B' R' B U B' U' B U' B' R B U B' U' R'",
+    "U L' U' L U' L' U L",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "63": [
+    "F' R'",
+    "R' U2 F U' F' R",
+    "F U' F' U",
+    "R U B U' B' R' U R B U B' U' R'",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "64": [
+    "R' F' R F",
+    "U B U' B'",
+    "U F U' F' U F U F' U'",
+    "F R L' U' L U R' U' L' U L F' U F L' U' L U R U' L' U L R' F'",
+    "F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "65": [
+    "R F R' F' R F R F' R' U R F R' F' R' F R F' R'",
+    "F L F' L' U L F L' F'"
+   ],
+   "66": [
+    "F' R'",
+    "L' U2 R' U' R U' R' U R U' L U R' U' R U R' U R U2",
+    "U L' U' L U L' U L U L' U' L U' L' U L U'",
+    "U2 R F R' F' U' F R F' R' U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U R F R' F' U F R F' R' U R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U2",
+    "F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "67": [
+    "R F R'",
+    "U R U B U' B' R' B U B' U' B U' B' R B U B' U' R'",
+    "F U' F'",
+    "U L' F' L F U' F' L' F L U L' F' L F U F' L' F L U'",
+    "U2"
+   ],
+   "68": [
+    "U F2",
+    "U B U' B' U2 F U' F' B U B' U'",
+    "L' U L",
+    "R F U F' R' F U' F' U F U F' R F U' F' R'",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "69": [
+    "U2 F' U' F U'",
+    "U2 R' U' R U'",
+    "U F U' F' U F U' F'",
+    "F L F' L' U L F L' F' U F L F' L' U' L F L' F'",
+    "R F R' F' U R F R' F' U' F R F' R' F R F' R'"
+   ],
+   "70": [
+    "U F U'",
+    "R F R' F R F' R'",
+    "F U F' U' F U F'",
+    "R B R' B' U B R B' R'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "71": [
+    "F'",
+    "U B U' B'",
+    "F U' F'",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "R F R' F' U R F R' F' U' F R F' R' F R F' R'"
+   ],
+   "72": [
+    "R F",
+    "U F U' F U F' U' R U F U' F' U F' U'",
+    "U2 L' F' L F U F' L' F L U L' F' L F U' F' L' F L U F U' L' F' L F U F' L' F L U' L' F' L F U' F' L' F L U2 F'",
+    "U F U R U' R' F'",
+    "F' U' F U' L' F' L F U F' L' F L F' U F"
+   ],
+   "73": [
+    "U F",
+    "U F R F' U F R' F'",
+    "U R B R' B' U B R B' R'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "74": [
+    "U R'",
+    "U2 R' U' R U' R' U R U'",
+    "U F U' F' U2 L' U' L F U F' U'",
+    "F L F' L' U L F L' F' U F L F' L' U' L F L' F'",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "75": [
+    "F L' F' L",
+    "U B U' B' U F U' F' B U B' U'",
+    "U F U' F' U F U' F'",
+    "U R B R' B' U B R B' R'",
+    "F' U' F L' F' L F U' F' L' F L U F' U F"
+   ],
+   "76": [
+    "U' F",
+    "U2 R' U' R U' R' U R U'",
+    "U2 R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U R F R' F' U F R F' R' U2",
+    "U' L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "77": [
+    "R' B R B'",
+    "F R' F'",
+    "U' F U F'",
+    "U R F R' F' U' F R F' R'",
+    "U' L' F' L F U F' L' F L R F R' F' U F R F' R'"
+   ],
+   "78": [
+    "F'",
+    "U R' U' R U R' U' R",
+    "R F R' F' U F U' R F' R'",
+    "L' R U R' U' L U R U' R'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "79": [
+    "R F",
+    "U R' U' R U R' U' R",
+    "U L' U' L",
+    "U' L' F' L F U F' L' F L",
+    "U2"
+   ],
+   "80": [
+    "U R' U'",
+    "F R F'",
+    "U L' U' L U' L' U L",
+    "U2 R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U'",
+    "F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "81": [
+    "F R'",
+    "R' U2 F U' F' U' F U F' U' R",
+    "R F R' F' U F U' R F' R'",
+    "U2 R F R' F' U' F R F' R' U' R F R' F' U F R F' R' U'",
+    "U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "82": [
+    "R2",
+    "U B U' B'",
+    "L' U L",
+    "U L' F' L F U' F' L' F L"
+   ],
+   "83": [
+    "R F",
+    "U B U' B' U B U B' U' B U' B' U' B U B'",
+    "F U F' U F U' F'",
+    "F R U F U' F' R' F U F' U' F'",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "84": [
+    "R2 F",
+    "R' U R U R' U' R",
+    "F U2 F'",
+    "F R U R' U' F'",
+    "U' L' F' L F U F' L' F L R F R' F' U F R F' R'"
+   ],
+   "85": [
+    "R F R'",
+    "U R' U' R",
+    "U' F U F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "86": [
+    "U R' U'",
+    "U F U' R U F' U'",
+    "U F U' F' U F U F' U'",
+    "R F R' F' U F R F' R'",
+    "U' L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "87": [
+    "F2",
+    "U2 R' U' R U' R' U R U'",
+    "U L' F' L F U' F' L' F L U' L' F' L F U F' L' F L F L' F' L F U' F' L' F L U L' F' L F U F' L' F L U' F'",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "F2 U F' U' R U F U' F' R' U R F U F' U' R' U F U' F' U' F'"
+   ],
+   "88": [
+    "R U R' F",
+    "R' U R",
+    "U L' U' L",
+    "U L' F' L F U' F' L' F L U L' F' L F U F' L' F L U' L' F' L F U' F' L' F L U' L' F' L F U F' L' F L",
+    "R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "89": [
+    "R2",
+    "F R' F'",
+    "U L' U' L U' L' U L",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ],
+   "90": [
+    "U F2",
+    "U R' U' R U R' U' R",
+    "L' U L",
+    "R U' L' U L R' L' U' L U"
+   ],
+   "91": [
+    "U R2",
+    "U B U' B' U B U B' U'",
+    "F U F' U F U' F'",
+    "U R B R' B' U' B R B' R' U R B R' B' U B R B' R' U'",
+    "U F U F' U R F R' F' U' F R F' R' F U' F'"
+   ],
+   "92": [
+    "R F R' F'",
+    "U R' U' R",
+    "R F R' F' U F U' R F' R'",
+    "L U F U' F' L'",
+    "L' F' L F L' F' L F U' F' L' F L U F' L' F L"
+   ],
+   "93": [
+    "F2",
+    "U' R' U' R U' R' U R U'",
+    "U F U' F'",
+    "F R U R' U' F'",
+    "U F U F' R F R' F' U F R F' R' U' F U' F'"
+   ],
+   "94": [
+    "F L' F' L",
+    "R' U2 F U' F' U' F U F' U' R",
+    "U2 L' U' L U' L' U L U'",
+    "U R F R' F' U' F R F' R'",
+    "L' F' L F U' L' F' L F U F' L' F L F' L' F L"
+   ],
+   "95": [
+    "R' B R B'",
+    "U2 R' U' R U' R' U R U'",
+    "U' F U F' U F U' F' U",
+    "U F L F' L' U' L F L' F' U F L F' L' U L F L' F' U'",
+    "U F U R U' R' F' R F R' F' U F R F' R' U' F R U R' U' F'"
+   ],
+   "96": [
+    "U2 F",
+    "R' U2 F U' F' R",
+    "U L' U' L U' L' U L",
+    "U F L F' L' U L F L' F' U' F L F' L' U' L F L' F'",
+    "U R F R' F' U' F R F' R' L' F' L F U' F' L' F L"
+   ],
+   "97": [
+    "R F",
+    "F R F' U F R' F'",
+    "R U B U' B' R'"
+   ],
+   "98": [
+    "R2",
+    "U F U' R U F' U'",
+    "U2 L' U' L U' L' U L U'",
+    "R U' L' U L R' L' U' L U",
+    "F2 U F' U' R U F U' F' R' U R F U F' U' R' U F U' F' U' F'"
+   ],
+   "99": [
+    "R F R' F'",
+    "F R' F'",
+    "U L' U' L",
+    "F U R U' R' F'",
+    "U R F R' F' R F R' F' U F R F' R' U' F R F' R'"
+   ]
+  }
+ },
+ "per_group": {
+  "1-corner": [
+   24,
+   24
+  ],
+  "2-corners": [
+   24,
+   24
+  ],
+  "3-Dlayer": [
+   24,
+   24
+  ],
+  "4-Uorient": [
+   24,
+   24
+  ],
+  "5-solved": [
+   23,
+   23
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "1-corner": [
+   [
+    "seq",
+    0.29040455239260815
+   ],
+   [
+    "comm",
+    0.27249231709664545
+   ],
+   [
+    "mirror",
+    0.1585069757125275
+   ],
+   [
+    "setup",
+    0.12200340960523744
+   ],
+   [
+    "inv",
+    0.08385327128712404
+   ],
+   [
+    "F",
+    0.05156773512417931
+   ],
+   [
+    "z",
+    0.010217908572318647
+   ],
+   [
+    "y",
+    0.007405196593533676
+   ],
+   [
+    "x",
+    0.0018652556702526979
+   ],
+   [
+    "R",
+    0.0009370247409847321
+   ],
+   [
+    "U",
+    0.0007463532045883188
+   ]
+  ],
+  "2-corners": [
+   [
+    "setup",
+    0.627460460845628
+   ],
+   [
+    "comm",
+    0.23380807646564405
+   ],
+   [
+    "seq",
+    0.11723685848150718
+   ],
+   [
+    "inv",
+    0.00718295044085085
+   ],
+   [
+    "mirror",
+    0.0043947613950768415
+   ],
+   [
+    "x",
+    0.003666563005410789
+   ],
+   [
+    "z",
+    0.0028813682341973425
+   ],
+   [
+    "F",
+    0.0013419761526821917
+   ],
+   [
+    "y",
+    0.0008491528857808148
+   ],
+   [
+    "U",
+    0.0006323206733053796
+   ],
+   [
+    "R",
+    0.0005455114199165195
+   ]
+  ],
+  "3-Dlayer": [
+   [
+    "comm",
+    0.5919777862777901
+   ],
+   [
+    "setup",
+    0.31142655917338863
+   ],
+   [
+    "seq",
+    0.06480060826981988
+   ],
+   [
+    "mirror",
+    0.0195191165776143
+   ],
+   [
+    "inv",
+    0.0032284805139887562
+   ],
+   [
+    "y",
+    0.0032233929289559246
+   ],
+   [
+    "U",
+    0.001998941772011886
+   ],
+   [
+    "x",
+    0.001689629024948359
+   ],
+   [
+    "z",
+    0.0013260164543280682
+   ],
+   [
+    "R",
+    0.00041909272264115555
+   ],
+   [
+    "F",
+    0.00039037628451276497
+   ]
+  ],
+  "4-Uorient": [
+   [
+    "setup",
+    0.5377426731326868
+   ],
+   [
+    "comm",
+    0.3182553500223223
+   ],
+   [
+    "mirror",
+    0.06365499467292014
+   ],
+   [
+    "seq",
+    0.06169689059039312
+   ],
+   [
+    "inv",
+    0.004287262747628376
+   ],
+   [
+    "x",
+    0.004226330349060124
+   ],
+   [
+    "U",
+    0.003803244664828106
+   ],
+   [
+    "y",
+    0.0027996789347230007
+   ],
+   [
+    "z",
+    0.00208269002172568
+   ],
+   [
+    "R",
+    0.0010105709029161857
+   ],
+   [
+    "F",
+    0.0004403139607962586
+   ]
+  ],
+  "5-solved": [
+   [
+    "setup",
+    0.39174354089589125
+   ],
+   [
+    "seq",
+    0.2539197675957289
+   ],
+   [
+    "mirror",
+    0.16569184458950958
+   ],
+   [
+    "comm",
+    0.09885868645047811
+   ],
+   [
+    "U",
+    0.05017497655071248
+   ],
+   [
+    "inv",
+    0.01597117683026517
+   ],
+   [
+    "y",
+    0.007828652478093116
+   ],
+   [
+    "z",
+    0.0067107947906905555
+   ],
+   [
+    "x",
+    0.006223337408512777
+   ],
+   [
+    "R",
+    0.0016504313702261925
+   ],
+   [
+    "F",
+    0.0012267910398919832
+   ]
+  ]
+ }
+}

@@ -1,0 +1,377 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 5,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 5,
+   "elapsed": 309.786180973053
+  },
+  {
+   "iteration": 2,
+   "solved": 5,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 5,
+   "elapsed": 529.5293805599213
+  },
+  {
+   "iteration": 3,
+   "solved": 6,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 6,
+   "elapsed": 745.089451789856
+  },
+  {
+   "iteration": 4,
+   "solved": 6,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 6,
+   "elapsed": 939.2862432003021
+  },
+  {
+   "iteration": 5,
+   "solved": 6,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 6,
+   "elapsed": 1131.2039420604706
+  },
+  {
+   "iteration": 6,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 1340.9497389793396
+  },
+  {
+   "iteration": 7,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 1554.7326097488403
+  },
+  {
+   "iteration": 8,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 1771.5849318504333
+  },
+  {
+   "iteration": 9,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 1962.8877477645874
+  },
+  {
+   "iteration": 10,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 2173.577125310898
+  },
+  {
+   "iteration": 11,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 2359.7350602149963
+  },
+  {
+   "iteration": 12,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 2575.457672595978
+  },
+  {
+   "iteration": 13,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 2767.371133327484
+  },
+  {
+   "iteration": 14,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 2984.4783487319946
+  },
+  {
+   "iteration": 15,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 3174.7221744060516
+  },
+  {
+   "iteration": 16,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 3364.1575422286987
+  },
+  {
+   "iteration": 17,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 3577.4461076259613
+  },
+  {
+   "iteration": 18,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 3770.390609025955
+  },
+  {
+   "iteration": 19,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 7,
+   "elapsed": 3961.772589445114
+  },
+  {
+   "iteration": 20,
+   "solved": 8,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 8,
+   "elapsed": 4153.41286611557
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": true,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 0,
+  "biasOptimal": true,
+  "out": "results/v7_verified/full_nn_nolib_s0.json"
+ },
+ "params": {
+  "cuda": false,
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": true,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 0,
+  "outputPrefix": "results/v7_verified/full_nn_nolib_s0_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#9": "R F U F' U' R' U F U' F' R F U F' U' R U F U' F' R2 F'",
+  "full#15": "D R D' F D F' D'",
+  "full#46": "U R U R' U R U' R' U' R F",
+  "full#78": "L F' L' F R' F' L F L' F",
+  "full#79": "F R' F' U' L' F R F' L U",
+  "full#90": "U R U R U' F R",
+  "full#92": "F U R' U' F R' F' R F R F' U R U' R'",
+  "full#107": "U' R F R2 F R' F'"
+ },
+ "solutions": {
+  "full#9": "(inv (seq F (comm R (comm R (comm F U)))))",
+  "full#15": "(z (seq (setup R U) (comm F R)))",
+  "full#46": "(seq U (seq (comm (setup R U) U) (seq R F)))",
+  "full#78": "(seq (inv (setup (mirror (comm (inv R) F)) R)) F)",
+  "full#79": "(comm (inv (setup F R)) (mirror (seq U R)))",
+  "full#90": "(seq U (seq R (seq (setup U R) (seq F R))))",
+  "full#92": "(seq F (comm (inv (seq (setup F R) (setup U R))) R))",
+  "full#107": "(seq (mirror U) (seq R (setup F (seq R (setup R F)))))"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 8,
+  "mean_len": 11.75,
+  "reached": {},
+  "moves": {
+   "45": [
+    "U R U' R' U' R U R' U"
+   ],
+   "50": [
+    "F U2 F U' F R F'"
+   ],
+   "51": [
+    "U' R' U' R U' R U R' U R U2 R' U' F'"
+   ],
+   "61": [
+    "U R' U' F' U R U' F R F' U R' U' F U R U' F R F' R'"
+   ],
+   "73": [
+    "R' U' R U F R U' R' U R"
+   ],
+   "82": [
+    "F' R2 U F U F'"
+   ],
+   "84": [
+    "R F R' F U' R' F R' F'"
+   ],
+   "98": [
+    "U2 L' F' L U L' F L U' F U L' F' L U' L' F L"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   8,
+   120
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "5-solved": [
+   [
+    "seq",
+    0.7315562941821985
+   ],
+   [
+    "inv",
+    0.10165875314719555
+   ],
+   [
+    "comm",
+    0.08453146860774337
+   ],
+   [
+    "setup",
+    0.05885859977741545
+   ],
+   [
+    "mirror",
+    0.010975210370935158
+   ],
+   [
+    "z",
+    0.010341306289739338
+   ],
+   [
+    "R",
+    0.0005582148194082166
+   ],
+   [
+    "x",
+    0.0004715262600132459
+   ],
+   [
+    "U",
+    0.0004125952338691933
+   ],
+   [
+    "F",
+    0.0003910437632879505
+   ],
+   [
+    "y",
+    0.0002449875481936963
+   ]
+  ]
+ }
+}
