@@ -1,0 +1,1 @@
+{"grammar":{"logVariable":0.0,"productions":[[0.0,"alg","R"],[0.0,"alg","U"],[0.0,"alg","F"],[0.0,"alg -> alg -> alg","seq"],[0.0,"alg -> alg","inv"],[0.0,"alg -> alg -> alg","setup"],[0.0,"alg -> alg -> alg","comm"],[0.0,"alg -> alg","x"],[0.0,"alg -> alg","y"],[0.0,"alg -> alg","z"],[0.0,"alg -> alg","mirror"]]},"recognition":null}

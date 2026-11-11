@@ -74,6 +74,24 @@ g, hist, fr = run(primitives(a.dsl), tasks, iterations=a.iterations, per_task_ti
                   recognition=rec)
 
 
+def export_model(path):
+    """Final model for the in-browser search: grammar (exact log-weights) + recognition MLP."""
+    m = {"grammar": {"log_variable": g.log_variable,
+                      "productions": [[l, str(t), str(p)] for l, t, p in g.productions]},
+         "recognition": None}
+    if run.model is not None and run.model.vocab is not None:
+        enc, head = run.model.encoder, run.model.head
+        lin = [enc[0], enc[2], head]
+        m["recognition"] = {"vocab": run.model.vocab, "activation": "relu",
+                            "layers": [{"W": l.weight.detach().cpu().tolist(),
+                                        "b": l.bias.detach().cpu().tolist()} for l in lin]}
+    json.dump(m, open(path, "w"))
+
+
+if a.out:
+    export_model(a.out[:-5] + ".model.json")
+
+
 
 
 def solve_batch(tasks_, budget):

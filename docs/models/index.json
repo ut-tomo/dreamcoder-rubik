@@ -1,0 +1,98 @@
+[
+ {
+  "cfg": "full_nn_lib_s0",
+  "source": "results/v6/full_nn_lib_s0.model.json"
+ },
+ {
+  "cfg": "full_nn_lib_s1",
+  "source": "results/v6/full_nn_lib_s1.model.json"
+ },
+ {
+  "cfg": "full_nn_lib_s2",
+  "source": "results/v6/full_nn_lib_s2.model.json"
+ },
+ {
+  "cfg": "full_nn_nolib_s0",
+  "source": "results/v6/full_nn_nolib_s0.model.json"
+ },
+ {
+  "cfg": "full_nn_nolib_s1",
+  "source": "results/v6/full_nn_nolib_s1.model.json"
+ },
+ {
+  "cfg": "full_nn_nolib_s2",
+  "source": "results/v6/full_nn_nolib_s2.model.json"
+ },
+ {
+  "cfg": "full_nonn_lib_s0",
+  "source": "results/v6/full_nonn_lib_s0.model.json"
+ },
+ {
+  "cfg": "full_nonn_lib_s1",
+  "source": "results/v6/full_nonn_lib_s1.model.json"
+ },
+ {
+  "cfg": "full_nonn_lib_s2",
+  "source": "results/v6/full_nonn_lib_s2.model.json"
+ },
+ {
+  "cfg": "full_nonn_nolib_s0",
+  "source": "results/v6/full_nonn_nolib_s0.model.json"
+ },
+ {
+  "cfg": "full_nonn_nolib_s1",
+  "source": "results/v6/full_nonn_nolib_s1.model.json"
+ },
+ {
+  "cfg": "full_nonn_nolib_s2",
+  "source": "results/v6/full_nonn_nolib_s2.model.json"
+ },
+ {
+  "cfg": "stages_nn_lib_s0",
+  "source": "results/v6/stages_nn_lib_s0.model.json"
+ },
+ {
+  "cfg": "stages_nn_lib_s1",
+  "source": "results/v6/stages_nn_lib_s1.model.json"
+ },
+ {
+  "cfg": "stages_nn_lib_s2",
+  "source": "results/v6/stages_nn_lib_s2.model.json"
+ },
+ {
+  "cfg": "stages_nn_nolib_s0",
+  "source": "results/v6/stages_nn_nolib_s0.model.json"
+ },
+ {
+  "cfg": "stages_nn_nolib_s1",
+  "source": "results/v6/stages_nn_nolib_s1.model.json"
+ },
+ {
+  "cfg": "stages_nn_nolib_s2",
+  "source": "results/v6/stages_nn_nolib_s2.model.json"
+ },
+ {
+  "cfg": "stages_nonn_lib_s0",
+  "source": "results/v6/stages_nonn_lib_s0.model.json"
+ },
+ {
+  "cfg": "stages_nonn_lib_s1",
+  "source": "results/v6/stages_nonn_lib_s1.model.json"
+ },
+ {
+  "cfg": "stages_nonn_lib_s2",
+  "source": "results/v6/stages_nonn_lib_s2.model.json"
+ },
+ {
+  "cfg": "stages_nonn_nolib_s0",
+  "source": "results/v6/stages_nonn_nolib_s0.model.json"
+ },
+ {
+  "cfg": "stages_nonn_nolib_s1",
+  "source": "results/v6/stages_nonn_nolib_s1.model.json"
+ },
+ {
+  "cfg": "stages_nonn_nolib_s2",
+  "source": "results/v6/stages_nonn_nolib_s2.model.json"
+ }
+]

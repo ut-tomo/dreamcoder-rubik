@@ -271,40 +271,60 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
 let DATA, run, ARMS, side, playing = false, busy = false, cube, scr = [];
 
-// stage goals (same as src/rubik/cube2.py + tasks.py), checked on the orientation-normalized cube
-const posKey = p => p.join(",");
-const cornerSolved = (s, pos) => STICKERS.every(([p], i) => posKey(p) !== posKey(pos) || s[i] === i);
-const DRF = [1, -1, 1], DRB = [1, -1, -1], DLF = [-1, -1, 1];
-const dLayer = s => STICKERS.every(([p], i) => p[1] !== -1 || s[i] === i);
-const uOriented = s => STICKERS.every(([, n], i) => n[1] !== 1 || FACE_OF[s[i]] === "U");
-const solvedS = s => s.every((v, i) => v === i);
-const GOAL = {
-  "1-corner": s => cornerSolved(s, DRF), "2-corners": s => cornerSolved(s, DRF) && cornerSolved(s, DRB),
-  "3-Dlayer": dLayer, "4-Uorient": s => dLayer(s) && uOriented(s), "5-solved": solvedS, "full": solvedS };
-const normalize = s => applyMatrix(s, normalizingRotation(s));
 const applySeq = (s, mv) => { for (const m of mv) s = applyMove(s, m); return s; };
 
-// Use this run's own programs: per stage, the shortest stored program that reaches the stage goal.
-function solveWith(kind, armId, seed, start) {
-  const pools = DATA.runs.find(r => r.id === `${kind}_s${seed}`).arms[armId].pools;
-  let s = normalize(start); const moves = [], bounds = [], parts = [];
-  for (const g of Object.keys(pools)) {
-    if (GOAL[g](s)) { parts.push(`${g}: already done`); continue; }
-    const hit = pools[g].find(p => GOAL[g](normalize(applySeq(s, p.split(" ")))));
-    if (hit === undefined) return { moves, bounds, parts, fail: STAGE_TEXT[g], stuck: g, tried: pools[g].length };
-    const mv = hit.split(" ");
-    s = normalize(applySeq(s, mv)); moves.push(...mv); bounds.push(moves.length);
-    parts.push(`${g}: ${hit}`);
+// ---------------- live search (docs/search.js in a Web Worker, using the run's exported model)
+let worker = null, jobId = 0;
+const pending = new Map();
+function getWorker() {
+  if (!worker) {
+    worker = new Worker("search-worker.js");
+    worker.onmessage = e => { const h = pending.get(e.data.id); if (h) h(e.data); };
   }
-  return { moves, bounds, parts };
+  return worker;
+}
+function cancelSearches() {
+  if (worker) { worker.terminate(); worker = null; }
+  for (const h of pending.values()) h({ type: "cancelled" });
+  pending.clear();
+}
+function budget(kind) {
+  const v = $("tBudget").value, mul = kind === "full" ? 5 : 1;
+  return v[0] === "p" ? { maxPrograms: mul * +v.slice(1) } : { timeMs: mul * 1000 * +v.slice(1) };
+}
+const budgetText = kind => { const b = budget(kind); return b.maxPrograms ? `${b.maxPrograms.toLocaleString()}-program` : `${b.timeMs / 1000} s`; };
+// search(kind, arm, seed, start, onMsg) -> Promise<result | null (cancelled)>
+function search(kind, arm, seed, start, onMsg) {
+  const id = ++jobId;
+  return new Promise((res, rej) => {
+    pending.set(id, m => {
+      if (m.type === "done") { pending.delete(id); res(m.result); }
+      else if (m.type === "error") { pending.delete(id); rej(new Error(m.error)); }
+      else if (m.type === "cancelled") res(null);
+      else if (onMsg) onMsg(m);
+    });
+    getWorker().postMessage({ id, cfg: `${kind}_${arm}_s${seed}`, kind, start, opts: budget(kind) });
+  });
+}
+// result -> what the player shows
+function toSolution(r) {
+  const moves = [], bounds = [], parts = [];
+  for (const p of r.parts) {
+    const label = p.stage === "full" ? "full solve" : p.stage;
+    if (p.skipped) { parts.push(`${label}: already done`); continue; }
+    if (!p.ok) { parts.push(`${label}: no program found (${p.nEnum.toLocaleString()} programs tried, ${(p.ms / 1000).toFixed(1)} s)`); continue; }
+    moves.push(...p.moves); bounds.push(moves.length);
+    parts.push(`${label}: ${p.program}  =  ${p.moves.join(" ") || "(no moves)"}   [${p.nEnum.toLocaleString()} programs tried, ${(p.ms / 1000).toFixed(1)} s]`);
+  }
+  return { moves, boundaries: bounds, program: parts.join("\n") };
 }
 
 const FACE_MOVES = ["R", "L", "U", "D", "F", "B"].flatMap(f => [f, f + "'", f + "2"]);
 function setScramble(list) {
   scr = list; cube = applySeq(SOLVED24(), scr);
   $("scrShow").textContent = scr.length ? `Scramble (${scr.length}): ${scr.join(" ")}` : "Solved cube. Add some moves.";
-  stop(); side.view.root.rotation.set(side.view.pitch, side.view.yaw, 0, "XYZ");
-  side.load(cube, null, { idle: "Scramble the cube, then press Solve." });
+  stop(); cancelSearches(); side.view.root.rotation.set(side.view.pitch, side.view.yaw, 0, "XYZ");
+  side.load(cube, null, { idle: "Scramble the cube, then press Solve to run the search." });
   $("tTitle").textContent = "Your cube"; drawAll8();
 }
 const SOLVED24 = () => STICKERS.map((_, i) => i);
@@ -313,23 +333,47 @@ function randomScramble() {
   while (out.length < 25) { const m = FACE_MOVES[Math.floor(Math.random() * FACE_MOVES.length)]; if (m[0] === last) continue; out.push(m); last = m[0]; }
   return out;
 }
-function solveNow() {
-  stop();
-  const k = $("tStrat").value, a = $("tArm").value, seed = $("tSeed").value;
-  const r = solveWith(k, a, seed, cube);
+async function solveNow() {
+  stop(); cancelSearches(); drawAll8();
+  const k = $("tStrat").value, a = $("tArm").value, seed = $("tSeed").value, start = cube.slice();
   $("tTitle").innerHTML = `<span class="c-${a}">${SHORT[a]}</span> · ${STRAT[k]} · seed ${seed}`;
-  const start = cube.slice();
-  const sol = { moves: r.moves, boundaries: r.bounds, program: r.parts.join("\n") };
-  side.load(start, sol, r.stuck ? { fail: `none of its ${r.tried} stored programs for ${r.fail} works on this cube` } : {});
+  side.load(start, null, { idle: "searching…" });
+  let stage = "";
+  let r;
+  try {
+    r = await search(k, a, seed, start, m => {
+      if (m.type === "stage") stage = m.stage;
+      side.statusEl.innerHTML = `<span class="busy">searching…</span> ${k === "stages" ? STAGE_TEXT[stage] || "" : "full solve"}` +
+        (m.type === "progress" ? ` · ${m.n.toLocaleString()} programs tried` : "");
+    });
+  } catch (err) { side.load(start, null, { idle: "Search failed: " + err.message }); return; }
+  if (!r) return; // cancelled
+  const sol = toSolution(r);
+  side.load(start, sol, r.ok ? {} : { fail: `no program found within the ${budgetText(k)} budget at ${STAGE_TEXT[r.stuck]}` });
+  return r;
 }
-function drawAll8() {
+async function runAll8() {
+  stop(); cancelSearches();
+  const seed = $("tSeed").value, start = cube.slice();
+  drawAll8(true);
+  for (const k of ["stages", "full"]) for (const a of ARMS) {
+    const cell = $(`all8-${k}-${a.id}`);
+    cell.innerHTML = `<span class="busy">searching…</span>`;
+    let r;
+    try {
+      r = await search(k, a.id, seed, start, m => { if (m.type === "stage" && k === "stages") cell.innerHTML = `<span class="busy">searching… stage ${m.stage[0]}</span>`; });
+    } catch (err) { cell.textContent = "error: " + err.message; continue; }
+    if (!r) return; // cancelled
+    const n = r.parts.reduce((x, p) => x + (p.moves ? p.moves.length : 0), 0), t = (r.ms / 1000).toFixed(1);
+    cell.innerHTML = r.ok ? `<span class="ok">✓ ${n} moves</span> <span class="small">${t} s</span>`
+      : `<span class="no">✗ stuck at ${r.stuck === "full" ? "full solve" : "stage " + r.stuck[0]}</span> <span class="small">${t} s</span>`;
+  }
+}
+function drawAll8(running) {
   if (!scr.length) { $("all8").innerHTML = "<tr><td>Scramble the cube first.</td></tr>"; return; }
   const seed = $("tSeed").value;
-  const rows = ["stages", "full"].flatMap(k => ARMS.map(a => {
-    const r = solveWith(k, a.id, seed, cube);
-    const res = r.stuck ? `<span class="no">✗ stuck at ${r.stuck === "full" ? "full solve" : "stage " + r.stuck[0]}</span>` : `<span class="ok">✓ ${r.moves.length} moves</span>`;
-    return `<tr><td>${STRAT[k]}</td><td><b class="c-${a.id}">${SHORT[a.id]}</b></td><td>${res}</td></tr>`;
-  })).join("");
+  const rows = ["stages", "full"].flatMap(k => ARMS.map(a =>
+    `<tr><td>${STRAT[k]}</td><td><b class="c-${a.id}">${SHORT[a.id]}</b></td><td id="all8-${k}-${a.id}">${running ? "waiting" : "–"}</td></tr>`)).join("");
   $("all8").innerHTML = `<tr><th>Strategy</th><th>Arm</th><th>Seed ${seed}</th></tr>` + rows;
 }
 const runOf = (k, seed) => DATA.runs.find(r => r.id === `${k}_s${seed}`);
@@ -343,8 +387,8 @@ async function stepAll() {
 }
 async function play() {
   if (playing) { stop(); return; }
-  if (!side.sol) solveNow();
-  if (side.done) solveNow();
+  if (!side.sol) { if (!(await solveNow()) || !side.sol) return; }
+  if (side.done) side.load(side.start, side.sol, side.failMsg ? { fail: side.failMsg } : {});
   playing = true; $("play").textContent = "⏸ Pause";
   while (playing && !side.done) { await stepAll(); await new Promise(r => setTimeout(r, 120 / +$("speed").value)); }
   stop();
@@ -356,8 +400,10 @@ function drawSummary() {
   const rows = ["stages", "full"].flatMap(k => ARMS.map(a => {
     const rs = [0, 1, 2].map(s => runOf(k, s).arms[a.id]);
     const pct = rs.map(A => 100 * A.test_solved / A.test_n), mean = pct.reduce((x, y) => x + y, 0) / pct.length;
-    const sols = rs.flatMap(A => Object.entries(A.solutions).filter(([n]) => n.startsWith("test:")).map(([, v]) => v.moves.length));
-    const len = sols.length ? (sols.reduce((x, y) => x + y, 0) / sols.length).toFixed(0) : "–";
+    const lens = rs.map(A => Object.entries(A.solutions).filter(([n]) => n.startsWith("test:")).map(([, v]) => v.moves.length));
+    const avg = xs => xs.length ? xs.reduce((x, y) => x + y, 0) / xs.length : null;
+    const perSeed = lens.map(avg), pooled = avg(lens.flat());
+    const len = pooled === null ? "–" : `<b>${pooled.toFixed(0)}</b> <span class="small">(${perSeed.map(v => v === null ? "–" : v.toFixed(0)).join(" / ")})</span>`;
     return `<tr><td>${STRAT[k]}</td><td><b class="c-${a.id}">${SHORT[a.id]}</b></td><td><b>${mean.toFixed(0)}%</b> <span class="small">(${pct.map(p => p.toFixed(0)).join(" / ")})</span></td><td>${len}</td></tr>`;
   })).join("");
   $("summary").innerHTML = `<tr><th>Training strategy</th><th>Arm</th><th>Test cubes solved</th><th>Avg. solution length (moves)</th></tr>${rows}`;
@@ -445,10 +491,12 @@ async function main() {
     setScramble(toks);
   };
   $("solve").onclick = solveNow;
-  $("tSeed").onchange = drawAll8;
-  $("reset").onclick = () => side.sol ? solveNow() : null;
+  $("tSeed").onchange = () => { cancelSearches(); drawAll8(); };
+  $("reset").onclick = () => { stop(); if (side.sol) side.load(side.start, side.sol, side.failMsg ? { fail: side.failMsg } : {}); };
+  $("runAll8").onclick = runAll8;
+  $("tBudget").onchange = () => { cancelSearches(); drawAll8(); };
   $("play").onclick = play;
-  $("step").onclick = () => { stop(); if (!side.sol) solveNow(); stepAll(); };
+  $("step").onclick = async () => { stop(); if (!side.sol) { await solveNow(); return; } stepAll(); };
   $("run").innerHTML = DATA.runs.map((r, i) => `<option value="${i}">${r.label}</option>`).join("");
   $("run").onchange = selectRun;
   $("pstage").onchange = drawPolicy;

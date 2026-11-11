@@ -22,7 +22,7 @@
         <section id="try" class="content-section">
             <div class="section-inner">
                 <h2>Try It: Can the Model Solve Your Cube?</h2>
-                <p>Scramble the cube yourself or randomly, pick a trained model, and press <b>Solve</b>.</p>
+                <p>Scramble the cube yourself or randomly, pick a trained model, and press <b>Solve</b>. The model's search really runs on your cube, in your browser.</p>
                 <div class="controls">
                     <span class="lbl">Scramble</span>
                     <div class="pad" id="pad"></div>
@@ -39,6 +39,11 @@
                     <label>Training strategy <select id="tStrat"><option value="stages">Subtask curriculum</option><option value="full">Full task only</option></select></label>
                     <label>Arm <select id="tArm"></select></label>
                     <label>Seed <select id="tSeed"><option>0</option><option>1</option><option>2</option></select></label>
+                    <label>Search budget <select id="tBudget">
+                        <option value="p50000" selected>50,000 programs per stage (≈ the 5 s budget of the original Python search)</option>
+                        <option value="p500000">500,000 programs per stage</option>
+                        <option value="t5">5 s of your browser per stage</option>
+                    </select></label>
                     <button id="solve" class="primary">▶ Solve</button>
                 </div>
                 <div class="try-grid">
@@ -55,17 +60,19 @@
                     </div>
                     <div class="card">
                         <h3>All 8 configurations on this cube</h3>
+                        <p class="small">Runs the real search for each configuration (chosen seed and budget), one after another.</p>
+                        <button id="runAll8">Run all 8</button>
                         <table class="summary" id="all8"></table>
                         <p class="small" style="margin-top:12px">Drag the cube to look around.</p>
                     </div>
                 </div>
-                <div class="goal" style="margin-top:18px"><b>How this works.</b> The site is static, so it cannot rerun the training search in your browser.
-                Instead it uses every program the chosen run found during its training and testing. For the subtask models, the page goes stage by stage (1 corner → 2 corners → bottom layer → top colour → solved).
-                At each stage it tries that run's own stage programs, shortest first, and keeps the first one that actually reaches the stage goal on your cube.
-                Each program is checked by simulating it. If none works, the model is <b>stuck</b> at that stage.
-                For full-task models there is only one stage, the whole solve.
-                On 1,000 fresh random cubes this reproduces the results table closely (library arms: 94–100%; no-library arms: 8–24%; full task: 0%).
-                The live search could occasionally solve a case that none of the stored programs covers, so these numbers are a slight underestimate.
+                <div class="goal" style="margin-top:18px"><b>How this works.</b> Pressing <b>Solve</b> runs the chosen model's program search on your cube, in your browser (a JavaScript port of the DreamCoder program search, in a background worker; it finds exactly the same programs as the Python search under the same budget).
+                Each of the 24 trained runs exported its final model: the learned library with its probabilities, and for the NN arms the recognition network.
+                The search tries programs from most to least likely under that model, runs each one on your cube, and keeps the first that reaches the goal. For the NN arms, the network first looks at your cube and reweights the building blocks.
+                Subtask models go stage by stage (1 corner → 2 corners → bottom layer → top colour → solved), with one search per stage. Full-task models do one search for the whole solve, with 5× the per-stage budget (as in the test protocol).
+                If no program is found within the budget, the model is <b>stuck</b> at that stage.
+                The budget is counted in programs tried, so results do not depend on how fast your device is. The default, 50,000 programs, is roughly what the original Python search checks in 5 s. Your browser is much faster, so the "5 s of your browser" option searches far more programs (often millions) than the models had during testing.
+                <span id="liveNumbers"></span>
                 The cube is first turned as a whole so its back-left-bottom corner is in place. A 2×2×2 has no centre pieces, so this corner defines the orientation.</div>
             </div>
         </section>
@@ -122,10 +129,10 @@ Each stage's training tasks start from a random state in which the earlier stage
 
 <h3>Model and hyperparameters</h3>
 <ul>
-<li><b>Recognition network</b> (NN arms): an MLP with 2 hidden layers of 128 units (ReLU). Input: the colour of each of the 24 stickers (one-hot) plus the stage id. Output: one weight per building block, giving a probability for each block that depends on the cube in front of it. After every round it is trained for 800 Adam steps on solved tasks plus 2000 "dreams": a random program is sampled from the current language and run backwards from a goal state, which gives a task whose solution is known.</li>
-<li><b>Search budget:</b> 5 s per task (NN arms search each task separately; the other arms search all tasks together with the same total time). At test time: 5 s per stage, or 25 s per cube for the full strategy.</li>
-<li><b>Library:</b> at most 3 new routines per round, best 3 programs kept per task, structure penalty 1.0.</li>
-<li><b>Implementation:</b> a pure-Python reimplementation of DreamCoder (unigram grammar, simplified compression), checked against the official OCaml code on its list-processing benchmark. It is not the official engine.</li>
+<li><b>Engine:</b> the official DreamCoder code (<a href="https://github.com/ellisk42/ec/tree/cb0e63f5c33cd2de360b791038b0f5272750270e">ellisk42/ec @ cb0e63f</a>). Its Python part is used unchanged apart from registering the backends. Its OCaml parts (program search, library compression, and the "dream" enumerator) are replaced by a Python port. The port was checked against the OCaml programs: the same set of programs with the same probabilities in each search band, the same dreams, and the same new routines from compression (the learned weights differ by up to about 0.001 because tied candidates are broken differently). Details and the remaining differences are in <code>pydreamcoder/PORT_STATUS.md</code>.</li>
+<li><b>Recognition network</b> (NN arms): DreamCoder's own recognition model. Input: the colour of each of the 24 stickers (one-hot) plus the stage id. One hidden layer of 64 tanh units. Output: a <i>contextual</i> grammar, i.e. a probability for each building block given which block it is an argument of. After every round it is trained for up to 5,000 steps on solved tasks and on "dreams". Dreams are programs enumerated from the current library, one per distinct effect on the cube, each turned into a task whose solution is known (bias-optimal training, plus the auxiliary loss).</li>
+<li><b>Search:</b> programs are tried from most to least likely under the model, in bands of 1.5 nats, for 5 s per task, with every task searched separately. At test time: 5 s per stage, or 25 s per cube for the full strategy.</li>
+<li><b>Library:</b> DreamCoder compression (version-space refactoring): new routines with up to 3 arguments, best 2 programs per task, pseudocounts 30, AIC 1, structure penalty 1.5. Up to 5 programs are kept per task. 20 rounds.</li>
 </ul>
             </div>
         </section>
@@ -133,8 +140,8 @@ Each stage's training tasks start from a random state in which the earlier stage
         <section id="results" class="content-section">
             <div class="section-inner">
                 <h2>Results</h2>
-                <p><b>New:</b> <a href="v7.html">v7 rerun on the verified backend</a> — NN+lib / NN-only / lib-only / neither, stages vs full, mean ± sd over seeds. The table below is the earlier v3 run.</p>
-                <p>Each of the 8 configurations (4 arms × 2 training strategies) was trained with 3 seeds and then tested on the <b>same 100 randomly scrambled cubes</b>, none of which were used in training. The table shows the percentage of those cubes each configuration solved completely (mean over seeds, per-seed values in brackets) and the average length of its solutions.</p>
+                <p><b>Final v6 results</b> (24 runs: 4 arms × 2 training strategies × seeds 0/1/2; official DreamCoder frontend with the verified Python backend, pyrepro <code>fdf68ad</code>). Every solution shown on this page was replayed on the cube before publishing. Stages: NN + library solves 100/100/100 of the 100 test cubes, NN only 100/89/100, library only 77/92/91, neither 6/8/8. Full task only: NN + library 20/6/7, NN only 8/9/11, both plain-search arms 0/0/0. With the library, the NN arm's stage solutions are longer (mean 158/124/91 moves vs 46/53/48 without it). The earlier <a href="v7.html">v7 summary page</a> is kept for reference.</p>
+                <p>Each of the 8 configurations (4 arms × 2 training strategies) was trained with 3 seeds and then tested on the <b>same 100 randomly scrambled cubes</b>, none of which were used in training. The table shows the percentage of those cubes each configuration solved completely (mean over seeds, per-seed values in brackets) and the average length of its solutions in face turns (over all solved cubes, per-seed means in brackets).</p>
                 <div class="card wide"><table class="summary" id="summary"></table></div>
                 <div class="controls" style="margin-top:20px"><label>Run for the charts and policies below <select id="run"></select></label></div>
                 <div class="stats">
@@ -173,7 +180,7 @@ Each stage's training tasks start from a random state in which the earlier stage
     <footer class="site-footer">
         <p class="tech-stack-label">Powered by</p>
         <div class="tech-stack">
-            <span>Python DreamCoder</span>
+            <span>DreamCoder (official frontend + Python port of its OCaml backend)</span>
             <span>JavaScript</span>
             <span>Three.js</span>
         </div>

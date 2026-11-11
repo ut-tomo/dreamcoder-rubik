@@ -1,0 +1,360 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 337.2761323451996
+  },
+  {
+   "iteration": 2,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 587.0956583023071
+  },
+  {
+   "iteration": 3,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 857.3215262889862
+  },
+  {
+   "iteration": 4,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 1178.6679294109344
+  },
+  {
+   "iteration": 5,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 1513.7143530845642
+  },
+  {
+   "iteration": 6,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 1835.2808675765991
+  },
+  {
+   "iteration": 7,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 2178.2514724731445
+  },
+  {
+   "iteration": 8,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 2508.56173992157
+  },
+  {
+   "iteration": 9,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 2838.4832067489624
+  },
+  {
+   "iteration": 10,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 3166.6956934928894
+  },
+  {
+   "iteration": 11,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 3521.218624353409
+  },
+  {
+   "iteration": 12,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 3858.409064769745
+  },
+  {
+   "iteration": 13,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 4424.546042203903
+  },
+  {
+   "iteration": 14,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 4758.906957149506
+  },
+  {
+   "iteration": 15,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 5079.091442108154
+  },
+  {
+   "iteration": 16,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 5395.345462560654
+  },
+  {
+   "iteration": 17,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 5710.672129392624
+  },
+  {
+   "iteration": 18,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 6041.199457406998
+  },
+  {
+   "iteration": 19,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 6362.731850147247
+  },
+  {
+   "iteration": 20,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 6695.194867134094
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 1,
+  "biasOptimal": true,
+  "out": "results/v6/full_nn_lib_s1.json"
+ },
+ "params": {
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": false,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 1,
+  "outputPrefix": "results/v6/full_nn_lib_s1_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#47": "R F' U' F U F' R F U' F' U",
+  "full#75": "F R F R' F R U",
+  "full#98": "U R U' R' U R' U2 R U' R U R' U"
+ },
+ "solutions": {
+  "full#47": "(seq (seq R (inv F)) (setup (comm (mirror U) F) R))",
+  "full#75": "(seq (seq (seq (seq F (setup R F)) F) R) U)",
+  "full#98": "(comm (inv (setup (comm U R) R)) (seq U U))"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 6,
+  "mean_len": 11.166666666666666,
+  "reached": {},
+  "moves": {
+   "37": [
+    "F R' F' U R U' R' F' R U R' U"
+   ],
+   "39": [
+    "U2 R F R' U R U F"
+   ],
+   "43": [
+    "R F R F' R U R' U' R U R U'"
+   ],
+   "45": [
+    "U R U' R' U' R U R' U"
+   ],
+   "50": [
+    "F U2 F U' F R F'"
+   ],
+   "98": [
+    "U' R F R' U' R F' R' U F' U' R F R' U R F' R' U'"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   3,
+   120
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "5-solved": [
+   [
+    "seq",
+    0.574413470904836
+   ],
+   [
+    "inv",
+    0.2986518535358062
+   ],
+   [
+    "setup",
+    0.04038736808528558
+   ],
+   [
+    "comm",
+    0.033984730663299344
+   ],
+   [
+    "mirror",
+    0.03330861269681437
+   ],
+   [
+    "x",
+    0.007048322603151939
+   ],
+   [
+    "y",
+    0.006935847768137065
+   ],
+   [
+    "z",
+    0.002754393494898357
+   ],
+   [
+    "U",
+    0.0009566739200765554
+   ],
+   [
+    "R",
+    0.0008798714921614849
+   ],
+   [
+    "F",
+    0.0006788548355330745
+   ]
+  ]
+ }
+}

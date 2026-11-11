@@ -1,0 +1,371 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 282.7104859352112
+  },
+  {
+   "iteration": 2,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 539.0658779144287
+  },
+  {
+   "iteration": 3,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 810.4015271663666
+  },
+  {
+   "iteration": 4,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 1031.8064849376678
+  },
+  {
+   "iteration": 5,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 3,
+   "elapsed": 1254.1576480865479
+  },
+  {
+   "iteration": 6,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 1463.858095407486
+  },
+  {
+   "iteration": 7,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 1671.6570072174072
+  },
+  {
+   "iteration": 8,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 1876.6398754119873
+  },
+  {
+   "iteration": 9,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 2080.096585035324
+  },
+  {
+   "iteration": 10,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 2287.3348729610443
+  },
+  {
+   "iteration": 11,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 2487.151858329773
+  },
+  {
+   "iteration": 12,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 2689.314096927643
+  },
+  {
+   "iteration": 13,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 2885.436948299408
+  },
+  {
+   "iteration": 14,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 3101.0484108924866
+  },
+  {
+   "iteration": 15,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 3309.185383081436
+  },
+  {
+   "iteration": 16,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 3523.1469266414642
+  },
+  {
+   "iteration": 17,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 3718.4759817123413
+  },
+  {
+   "iteration": 18,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 3924.927503824234
+  },
+  {
+   "iteration": 19,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 4155.47249174118
+  },
+  {
+   "iteration": 20,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 4,
+   "elapsed": 4371.689270019531
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": true,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 1,
+  "biasOptimal": true,
+  "out": "results/v6/full_nn_nolib_s1.json"
+ },
+ "params": {
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": true,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 1,
+  "outputPrefix": "results/v6/full_nn_nolib_s1_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#22": "U' L' U' F' U F U F' U' F U L U'",
+  "full#47": "R F' U' F U F' R F U' F' U",
+  "full#75": "F R F R' F R U",
+  "full#98": "U R U' R' U R' U2 R U' R U R' U"
+ },
+ "solutions": {
+  "full#22": "(mirror (seq (comm U (seq R (comm U F))) U))",
+  "full#47": "(seq R (seq (mirror F) (setup (comm (inv U) F) R)))",
+  "full#75": "(seq F (seq (setup R F) (seq F (seq R U))))",
+  "full#98": "(comm (inv (setup (comm U R) R)) (seq U U))"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 9,
+  "mean_len": 11.777777777777779,
+  "reached": {},
+  "moves": {
+   "2": [
+    "U R U F U' F' U F U F' U' R' U' R' U' F U F' U'"
+   ],
+   "37": [
+    "F R' F' U R U' R' F' R U R' U"
+   ],
+   "39": [
+    "U R F' R' U' R F' R' U F' U'"
+   ],
+   "45": [
+    "U R U' R' U' R U R' U"
+   ],
+   "50": [
+    "F U2 F U' F R F'"
+   ],
+   "58": [
+    "F U' F U F' U' F' U F U F' U2"
+   ],
+   "71": [
+    "F U R F2 R' F R' U' F2"
+   ],
+   "73": [
+    "R' U' R U F R U' R' U R"
+   ],
+   "98": [
+    "U R' U2 R U2 R U' R' F R U R' U2 R' U2 R U"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   4,
+   120
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "5-solved": [
+   [
+    "seq",
+    0.5342386168503684
+   ],
+   [
+    "inv",
+    0.34431985887987276
+   ],
+   [
+    "comm",
+    0.047883898182057585
+   ],
+   [
+    "setup",
+    0.03523938141523948
+   ],
+   [
+    "mirror",
+    0.019653836489988186
+   ],
+   [
+    "x",
+    0.013358695662538549
+   ],
+   [
+    "U",
+    0.0015958089971550603
+   ],
+   [
+    "y",
+    0.0015224169955766627
+   ],
+   [
+    "F",
+    0.0010957439821130818
+   ],
+   [
+    "R",
+    0.0008737970475300589
+   ],
+   [
+    "z",
+    0.0002179454975599809
+   ]
+  ]
+ }
+}

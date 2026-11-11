@@ -1,0 +1,504 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 1425.8085131645203
+  },
+  {
+   "iteration": 2,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 1699.9088928699493
+  },
+  {
+   "iteration": 3,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 1986.4162766933441
+  },
+  {
+   "iteration": 4,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 2268.5804102420807
+  },
+  {
+   "iteration": 5,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 3264.869577407837
+  },
+  {
+   "iteration": 6,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 3513.0243520736694
+  },
+  {
+   "iteration": 7,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 3761.7362897396088
+  },
+  {
+   "iteration": 8,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 4005.3189952373505
+  },
+  {
+   "iteration": 9,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 4249.216607570648
+  },
+  {
+   "iteration": 10,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 4488.516311883926
+  },
+  {
+   "iteration": 11,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 4733.465823888779
+  },
+  {
+   "iteration": 12,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [
+    "#(seq R)"
+   ],
+   "hits_top_down": 2,
+   "elapsed": 4977.187330245972
+  },
+  {
+   "iteration": 13,
+   "solved": 3,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 3,
+   "elapsed": 5508.751653671265
+  },
+  {
+   "iteration": 14,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 4,
+   "elapsed": 5744.795914888382
+  },
+  {
+   "iteration": 15,
+   "solved": 4,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 4,
+   "elapsed": 5979.450214624405
+  },
+  {
+   "iteration": 16,
+   "solved": 6,
+   "n_tasks": 120,
+   "library": [
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 6,
+   "elapsed": 6222.078277587891
+  },
+  {
+   "iteration": 17,
+   "solved": 7,
+   "n_tasks": 120,
+   "library": [
+    "#(#(seq R) (comm F U))",
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 7,
+   "elapsed": 25236.127394914627
+  },
+  {
+   "iteration": 18,
+   "solved": 10,
+   "n_tasks": 120,
+   "library": [
+    "#(#(seq R) (comm F U))",
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 10,
+   "elapsed": 25497.16333246231
+  },
+  {
+   "iteration": 19,
+   "solved": 12,
+   "n_tasks": 120,
+   "library": [
+    "#(#(seq R) (comm F U))",
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 12,
+   "elapsed": 25756.60208415985
+  },
+  {
+   "iteration": 20,
+   "solved": 13,
+   "n_tasks": 120,
+   "library": [
+    "#(#(seq R) (comm F U))",
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    "#(seq R)"
+   ],
+   "hits_top_down": 13,
+   "elapsed": 26022.560869693756
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 0,
+  "biasOptimal": true,
+  "out": "results/v6/full_nn_lib_s0.json"
+ },
+ "params": {
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": false,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 0,
+  "outputPrefix": "results/v6/full_nn_lib_s0_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    -0.9315856746507003,
+    "alg",
+    "#(#(seq R) (comm F U))"
+   ],
+   [
+    -0.7337599313207805,
+    "alg -> alg -> alg",
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))"
+   ],
+   [
+    -0.8617281827806336,
+    "alg -> alg",
+    "#(seq R)"
+   ],
+   [
+    -0.8171367986602625,
+    "alg",
+    "R"
+   ],
+   [
+    -0.6870977055063099,
+    "alg",
+    "U"
+   ],
+   [
+    -0.8133475624773281,
+    "alg",
+    "F"
+   ],
+   [
+    -0.8136437572165724,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    -0.8612541158710383,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    -0.9615510375292207,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    -0.941053564529259,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    -0.9959934334482554,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    -0.9961241957882714,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    -0.9940249631989961,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    -0.9961241957882714,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#8": "R F U F' U' R F U F' U' F R2 F U F' U' R F U F' U' R F U F' U' F U F U' F' R' F' U F U' F' R' U F U' F' R' F'",
+  "full#43": "R F U F2 R F' R' F2 U' R' F' U'",
+  "full#48": "F' R F R F2 U F U' F' R' F2 R' F' R' F2 R' F R' F' R' F2",
+  "full#54": "F U F R U' R2 F' R' F' U' R' F' U2",
+  "full#60": "F2 R F R2 F U F' U' F2",
+  "full#65": "U F R U R U F R F' U' F'",
+  "full#78": "F R U B U' B' F R2 U B U' B' R B U B' U' R' F' R U B U' B' R' B U B' U' R2 F' B U B' U' R'",
+  "full#79": "R F U F' U' F U F U' F' R' F2 R F R F2 R F U F' U' F' U F U' F' R' F2 R' F' R' F2",
+  "full#83": "R U F U' R U F U' F' U' F U F' U' F'",
+  "full#90": "U R U R U' F R",
+  "full#104": "R F2 R2 U B U' B' R' F2 B U B' U' R'",
+  "full#107": "U' R F R2 F R' F'",
+  "full#112": "U B U' B' U2 B U' B' U B U B' U' R U'"
+ },
+ "solutions": {
+  "full#8": "(#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (comm #(#(seq R) (comm F U)) F) (seq #(#(seq R) (comm F U)) #(#(seq R) (comm F U))))",
+  "full#43": "(#(seq R) (inv (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (inv R) F) U)))",
+  "full#48": "(inv (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) #(#(seq R) (comm F U)) (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) R F)))",
+  "full#54": "(inv (seq U (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (seq F (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) U R)) U)))",
+  "full#60": "(#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (#(seq R) #(#(seq R) (comm F U))) F)",
+  "full#65": "(#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (#(seq R) (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (comm U U) U)) U)",
+  "full#78": "(comm F (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) R (x #(#(seq R) (comm F U)))))",
+  "full#79": "(comm (setup #(#(seq R) (comm F U)) F) (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) R F))",
+  "full#83": "(#(seq R) (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) (inv U) (comm U F)))",
+  "full#90": "(seq (setup U (#(seq R) (seq U R))) (seq F R))",
+  "full#104": "(#(seq R) (comm (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) F F) (x #(#(seq R) (comm F U)))))",
+  "full#107": "(seq (inv U) (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) F R))",
+  "full#112": "(#(seq R) (x (#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1)))))) F (#(seq R) (#(seq R) #(#(seq R) (comm F U)))))))"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 20,
+  "mean_len": 43.2,
+  "reached": {},
+  "moves": {
+   "4": [
+    "R B U R B R B' R B U R B R B' U' R U B R' B' R' U' B' U' F R B U R B R B' R B U R B R B' U' R U B R' B' R' U' B' U' R U B U R B R B' U' R' U B R' B' R' U' B' R' B R' B' R' U' B' F'"
+   ],
+   "6": [
+    "R U F2 R F R F R' F U F' U' R' F U' F R U F2 R F R F R' F U F' U' R' F U' R F U F2 R U F U' F' R F' R' F' R' F2 U' F'"
+   ],
+   "20": [
+    "R F U F2 R F R F U F' U' F' R F2 R F R F U F' U' F2 R F U F' U' F2 U F U' F' R' F' R' F U' F' R F R F U F' U' F2 U F U' F' R' F2 U F U' F' R' F' R' F2 R' F U F U' F' R' F' R' F' R F R F U F' U' F' R F2 R F R F U F' U' F2 R F U F' U' F2 U F U' F' R' F' R' F U F' R F R F U F' U' F2 U F U' F' R' F2 U F U' F' R' F' R' F2 R' F U F U' F' R' F' R' F2 U'"
+   ],
+   "25": [
+    "B U R B R B' R B U R B R B' U' R U B U' B' U B R' B' R' U' B' U' F R B U R B R B' R B U R B R B' U' R U B U' B' U B R' B' R' U' B' U' R F U F' B U R B R B' U' B U B' U' R' U B R' B' R' U' B' R' B R' B' R' U' B' F'"
+   ],
+   "26": [
+    "R F R U F U' F' R F' R F R' F U F' U' R' F' R F U F' U'"
+   ],
+   "38": [
+    "R U F R U F' U F R U R2 F'"
+   ],
+   "45": [
+    "R F R F R U B U' B' U F U' F' R' B U B' U' R2 F' B U B' U' R' F' R U B U' B' F R2 U B U' B' R F U F' U' B U B' U' R' F' R2 F' R U B U' B' F R2 U B U' B' R F U F' U' B U B' U' R' F' R'"
+   ],
+   "46": [
+    "R F U F' U' R F U F' U' F R2 F U F' R F U F' U' F R2 F U F' U' F U F U' F' R' F' U' F R F U F' U' F' U F U' F' R2 F' U F U' F' R' U F U' F' R' F' U F U' F' R' F R F U F' U' R F U F' U' F R2 F U F' U' F U F U' F' R' F' U F R F U F' U' F' U F U' F' R2 F' U F U' F' R' F U' F' R2 F' U F U' F' R'"
+   ],
+   "47": [
+    "F U2 R' U2 R' F' U' F'"
+   ],
+   "49": [
+    "R2 F R' F U F' U' R F R' F U F' U' R' F U F' R' F' R U F U' F' R F' R' F'"
+   ],
+   "50": [
+    "R U F U' F' R' F' R' F2 U2 F' R' F2"
+   ],
+   "54": [
+    "B' U R B' R U B U' B U B' U' R' U' F R B' U R B' R U B U' B U B' U' R' U' R F U F' U' F U F U' F' R' F' U R U B U' B' U B' U' R' B R' U' B F'"
+   ],
+   "56": [
+    "R F U F' U' F R2 F U F' U' R2 U R' U' R' U F U' F' R' F'"
+   ],
+   "61": [
+    "R F2 R' F' R' F2 R F U F' U' F2 R F R F2 R F U F' U'"
+   ],
+   "62": [
+    "R F2 R F R F R' F U F' U' R' F' U' F R U F U' F' R F' R' U F2"
+   ],
+   "69": [
+    "R2 F R2 U2 F R U' F U' R U F U' F' R F U F' U' F U F' U' F' U' F' R' F'"
+   ],
+   "73": [
+    "R F R2 F U F' U' F R2 F R2 F U F' U' R F' R' F'"
+   ],
+   "77": [
+    "R F2 R F U F' U F U' F' R' U' R'"
+   ],
+   "88": [
+    "R U' B' R' U' B' U2 B' R' U' B' R B' R' B U R B U R"
+   ],
+   "90": [
+    "R2 F U F U' F' R2 F' R2 F U F' U' R' F' R2 F U F' U F U' F' R2 F R U F U' F' R2 F R2 F U F' U' F' U'"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   13,
+   120
+  ]
+ },
+ "library_readable": [
+  {
+   "program": "#(#(seq R) (comm F U))",
+   "type": "alg",
+   "logProbability": -0.9315856746507003,
+   "moves": "R F U F' U'"
+  },
+  {
+   "program": "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+   "type": "alg -> alg -> alg",
+   "logProbability": -0.7337599313207805,
+   "moves": ""
+  },
+  {
+   "program": "#(seq R)",
+   "type": "alg -> alg",
+   "logProbability": -0.8617281827806336,
+   "moves": ""
+  }
+ ],
+ "policy": {
+  "5-solved": [
+   [
+    "#(seq R)",
+    0.4889627764904077
+   ],
+   [
+    "#(lambda (lambda (seq $0 (setup F (#(seq R) (setup $0 $1))))))",
+    0.16016141209179083
+   ],
+   [
+    "inv",
+    0.10922210541602607
+   ],
+   [
+    "seq",
+    0.09605352682607435
+   ],
+   [
+    "comm",
+    0.08770702064558408
+   ],
+   [
+    "setup",
+    0.023591993213925962
+   ],
+   [
+    "y",
+    0.010490921425301256
+   ],
+   [
+    "x",
+    0.010353381801595809
+   ],
+   [
+    "mirror",
+    0.007077009282548224
+   ],
+   [
+    "z",
+    0.005810884138164353
+   ],
+   [
+    "U",
+    0.00024257720090695864
+   ],
+   [
+    "#(#(seq R) (comm F U))",
+    0.00011311699970826522
+   ]
+  ]
+ }
+}

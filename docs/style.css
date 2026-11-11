@@ -157,3 +157,6 @@ button.primary { background: #ffc107; }
 .canvas.big { aspect-ratio: auto; height: 380px; }
 .moves .stage-sep { color: #999; margin: 0 4px; }
 @media (max-width: 800px) { .try-grid { grid-template-columns: 1fr; } .pad { grid-template-columns: repeat(6, auto); } }
+.busy { color: #b45309; font-weight: 600; }
+#all8 .ok { color: #15803d; }
+#all8 .no { color: #b91c1c; }

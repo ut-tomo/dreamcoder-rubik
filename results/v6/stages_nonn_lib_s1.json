@@ -1,0 +1,2339 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 61,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 61,
+   "elapsed": 323.01812076568604
+  },
+  {
+   "iteration": 2,
+   "solved": 96,
+   "n_tasks": 119,
+   "library": [
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 96,
+   "elapsed": 478.5885806083679
+  },
+  {
+   "iteration": 3,
+   "solved": 107,
+   "n_tasks": 119,
+   "library": [
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 107,
+   "elapsed": 554.3005170822144
+  },
+  {
+   "iteration": 4,
+   "solved": 112,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 112,
+   "elapsed": 657.1860549449921
+  },
+  {
+   "iteration": 5,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 695.8370490074158
+  },
+  {
+   "iteration": 6,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 733.3571164608002
+  },
+  {
+   "iteration": 7,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 772.0814154148102
+  },
+  {
+   "iteration": 8,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 811.573805809021
+  },
+  {
+   "iteration": 9,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 851.8442897796631
+  },
+  {
+   "iteration": 10,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 891.0683357715607
+  },
+  {
+   "iteration": 11,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 934.3086755275726
+  },
+  {
+   "iteration": 12,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 974.4881677627563
+  },
+  {
+   "iteration": 13,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1018.4254314899445
+  },
+  {
+   "iteration": 14,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1061.8203167915344
+  },
+  {
+   "iteration": 15,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1105.1997361183167
+  },
+  {
+   "iteration": 16,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1150.493905544281
+  },
+  {
+   "iteration": 17,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1193.4352145195007
+  },
+  {
+   "iteration": 18,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1239.3164360523224
+  },
+  {
+   "iteration": 19,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1283.998723745346
+  },
+  {
+   "iteration": 20,
+   "solved": 113,
+   "n_tasks": 119,
+   "library": [
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(setup (inv R)) #(seq U U))",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+    "#(#(comm F) (inv #(comm U (inv R))))",
+    "#(setup #(#(comm F) (inv U)))",
+    "#(lambda (comm $0 #(#(comm F) (y F))))",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))",
+    "#(#(setup (inv R)) F)",
+    "#(#(comm F) (y F))",
+    "#(#(comm F) R)",
+    "#(#(setup (inv R)) U)",
+    "#(#(lambda (comm $0 F)) U)",
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    "#(seq U U)",
+    "#(comm U (inv R))",
+    "#(mirror R)",
+    "#(#(comm F) (inv U))",
+    "#(#(lambda (comm $0 F)) (inv U))",
+    "#(setup R F)",
+    "#(setup F R)",
+    "#(lambda (comm $0 F))",
+    "#(comm F)",
+    "#(setup (inv R))"
+   ],
+   "hits_top_down": 113,
+   "elapsed": 1330.702870607376
+  }
+ ],
+ "args": {
+  "kind": "stages",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 1,
+  "biasOptimal": false,
+  "out": "results/v6/stages_nonn_lib_s1.json"
+ },
+ "params": {
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": false,
+  "noConsolidation": false,
+  "contextual": false,
+  "biasOptimal": false,
+  "auxiliaryLoss": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": null,
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 1,
+  "outputPrefix": "results/v6/stages_nonn_lib_s1_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    -1.7935597260716727,
+    "alg",
+    "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))"
+   ],
+   [
+    -1.7682349996958524,
+    "alg",
+    "#(#(setup (inv R)) #(seq U U))"
+   ],
+   [
+    -1.770861279686688,
+    "alg",
+    "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))"
+   ],
+   [
+    -1.6510596011698655,
+    "alg",
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))"
+   ],
+   [
+    -1.7324797823490292,
+    "alg",
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))"
+   ],
+   [
+    -1.825428991309888,
+    "alg",
+    "#(setup #(#(setup (inv R)) U) #(seq U U))"
+   ],
+   [
+    -1.796253079136239,
+    "alg",
+    "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)"
+   ],
+   [
+    -1.7331701646200246,
+    "alg",
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))"
+   ],
+   [
+    -1.795410199014285,
+    "alg",
+    "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))"
+   ],
+   [
+    -1.7570037119206288,
+    "alg",
+    "#(#(comm F) (inv #(comm U (inv R))))"
+   ],
+   [
+    -1.7157748198289036,
+    "alg -> alg",
+    "#(setup #(#(comm F) (inv U)))"
+   ],
+   [
+    -1.7463335485193348,
+    "alg -> alg",
+    "#(lambda (comm $0 #(#(comm F) (y F))))"
+   ],
+   [
+    -1.7664832602105673,
+    "alg",
+    "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))"
+   ],
+   [
+    -1.757021036485368,
+    "alg",
+    "#(seq #(#(setup (inv R)) U) #(setup F R))"
+   ],
+   [
+    -1.7740078261837873,
+    "alg",
+    "#(#(setup (inv R)) F)"
+   ],
+   [
+    -1.825415758441955,
+    "alg",
+    "#(#(comm F) (y F))"
+   ],
+   [
+    -1.77333027928464,
+    "alg",
+    "#(#(comm F) R)"
+   ],
+   [
+    -1.7363948985003468,
+    "alg",
+    "#(#(setup (inv R)) U)"
+   ],
+   [
+    -1.731621285826575,
+    "alg",
+    "#(#(lambda (comm $0 F)) U)"
+   ],
+   [
+    -1.715339801851366,
+    "alg",
+    "#(comm (#(lambda (comm $0 F)) R) U)"
+   ],
+   [
+    -1.7143307816593572,
+    "alg",
+    "#(seq U U)"
+   ],
+   [
+    -1.7460530834344614,
+    "alg",
+    "#(comm U (inv R))"
+   ],
+   [
+    -1.7835040650208773,
+    "alg",
+    "#(mirror R)"
+   ],
+   [
+    -1.7313970577067548,
+    "alg",
+    "#(#(comm F) (inv U))"
+   ],
+   [
+    -1.7415347109929025,
+    "alg",
+    "#(#(lambda (comm $0 F)) (inv U))"
+   ],
+   [
+    -1.7997342592558652,
+    "alg",
+    "#(setup R F)"
+   ],
+   [
+    -1.7268274193849331,
+    "alg",
+    "#(setup F R)"
+   ],
+   [
+    -1.8282891390467961,
+    "alg -> alg",
+    "#(lambda (comm $0 F))"
+   ],
+   [
+    -1.7406922234884994,
+    "alg -> alg",
+    "#(comm F)"
+   ],
+   [
+    -1.7667296126111327,
+    "alg -> alg",
+    "#(setup (inv R))"
+   ],
+   [
+    -1.8307370606090414,
+    "alg",
+    "R"
+   ],
+   [
+    -1.7266093874098996,
+    "alg",
+    "U"
+   ],
+   [
+    -1.8030758120268344,
+    "alg",
+    "F"
+   ],
+   [
+    -1.8256631607852505,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    -1.7262120522366757,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    -1.8392183170011314,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    -1.8145604529403596,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    -1.8580238147861854,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    -1.7338717931193286,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    -1.8315819447141761,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    -1.602588959957422,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "1-corner#0": "L U' L' F' L' F",
+  "1-corner#1": "L U2 L'",
+  "1-corner#2": "F",
+  "1-corner#3": "R F R'",
+  "1-corner#4": "F' L' F",
+  "1-corner#5": "F R F' R'",
+  "1-corner#6": "R F R'",
+  "1-corner#7": "U F' U' F",
+  "1-corner#8": "U F' U' F",
+  "1-corner#9": "L'",
+  "1-corner#10": "F' L' F",
+  "1-corner#11": "R",
+  "1-corner#12": "R F R'",
+  "1-corner#13": "F L F' L'",
+  "1-corner#14": "F R F' R'",
+  "1-corner#15": "F",
+  "1-corner#16": "F' U F U'",
+  "1-corner#17": "R",
+  "1-corner#18": "L'",
+  "1-corner#19": "F",
+  "1-corner#20": "L U2 L'",
+  "1-corner#21": "U' L U L'",
+  "1-corner#22": "F L F' L'",
+  "1-corner#23": "F R F' R'",
+  "2-corners#0": "R' U R F R F'",
+  "2-corners#1": "R' U2 R",
+  "2-corners#2": "R' U R U2 R' U' R",
+  "2-corners#3": "R' U R U2 R' U' R",
+  "2-corners#4": "R' U R",
+  "2-corners#5": "F U' F' U2 R' U' R U' F U F'",
+  "2-corners#6": "U R' U' R F L F' L' R' U R U' L F L' F'",
+  "2-corners#7": "U R' U' R",
+  "2-corners#8": "R2 F R L F' L' F R' F' L F L' F' R2",
+  "2-corners#9": "R' U R",
+  "2-corners#10": "R' U R",
+  "2-corners#11": "R' U2 R F R' U2 R F'",
+  "2-corners#12": "F R' F'",
+  "2-corners#13": "F R' F' U F R F' R' U' R",
+  "2-corners#14": "F R F'",
+  "2-corners#15": "F R F'",
+  "2-corners#16": "R' U2 R",
+  "2-corners#17": "U R' U' R",
+  "2-corners#18": "F R' F'",
+  "2-corners#19": "R' U R F R F'",
+  "2-corners#20": "R' U R",
+  "2-corners#21": "R' U R F R F'",
+  "2-corners#22": "F R F'",
+  "2-corners#23": "F R' F' R' U' R",
+  "3-Dlayer#0": "F U' F' U",
+  "3-Dlayer#1": "U F U' F' U F U' F'",
+  "3-Dlayer#2": "F U' F' U2 F U F'",
+  "3-Dlayer#3": "R' F R",
+  "3-Dlayer#4": "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+  "3-Dlayer#5": "U F U' F'",
+  "3-Dlayer#6": "F U2 F' U2",
+  "3-Dlayer#7": "U' F U F'",
+  "3-Dlayer#8": "U F U' F' U F U' F'",
+  "3-Dlayer#9": "R' F R",
+  "3-Dlayer#10": "U' F U F' U' F U F'",
+  "3-Dlayer#11": "U F U' F' U F U' F'",
+  "3-Dlayer#12": "U F U' F'",
+  "3-Dlayer#13": "U F U' F'",
+  "3-Dlayer#14": "U' F U F'",
+  "3-Dlayer#15": "F U' F' U",
+  "3-Dlayer#16": "F U' F' U",
+  "3-Dlayer#17": "U' F U F'",
+  "3-Dlayer#18": "U' F U F'",
+  "3-Dlayer#19": "R' F R",
+  "3-Dlayer#20": "F U' F' U",
+  "3-Dlayer#21": "U' F U F' U' F U F'",
+  "3-Dlayer#22": "U F U' F'",
+  "3-Dlayer#23": "F U2 F' U2",
+  "4-Uorient#0": "B U' B' U2 B U' B' U' B U B'",
+  "4-Uorient#1": "F R' U R U' F' U R' U' R",
+  "4-Uorient#2": "U F L F' L' U L F L' F' U' F L F' L' U' L F L' F'",
+  "4-Uorient#3": "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+  "4-Uorient#4": "R F R' F' U F R F' R' U'",
+  "4-Uorient#5": "R' F R L F' L' F R' F' L F L' F' R",
+  "4-Uorient#6": "F R L F' L' F R' L F' L' F R F' L F L' R' F' L F L' F'",
+  "4-Uorient#7": "L U' L' U2 L U' L' U' L U L'",
+  "4-Uorient#8": "F R L F' L' F R' L F' L' F R F' L F L' R' F' L F L' F'",
+  "4-Uorient#9": "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+  "4-Uorient#10": "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+  "4-Uorient#11": "F' L U' L' U F U' L U L'",
+  "4-Uorient#12": "U' L' F' L F U' F' L' F L U L' F' L F U F' L' F L",
+  "4-Uorient#13": "L U' L' U2 L U' L' U' L U L'",
+  "4-Uorient#14": "L U' L' U2 L U' L' U' L U L'",
+  "4-Uorient#15": "F U' F' U R F R' F' U F R F' R' U2 F U F'",
+  "4-Uorient#16": "F' U F U2 F' U F U F' U' F",
+  "4-Uorient#17": "F L F' L' U L F L' F' U'",
+  "4-Uorient#18": "R F R' F' U F R F' R' U'",
+  "4-Uorient#19": "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+  "4-Uorient#20": "F U' F' U2 F U' F' U' F U F'",
+  "4-Uorient#21": "F R' U R U' F' U R' U' R",
+  "4-Uorient#22": "R' F R L F' L' F R' F' L F L' F' R",
+  "4-Uorient#23": "R' U R U2 R' U R U R' U' R",
+  "5-solved#0": "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2",
+  "5-solved#3": "F' L' R' F R F' L F R' F' R F",
+  "5-solved#4": "U F R L F' L' F R' F' L F L' F'",
+  "5-solved#5": "F R L F' L' F R' F' L F L' F'",
+  "5-solved#6": "U",
+  "5-solved#8": "F R L F' L' F R' F' L F L' F' U F L F' L' F R F' L F L' R' F'",
+  "5-solved#9": "B L R B' R' B L' B' R B R' B'",
+  "5-solved#10": "F R L F' L' F R' F' L F L' F' U",
+  "5-solved#11": "L F B L' B' L F' L' B L B' L'",
+  "5-solved#14": "U'",
+  "5-solved#16": "L F B L' B' L F' L' B L B' L' U L B L' B' L F L' B L B' F' L'",
+  "5-solved#17": "U2",
+  "5-solved#18": "F L F' L' F R F' L F L' R' F'",
+  "5-solved#19": "F' R' F R F' L' F R' F' R L F",
+  "5-solved#20": "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'",
+  "5-solved#21": "R' F' B' R B R' F R B' R' B R",
+  "5-solved#22": "L B L' B' L F L' B L B' F' L'"
+ },
+ "solutions": {
+  "1-corner#0": "(mirror #(seq #(#(setup (inv R)) U) #(setup F R)))",
+  "1-corner#1": "(mirror #(#(setup (inv R)) #(seq U U)))",
+  "1-corner#2": "F",
+  "1-corner#3": "#(setup R F)",
+  "1-corner#4": "(mirror #(setup F R))",
+  "1-corner#5": "#(#(comm F) R)",
+  "1-corner#6": "#(setup R F)",
+  "1-corner#7": "(mirror #(#(lambda (comm $0 F)) (inv U)))",
+  "1-corner#8": "(mirror #(#(lambda (comm $0 F)) (inv U)))",
+  "1-corner#9": "#(mirror R)",
+  "1-corner#10": "(mirror #(setup F R))",
+  "1-corner#11": "R",
+  "1-corner#12": "#(setup R F)",
+  "1-corner#13": "#(#(comm F) (y F))",
+  "1-corner#14": "#(#(comm F) R)",
+  "1-corner#15": "F",
+  "1-corner#16": "(mirror #(#(comm F) (inv U)))",
+  "1-corner#17": "R",
+  "1-corner#18": "#(mirror R)",
+  "1-corner#19": "F",
+  "1-corner#20": "(mirror #(#(setup (inv R)) #(seq U U)))",
+  "1-corner#21": "(mirror #(comm U (inv R)))",
+  "1-corner#22": "#(#(comm F) (y F))",
+  "1-corner#23": "#(#(comm F) R)",
+  "2-corners#0": "#(seq #(#(setup (inv R)) U) #(setup F R))",
+  "2-corners#1": "#(#(setup (inv R)) #(seq U U))",
+  "2-corners#2": "#(setup #(#(setup (inv R)) U) #(seq U U))",
+  "2-corners#3": "#(setup #(#(setup (inv R)) U) #(seq U U))",
+  "2-corners#4": "#(#(setup (inv R)) U)",
+  "2-corners#5": "(#(setup #(#(comm F) (inv U))) #(comm U (inv R)))",
+  "2-corners#6": "(#(lambda (comm $0 #(#(comm F) (y F)))) #(comm U (inv R)))",
+  "2-corners#7": "#(comm U (inv R))",
+  "2-corners#8": "(#(setup (inv R)) #(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))))",
+  "2-corners#9": "#(#(setup (inv R)) U)",
+  "2-corners#10": "#(#(setup (inv R)) U)",
+  "2-corners#11": "(#(lambda (comm $0 F)) #(#(setup (inv R)) #(seq U U)))",
+  "2-corners#12": "(inv #(setup F R))",
+  "2-corners#13": "(#(setup (inv R)) #(comm (#(lambda (comm $0 F)) R) U))",
+  "2-corners#14": "#(setup F R)",
+  "2-corners#15": "#(setup F R)",
+  "2-corners#16": "#(#(setup (inv R)) #(seq U U))",
+  "2-corners#17": "#(comm U (inv R))",
+  "2-corners#18": "(inv #(setup F R))",
+  "2-corners#19": "#(seq #(#(setup (inv R)) U) #(setup F R))",
+  "2-corners#20": "#(#(setup (inv R)) U)",
+  "2-corners#21": "#(seq #(#(setup (inv R)) U) #(setup F R))",
+  "2-corners#22": "#(setup F R)",
+  "2-corners#23": "(inv #(seq #(#(setup (inv R)) U) #(setup F R)))",
+  "3-Dlayer#0": "#(#(comm F) (inv U))",
+  "3-Dlayer#1": "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+  "3-Dlayer#2": "(#(setup #(#(comm F) (inv U))) #(seq U U))",
+  "3-Dlayer#3": "#(#(setup (inv R)) F)",
+  "3-Dlayer#4": "(#(comm F) #(#(comm F) (inv #(comm U (inv R)))))",
+  "3-Dlayer#5": "#(#(lambda (comm $0 F)) U)",
+  "3-Dlayer#6": "(#(comm F) #(seq U U))",
+  "3-Dlayer#7": "#(#(lambda (comm $0 F)) (inv U))",
+  "3-Dlayer#8": "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+  "3-Dlayer#9": "#(#(setup (inv R)) F)",
+  "3-Dlayer#10": "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+  "3-Dlayer#11": "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+  "3-Dlayer#12": "#(#(lambda (comm $0 F)) U)",
+  "3-Dlayer#13": "#(#(lambda (comm $0 F)) U)",
+  "3-Dlayer#14": "#(#(lambda (comm $0 F)) (inv U))",
+  "3-Dlayer#15": "#(#(comm F) (inv U))",
+  "3-Dlayer#16": "#(#(comm F) (inv U))",
+  "3-Dlayer#17": "#(#(lambda (comm $0 F)) (inv U))",
+  "3-Dlayer#18": "#(#(lambda (comm $0 F)) (inv U))",
+  "3-Dlayer#19": "#(#(setup (inv R)) F)",
+  "3-Dlayer#20": "#(#(comm F) (inv U))",
+  "3-Dlayer#21": "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+  "3-Dlayer#22": "#(#(lambda (comm $0 F)) U)",
+  "3-Dlayer#23": "(#(comm F) #(seq U U))",
+  "4-Uorient#0": "(y #(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U))))",
+  "4-Uorient#1": "#(#(comm F) (inv #(comm U (inv R))))",
+  "4-Uorient#2": "(y #(comm U #(comm (#(lambda (comm $0 F)) R) U)))",
+  "4-Uorient#3": "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+  "4-Uorient#4": "#(comm (#(lambda (comm $0 F)) R) U)",
+  "4-Uorient#5": "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "4-Uorient#6": "(#(lambda (comm $0 #(#(comm F) (y F)))) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "4-Uorient#7": "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+  "4-Uorient#8": "(#(lambda (comm $0 #(#(comm F) (y F)))) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "4-Uorient#9": "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+  "4-Uorient#10": "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+  "4-Uorient#11": "(mirror #(#(comm F) (inv #(comm U (inv R)))))",
+  "4-Uorient#12": "(mirror #(comm U #(comm (#(lambda (comm $0 F)) R) U)))",
+  "4-Uorient#13": "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+  "4-Uorient#14": "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+  "4-Uorient#15": "(#(setup #(#(comm F) (inv U))) #(comm (#(lambda (comm $0 F)) R) U))",
+  "4-Uorient#16": "(mirror (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+  "4-Uorient#17": "(y #(comm (#(lambda (comm $0 F)) R) U))",
+  "4-Uorient#18": "#(comm (#(lambda (comm $0 F)) R) U)",
+  "4-Uorient#19": "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+  "4-Uorient#20": "(#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U))",
+  "4-Uorient#21": "#(#(comm F) (inv #(comm U (inv R))))",
+  "4-Uorient#22": "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "4-Uorient#23": "(mirror #(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U))))",
+  "5-solved#0": "(comm #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)) #(seq U U))",
+  "5-solved#3": "(mirror #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "5-solved#4": "(seq U #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "5-solved#5": "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+  "5-solved#6": "U",
+  "5-solved#8": "(setup #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)) U)",
+  "5-solved#9": "(y #(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))))",
+  "5-solved#10": "(seq #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)) U)",
+  "5-solved#11": "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "5-solved#14": "(mirror U)",
+  "5-solved#16": "(setup #(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))) U)",
+  "5-solved#17": "#(seq U U)",
+  "5-solved#18": "(inv #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+  "5-solved#19": "(inv (mirror #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))))",
+  "5-solved#20": "(setup #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)) #(seq U U))",
+  "5-solved#21": "(mirror #(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))))",
+  "5-solved#22": "(inv #(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))))"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 92,
+  "mean_len": 53.66304347826087,
+  "reached": {
+   "1-corner": 100,
+   "2-corners": 100,
+   "3-Dlayer": 100,
+   "4-Uorient": 100,
+   "5-solved": 92
+  },
+  "moves": {
+   "0": [
+    "L U2 L'",
+    "F U2 F' U2",
+    "R' U R U2 R' U R U R' U' R",
+    "F R L F' L' F R' F' L F L' F' U'"
+   ],
+   "1": [
+    "F U' F' U F L F' L' U' F U F' L F L' F'",
+    "F U' F' U F R' F' U F R F' R' U' R U' F U F'",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "R' F R L F' L' F R' F' L F L' F' R",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "2": [
+    "L'",
+    "R' U2 R",
+    "F U2 F' U2",
+    "B U' B' U2 B U' B' U' B U B'",
+    "F R L F' L' F R' F' L F L' F'"
+   ],
+   "3": [
+    "F' L' F",
+    "F R' F' R' U' R",
+    "U' F U F' U' F U F'",
+    "F R' F' B' R B R' F R B' R' B R F' R' B' R B R' F' R B' R' B F R",
+    "U' F R L F' L' F R' F' L F L' F'"
+   ],
+   "4": [
+    "F L F' L'",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "U' F U F'",
+    "F' L F B L' B' L F' L' B L B' L' F",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "5": [
+    "U F' U' F",
+    "R' U R U2 R' U' R",
+    "F U' F' U",
+    "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "6": [
+    "F L F' L'",
+    "F R' F' U F R F' R' U' R",
+    "F U2 F' U2",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "U F' L' R' F R F' L F R' F' R F"
+   ],
+   "7": [
+    "F2 U' F' U F' U' F U F'",
+    "F R' F'",
+    "F L U' L' U2 L U' L' U' L U L' F' L U' L' U L U L' U2 L U L'",
+    "F U' F' U R F R' F' U F R F' R' U2 F U F'",
+    "U'"
+   ],
+   "8": [
+    "F' U2 F",
+    "F U' F' U R' U R U' F U F'",
+    "F U' F' U",
+    "R F R' F' U F R F' R' U'",
+    "L F B L' B' L F' L' B L B' L' U L B L' B' L F L' B L B' F' L'"
+   ],
+   "9": [
+    "F L F' L'",
+    "F U' F' U2 R' U' R U' F U F'",
+    "F U' F' U",
+    "L U' L' U2 L U' L' U' L U L'",
+    "F R L F' L' F R' F' L F L' F' U F L F' L' F R F' L F L' R' F'"
+   ],
+   "10": [
+    "L U' L' F' L' F",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "U' B' L' B L U' L' B' L B U B' L' B L U L' B' L B",
+    "L F B L' B' L F' L' B L B' L' U L B L' B' L F L' B L B' F' L'"
+   ],
+   "11": [
+    "U F U' L F' L' F U F' U' L F L' F'",
+    "F R' F' U F R F' R' U' R",
+    "U F U' F' U F U' F'",
+    "F U' F' U R F R' F' U F R F' R' U2 F U F'",
+    "F R L F' L' F R' F' L F L' F' U"
+   ],
+   "12": [
+    "F",
+    "F U' F' U F R' F' U F R F' R' U' R U' F U F'",
+    "F U2 F' U2",
+    "U F L F' L' U L F L' F' U' F L F' L' U' L F L' F'",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "13": [
+    "L U' L' U2 L U L'",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "R' F R",
+    "F' L U' L' U F U' L U L'",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "14": [
+    "L U' L' F' L' F",
+    "R' U2 R F R' U2 R F'",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "F U' F' U F R' U R U' F' U R' U' R U' F U F'",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "15": [
+    "L U' L'",
+    "F R' F' R' U' R",
+    "F U' F' U2 F U' F' U' F U F'",
+    "U'"
+   ],
+   "16": [
+    "F' U2 F",
+    "U R' U' R F L F' L' R' U R U' L F L' F'",
+    "U F U' F' U F U' F'",
+    "F R' F' B' R B R' F R B' R' B R F' R' B' R B R' F' R B' R' B F R",
+    "U"
+   ],
+   "17": [
+    "F' U2 F",
+    "F R' F' U F R F' R' U' R",
+    "U R F R' F' U' F R F' R'",
+    "U R' F' B' R B R' F R B' R' B R"
+   ],
+   "18": [
+    "R2 U R U2 R' U' R2",
+    "R' U2 R",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "F R' U R U' F' U R' U' R F L F' L' R' U R U' F U R' U' R F' L F L' F'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "19": [
+    "F L F' L'",
+    "F R' F' R' U' R",
+    "U' F U F'",
+    "F R L F' L' F R' F' L F L' F' U'"
+   ],
+   "20": [
+    "F' U2 F",
+    "F R' F'",
+    "F U2 F' U2",
+    "F R' F' B' R B R' F R B' R' B R F' R' B' R B R' F' R B' R' B F R",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "21": [
+    "R",
+    "R' U R",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "F L F' L' U L F L' F' U'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "22": [
+    "F' U F U'",
+    "F R' F'",
+    "R' F R",
+    "F' U F U2 F' U F U F' U' F",
+    "U2"
+   ],
+   "23": [
+    "R",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "F U' F' U",
+    "F U' F' U R F R' F' U F R F' R' U2 F U F'",
+    "F R L F' L' F R' F' L F L' F' U F L F' L' F R F' L F L' R' F'"
+   ],
+   "24": [
+    "F2 U' F' U F' U' F U F'",
+    "F U' F' U R' U2 R U' F U F'",
+    "F U' F' U2 F U F'",
+    "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+    "B L R B' R' B L' B' R B R' B'"
+   ],
+   "25": [
+    "R F R'",
+    "R' U R U2 R' U' R",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "R' F R L F' L' F R' F' L F L' F' R",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "26": [
+    "L U' L' F' L' F",
+    "U F U' F'",
+    "R' U R U2 R' U R U R' U' R",
+    "U'"
+   ],
+   "27": [
+    "R F R'",
+    "U' F U F' U' F U F'",
+    "F R L F' L' F R' L F' L' F R F' L F L' R' F' L F L' F'",
+    "U'"
+   ],
+   "28": [
+    "F L F' L'",
+    "R' U2 R",
+    "R' F R",
+    "F L F' L' F R F' L F L' R' F'"
+   ],
+   "29": [
+    "R",
+    "U R' U' R",
+    "U F U' F'",
+    "U F L F' L' U L F L' F' U' F L F' L' U' L F L' F'",
+    "R' F' B' R B R' F R B' R' B R"
+   ],
+   "30": [
+    "L'",
+    "F R' F' U F R F' R' U' R",
+    "F U2 F' U2",
+    "R' F R L F' L' F R' F' L F L' F' R",
+    "F L F' L' F R F' L F L' R' F'"
+   ],
+   "31": [
+    "L U2 L'",
+    "R' U R U2 R' U' R",
+    "U' B' L' B L U' L' B' L B U B' L' B L U L' B' L B",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "32": [
+    "U F U' L F' L' F U F' U' L F L' F'",
+    "R' U R F R F'",
+    "U F U' F' U F U' F'",
+    "F' L F B L' B' L F' L' B L B' L' F",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'"
+   ],
+   "34": [
+    "L'",
+    "U R' U' R F L F' L' R' U R U' L F L' F'",
+    "U F U' F'",
+    "F R L F' L' F R' L F' L' F R F' L F L' R' F' L F L' F'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'"
+   ],
+   "37": [
+    "L F' L'",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+    "F R L F' L' F R' F' L F L' F' U F L F' L' F R F' L F L' R' F'"
+   ],
+   "38": [
+    "R",
+    "R' U R F R F'",
+    "U' F U F'",
+    "F R L F' L' F R' L F' L' F R F' L F L' R' F' L F L' F'",
+    "R' F' B' R B R' F R B' R' B R"
+   ],
+   "39": [
+    "L U' L' U2 L U L'",
+    "F R' F' R' U' R",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "F' L U' L' U F U' L U L'",
+    "U F' L' R' F R F' L F R' F' R F"
+   ],
+   "40": [
+    "L F' L'",
+    "F U' F' U2 F U F'",
+    "F U' F' U R F R' F' U F R F' R' U2 F U F'",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "41": [
+    "F U' F' U F L F' L' U' F U F' L F L' F'",
+    "F U' F' U R' U R U' F U F'",
+    "U F U' F' U F U' F'",
+    "F L F' L' U L F L' F' U'",
+    "R' F' B' R B R' F R B' R' B R"
+   ],
+   "42": [
+    "F' U F U'",
+    "F U' F' U F R' F' U F R F' R' U' R U' F U F'",
+    "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+    "R' U' F' U F R",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "43": [
+    "F' U2 F",
+    "U R' U' R F L F' L' R' U R U' L F L' F'",
+    "F' U F U2 F' U F U F' U' F",
+    "U2"
+   ],
+   "44": [
+    "F' U F U'",
+    "F R' F' U F R F' R' U' R",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "R' U R U2 R' U R U R' U' R",
+    "L B L' B' L F L' B L B' F' L'"
+   ],
+   "45": [
+    "R F R'",
+    "R' U2 R F R' U2 R F'",
+    "F R' U R U' F' U R' U' R F L F' L' R' U R U' F U R' U' R F' L F L' F'",
+    "U2"
+   ],
+   "46": [
+    "F",
+    "F R' F' R' U' R",
+    "U' F U F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "47": [
+    "R",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "U F U' F' U F U' F'",
+    "R' U' F' U F R",
+    "F R L F' L' F R' F' L F L' F' U"
+   ],
+   "49": [
+    "L F' L'",
+    "F R' F' U F R F' R' U' R",
+    "F' U F U' F' U F' U' F",
+    "F R' U R U' F' U R' U' R",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'"
+   ],
+   "50": [
+    "F' U2 F",
+    "F U' F' U R' U2 R U' F U F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R' F L F' L' R F R' F' U F R F' R' U' R F R' F' U' F R F' R' L F L' F'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "51": [
+    "L U' L'",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "F U' F' U2 F U F'",
+    "F' L U' L' U F U' L U L'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'"
+   ],
+   "52": [
+    "L U' L'",
+    "F U' F' U2 R' U' R U' F U F'",
+    "F L U' L' U2 L U' L' U' L U L' F' L U' L' U L U L' U2 L U L'",
+    "R' F R L F' L' F R' F' L F L' F' R",
+    "F L F' L' F R F' L F L' R' F'"
+   ],
+   "53": [
+    "R2 U R U2 R' U' R2",
+    "R' U R F R F'",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R' F L F' L' R F R' F' U F R F' R' U' R F R' F' U' F R F' R' L F L' F'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'"
+   ],
+   "54": [
+    "F' L' F",
+    "F R F'",
+    "F L U' L' U2 L U' L' U' L U L' F' L U' L' U L U L' U2 L U L'",
+    "U R F R' F' U' F R F' R'",
+    "U' F R L F' L' F R' F' L F L' F'"
+   ],
+   "55": [
+    "L U' L' U2 L U L'",
+    "U' F U F'",
+    "F L F' L' U L F L' F' U'",
+    "R' F' B' R B R' F R B' R' B R"
+   ],
+   "56": [
+    "R",
+    "F U' F' U R' U R U' F U F'",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R' F L F' L' R F R' F' U F R F' R' U' R F R' F' U' F R F' R' L F L' F'",
+    "B L R B' R' B L' B' R B R' B'"
+   ],
+   "57": [
+    "R2 U R U2 R' U' R2",
+    "F U' F' U2 R' U' R U' F U F'",
+    "F' U F U' F' U F' U' F",
+    "L B L' B' L F L' B L B' F' L'"
+   ],
+   "58": [
+    "U F U' L F' L' F U F' U' L F L' F'",
+    "R' F R",
+    "B U' B' U2 B U' B' U' B U B'",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "59": [
+    "L U' L' F' L' F",
+    "U R' U' R",
+    "L U' L' U2 L U' L' U' L U L'",
+    "U"
+   ],
+   "60": [
+    "L U' L' U2 L U L'",
+    "R' U' R",
+    "F L U' L' U2 L U' L' U' L U L' F' L U' L' U L U L' U2 L U L'",
+    "U R F R' F' U' F R F' R'",
+    "R' F' B' R B R' F R B' R' B R"
+   ],
+   "61": [
+    "F L F' L'",
+    "R' U2 R F R' U2 R F'",
+    "F' U F U' F' U F' U' F",
+    "L U' L' U2 L U' L' U' L U L'",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "62": [
+    "F' U2 F",
+    "R' U' R",
+    "F U' F' U",
+    "F' L F B L' B' L F' L' B L B' L' F",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "63": [
+    "F' L' F",
+    "R' U R F R F'",
+    "F' U F U' F' U F' U' F",
+    "R F R' F' U F R F' R' U'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F'"
+   ],
+   "64": [
+    "F L F' L'",
+    "F R' F'",
+    "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "F L F' L' F R F' L F L' R' F'"
+   ],
+   "65": [
+    "F U' F' U F R' F' U F R F' R' U' R U' F U F'",
+    "U F L F' L' U L F L' F' U' F L F' L' U' L F L' F'",
+    "L B L' B' L F L' B L B' F' L'"
+   ],
+   "66": [
+    "F' L' F",
+    "R' U2 R F R' U2 R F'",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "U F' L' R' F R F' L F R' F' R F"
+   ],
+   "67": [
+    "R F R'",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "F U' F' U2 F U F'",
+    "R' U' F' U F R",
+    "F L F' L' F R F' L F L' R' F'"
+   ],
+   "68": [
+    "F U' F' U F L F' L' U' F U F' L F L' F'",
+    "R' U R F R F'",
+    "F U' F' U",
+    "F R' U R U' F' U R' U' R",
+    "F R L F' L' F R' F' L F L' F' U F L F' L' F R F' L F L' R' F'"
+   ],
+   "69": [
+    "U F U' L F' L' F U F' U' L F L' F'",
+    "F U' F' U R' U R U' F U F'",
+    "U F U' F'",
+    "R' F R L F' L' F R' F' L F L' F' R",
+    "L B L' B' L F L' B L B' F' L'"
+   ],
+   "70": [
+    "F' U F U'",
+    "F R' F'",
+    "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+    "F' L F B L' B' L F' L' B L B' L' F",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "71": [
+    "L U' L'",
+    "F R' F' R' U' R",
+    "F2 R L F' L' F R' F' L F L' F' L F' L' F R F' L F L' R' F'",
+    "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'",
+    "U2"
+   ],
+   "72": [
+    "U' L U L'",
+    "R' U2 R F R' U2 R F'",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "F R' F' B' R B R' F R B' R' B R F' R' B' R B R' F' R B' R' B F R",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "73": [
+    "F' U F U'",
+    "R' U2 R",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "F U' F' U2 F U' F' U' F U F'",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "74": [
+    "U F' U' F",
+    "R' U R F R F'",
+    "U' F U F' U' F U F'",
+    "F U' F' U2 F U' F' U' F U F'",
+    "U'"
+   ],
+   "75": [
+    "L U2 L'",
+    "U R' U' R",
+    "U F U' F'",
+    "R F R' F' U F R F' R' U'",
+    "F' R' F R F' L' F R' F' R L F"
+   ],
+   "76": [
+    "R F R'",
+    "F U' F' U F R' F' U F R F' R' U' R U' F U F'",
+    "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+    "F U' F' U F R' U R U' F' U R' U' R U' F U F'",
+    "U'"
+   ],
+   "77": [
+    "R2 U R U2 R' U' R2",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "U' F U F' U' F U F'",
+    "R F R' F' U F R F' R' U'",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "78": [
+    "L U' L'",
+    "R' U R U2 R' U' R",
+    "U F U' F'",
+    "F R' U R U' F' U R' U' R",
+    "U F' L' R' F R F' L F R' F' R F"
+   ],
+   "79": [
+    "U' L U L'",
+    "U R' U' R F L F' L' R' U R U' L F L' F'",
+    "U F U' F'",
+    "F' L U' L' U F U' L U L'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "80": [
+    "U F' U' F",
+    "U R' U' R",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "U' B' L' B L U' L' B' L B U B' L' B L U L' B' L B",
+    "F' L' R' F R F' L F R' F' R F"
+   ],
+   "81": [
+    "R F R'",
+    "R' U R F R F'",
+    "F U2 F' U2",
+    "L F B L' B' L F' L' B L B' L'"
+   ],
+   "82": [
+    "L U' L' F' L' F",
+    "R' U R U2 R' U' R",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "F L F' L' U L F L' F' U'",
+    "U"
+   ],
+   "83": [
+    "U' L U L'",
+    "F R F'",
+    "F U' F' U",
+    "F L F' L' U L F L' F' U'",
+    "L B L' B' L F L' B L B' F' L'"
+   ],
+   "84": [
+    "R2 U R U2 R' U' R2",
+    "F U' F' U R' U R U' F U F'",
+    "F' U F U' F' U F' U' F",
+    "R' U' F' U F R",
+    "U'"
+   ],
+   "85": [
+    "R F R'",
+    "U R' U' R",
+    "U' F U F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R'",
+    "U R' F' B' R B R' F R B' R' B R"
+   ],
+   "87": [
+    "L U' L' U2 L U L'",
+    "F U' F' U R' U R U' F U F'",
+    "F2 R' U R U' F' U R' U' R F' R' U R U' F U R' U' R F'",
+    "R' U' F' U F R",
+    "U2"
+   ],
+   "88": [
+    "U F U' L F' L' F U F' U' L F L' F'",
+    "R' U2 R F R' U2 R F'",
+    "F U' F' U",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R' F L F' L' R F R' F' U F R F' R' U' R F R' F' U' F R F' R' L F L' F'",
+    "U'"
+   ],
+   "89": [
+    "L U' L' F' L' F",
+    "R' U R",
+    "U F U' F' U F U' F'",
+    "U' B' L' B L U' L' B' L B U B' L' B L U L' B' L B",
+    "F R L F' L' F R' F' L F L' F' U'"
+   ],
+   "90": [
+    "F U' F' U F L F' L' U' F U F' L F L' F'",
+    "F R' F' R' U' R",
+    "F U R F R' F' U F R F' R' U' R F R' F' U' F R F' R' F' R F R' F' U F R F' R' U R F R' F' U' F R F' R' U'",
+    "F R L F' L' F R' L F' L' F R F' L F L' R' F' L F L' F'",
+    "U2"
+   ],
+   "91": [
+    "F2 U' F' U F' U' F U F'",
+    "F R' F' U F R F' R' U' R",
+    "U F U' F' U F U' F'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R' F L F' L' R F R' F' U F R F' R' U' R F R' F' U' F R F' R' L F L' F'",
+    "F R L F' L' F R' F' L F L' F' U"
+   ],
+   "93": [
+    "L U' L' U2 L U L'",
+    "R2 F R L F' L' F R' F' L F L' F' R2",
+    "U' F U F'",
+    "U F L F' L' U L F L' F' U' F L F' L' U' L F L' F'",
+    "F R L F' L' F R' F' L F L' F' U2 F L F' L' F R F' L F L' R' F' U2"
+   ],
+   "94": [
+    "L U2 L'",
+    "R' U R F R F'",
+    "F L U' L' U2 L U' L' U' L U L' F' L U' L' U L U L' U2 L U L'",
+    "R' U R U2 R' U R U R' U' R",
+    "F' R' F R F' L' F R' F' R L F"
+   ],
+   "95": [
+    "R2 U R U2 R' U' R2",
+    "F R' F' R' U' R",
+    "U' F U F' U' F U F'",
+    "F L F' L' U L F L' F' U'",
+    "U"
+   ],
+   "96": [
+    "F' U2 F",
+    "R' U R F R F'",
+    "U F U' F' U F U' F'",
+    "F U' F' U F R' U R U' F' U R' U' R U' F U F'",
+    "U R' F' B' R B R' F R B' R' B R"
+   ],
+   "98": [
+    "L U' L' F' L' F",
+    "U R' U' R",
+    "F L U' L' U2 L U' L' U' L U L' F' L U' L' U L U L' U2 L U L'",
+    "R F R' F' U F R F' R' U R F R' F' U' F R F' R' F L F' L' R F R' F' U F R F' R' U' R F R' F' U' F R F' R' L F L' F'",
+    "L F B L' B' L F' L' B L B' L' U L B L' B' L F L' B L B' F' L'"
+   ]
+  }
+ },
+ "per_group": {
+  "1-corner": [
+   24,
+   24
+  ],
+  "2-corners": [
+   24,
+   24
+  ],
+  "3-Dlayer": [
+   24,
+   24
+  ],
+  "4-Uorient": [
+   24,
+   24
+  ],
+  "5-solved": [
+   17,
+   23
+  ]
+ },
+ "library_readable": [
+  {
+   "program": "#(#(setup (inv R)) #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+   "type": "alg",
+   "logProbability": -1.7935597260716727,
+   "moves": "R' F R L F' L' F R' F' L F L' F' R"
+  },
+  {
+   "program": "#(#(setup (inv R)) #(seq U U))",
+   "type": "alg",
+   "logProbability": -1.7682349996958524,
+   "moves": "R' U2 R"
+  },
+  {
+   "program": "#(y #(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R)))",
+   "type": "alg",
+   "logProbability": -1.770861279686688,
+   "moves": "L F B L' B' L F' L' B L B' L'"
+  },
+  {
+   "program": "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+   "type": "alg",
+   "logProbability": -1.6510596011698655,
+   "moves": "F R L F' L' F R' F' L F L' F'"
+  },
+  {
+   "program": "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+   "type": "alg",
+   "logProbability": -1.7324797823490292,
+   "moves": "L U' L' U2 L U' L' U' L U L'"
+  },
+  {
+   "program": "#(setup #(#(setup (inv R)) U) #(seq U U))",
+   "type": "alg",
+   "logProbability": -1.825428991309888,
+   "moves": "R' U R U2 R' U' R"
+  },
+  {
+   "program": "#(setup #(comm (#(lambda (comm $0 F)) R) U) U)",
+   "type": "alg",
+   "logProbability": -1.796253079136239,
+   "moves": "R F R' F' U F R F' R' U R F R' F' U' F R F' R'"
+  },
+  {
+   "program": "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+   "type": "alg",
+   "logProbability": -1.7331701646200246,
+   "moves": "U R F R' F' U F R F' R' U' R F R' F' U' F R F' R'"
+  },
+  {
+   "program": "#(seq #(#(lambda (comm $0 F)) (inv U)) #(#(lambda (comm $0 F)) (inv U)))",
+   "type": "alg",
+   "logProbability": -1.795410199014285,
+   "moves": "U' F U F' U' F U F'"
+  },
+  {
+   "program": "#(#(comm F) (inv #(comm U (inv R))))",
+   "type": "alg",
+   "logProbability": -1.7570037119206288,
+   "moves": "F R' U R U' F' U R' U' R"
+  },
+  {
+   "program": "#(setup #(#(comm F) (inv U)))",
+   "type": "alg -> alg",
+   "logProbability": -1.7157748198289036,
+   "moves": ""
+  },
+  {
+   "program": "#(lambda (comm $0 #(#(comm F) (y F))))",
+   "type": "alg -> alg",
+   "logProbability": -1.7463335485193348,
+   "moves": ""
+  },
+  {
+   "program": "#(seq #(#(lambda (comm $0 F)) U) #(#(lambda (comm $0 F)) U))",
+   "type": "alg",
+   "logProbability": -1.7664832602105673,
+   "moves": "U F U' F' U F U' F'"
+  },
+  {
+   "program": "#(seq #(#(setup (inv R)) U) #(setup F R))",
+   "type": "alg",
+   "logProbability": -1.757021036485368,
+   "moves": "R' U R F R F'"
+  },
+  {
+   "program": "#(#(setup (inv R)) F)",
+   "type": "alg",
+   "logProbability": -1.7740078261837873,
+   "moves": "R' F R"
+  },
+  {
+   "program": "#(#(comm F) (y F))",
+   "type": "alg",
+   "logProbability": -1.825415758441955,
+   "moves": "F L F' L'"
+  },
+  {
+   "program": "#(#(comm F) R)",
+   "type": "alg",
+   "logProbability": -1.77333027928464,
+   "moves": "F R F' R'"
+  },
+  {
+   "program": "#(#(setup (inv R)) U)",
+   "type": "alg",
+   "logProbability": -1.7363948985003468,
+   "moves": "R' U R"
+  },
+  {
+   "program": "#(#(lambda (comm $0 F)) U)",
+   "type": "alg",
+   "logProbability": -1.731621285826575,
+   "moves": "U F U' F'"
+  },
+  {
+   "program": "#(comm (#(lambda (comm $0 F)) R) U)",
+   "type": "alg",
+   "logProbability": -1.715339801851366,
+   "moves": "R F R' F' U F R F' R' U'"
+  },
+  {
+   "program": "#(seq U U)",
+   "type": "alg",
+   "logProbability": -1.7143307816593572,
+   "moves": "U2"
+  },
+  {
+   "program": "#(comm U (inv R))",
+   "type": "alg",
+   "logProbability": -1.7460530834344614,
+   "moves": "U R' U' R"
+  },
+  {
+   "program": "#(mirror R)",
+   "type": "alg",
+   "logProbability": -1.7835040650208773,
+   "moves": "L'"
+  },
+  {
+   "program": "#(#(comm F) (inv U))",
+   "type": "alg",
+   "logProbability": -1.7313970577067548,
+   "moves": "F U' F' U"
+  },
+  {
+   "program": "#(#(lambda (comm $0 F)) (inv U))",
+   "type": "alg",
+   "logProbability": -1.7415347109929025,
+   "moves": "U' F U F'"
+  },
+  {
+   "program": "#(setup R F)",
+   "type": "alg",
+   "logProbability": -1.7997342592558652,
+   "moves": "R F R'"
+  },
+  {
+   "program": "#(setup F R)",
+   "type": "alg",
+   "logProbability": -1.7268274193849331,
+   "moves": "F R F'"
+  },
+  {
+   "program": "#(lambda (comm $0 F))",
+   "type": "alg -> alg",
+   "logProbability": -1.8282891390467961,
+   "moves": ""
+  },
+  {
+   "program": "#(comm F)",
+   "type": "alg -> alg",
+   "logProbability": -1.7406922234884994,
+   "moves": ""
+  },
+  {
+   "program": "#(setup (inv R))",
+   "type": "alg -> alg",
+   "logProbability": -1.7667296126111327,
+   "moves": ""
+  }
+ ],
+ "policy": {
+  "1-corner": [
+   [
+    "mirror",
+    0.02863402824603704
+   ],
+   [
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    0.027279218035488387
+   ],
+   [
+    "#(seq U U)",
+    0.02560669876303111
+   ],
+   [
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    0.025580874117913762
+   ],
+   [
+    "#(setup #(#(comm F) (inv U)))",
+    0.025569748397910888
+   ],
+   [
+    "inv",
+    0.025304258889231008
+   ],
+   [
+    "U",
+    0.025294206614335388
+   ],
+   [
+    "#(setup F R)",
+    0.025288692269683954
+   ],
+   [
+    "#(#(comm F) (inv U))",
+    0.025173395724765884
+   ],
+   [
+    "#(#(lambda (comm $0 F)) U)",
+    0.025167751774362878
+   ],
+   [
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    0.025146154618854496
+   ],
+   [
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    0.025128800150819756
+   ]
+  ],
+  "2-corners": [
+   [
+    "mirror",
+    0.02863402824603704
+   ],
+   [
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    0.027279218035488387
+   ],
+   [
+    "#(seq U U)",
+    0.02560669876303111
+   ],
+   [
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    0.025580874117913762
+   ],
+   [
+    "#(setup #(#(comm F) (inv U)))",
+    0.025569748397910888
+   ],
+   [
+    "inv",
+    0.025304258889231008
+   ],
+   [
+    "U",
+    0.025294206614335388
+   ],
+   [
+    "#(setup F R)",
+    0.025288692269683954
+   ],
+   [
+    "#(#(comm F) (inv U))",
+    0.025173395724765884
+   ],
+   [
+    "#(#(lambda (comm $0 F)) U)",
+    0.025167751774362878
+   ],
+   [
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    0.025146154618854496
+   ],
+   [
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    0.025128800150819756
+   ]
+  ],
+  "3-Dlayer": [
+   [
+    "mirror",
+    0.02863402824603704
+   ],
+   [
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    0.027279218035488387
+   ],
+   [
+    "#(seq U U)",
+    0.02560669876303111
+   ],
+   [
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    0.025580874117913762
+   ],
+   [
+    "#(setup #(#(comm F) (inv U)))",
+    0.025569748397910888
+   ],
+   [
+    "inv",
+    0.025304258889231008
+   ],
+   [
+    "U",
+    0.025294206614335388
+   ],
+   [
+    "#(setup F R)",
+    0.025288692269683954
+   ],
+   [
+    "#(#(comm F) (inv U))",
+    0.025173395724765884
+   ],
+   [
+    "#(#(lambda (comm $0 F)) U)",
+    0.025167751774362878
+   ],
+   [
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    0.025146154618854496
+   ],
+   [
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    0.025128800150819756
+   ]
+  ],
+  "4-Uorient": [
+   [
+    "mirror",
+    0.02863402824603704
+   ],
+   [
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    0.027279218035488387
+   ],
+   [
+    "#(seq U U)",
+    0.02560669876303111
+   ],
+   [
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    0.025580874117913762
+   ],
+   [
+    "#(setup #(#(comm F) (inv U)))",
+    0.025569748397910888
+   ],
+   [
+    "inv",
+    0.025304258889231008
+   ],
+   [
+    "U",
+    0.025294206614335388
+   ],
+   [
+    "#(setup F R)",
+    0.025288692269683954
+   ],
+   [
+    "#(#(comm F) (inv U))",
+    0.025173395724765884
+   ],
+   [
+    "#(#(lambda (comm $0 F)) U)",
+    0.025167751774362878
+   ],
+   [
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    0.025146154618854496
+   ],
+   [
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    0.025128800150819756
+   ]
+  ],
+  "5-solved": [
+   [
+    "mirror",
+    0.02863402824603704
+   ],
+   [
+    "#(#(lambda (comm $0 #(#(comm F) (y F)))) #(setup F R))",
+    0.027279218035488387
+   ],
+   [
+    "#(seq U U)",
+    0.02560669876303111
+   ],
+   [
+    "#(comm (#(lambda (comm $0 F)) R) U)",
+    0.025580874117913762
+   ],
+   [
+    "#(setup #(#(comm F) (inv U)))",
+    0.025569748397910885
+   ],
+   [
+    "inv",
+    0.025304258889231008
+   ],
+   [
+    "U",
+    0.02529420661433539
+   ],
+   [
+    "#(setup F R)",
+    0.02528869226968395
+   ],
+   [
+    "#(#(comm F) (inv U))",
+    0.025173395724765884
+   ],
+   [
+    "#(#(lambda (comm $0 F)) U)",
+    0.025167751774362875
+   ],
+   [
+    "#(y (#(setup #(#(comm F) (inv U))) #(#(lambda (comm $0 F)) U)))",
+    0.025146154618854496
+   ],
+   [
+    "#(comm U #(comm (#(lambda (comm $0 F)) R) U))",
+    0.025128800150819756
+   ]
+  ]
+ }
+}

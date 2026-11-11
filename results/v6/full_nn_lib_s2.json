@@ -1,0 +1,361 @@
+{
+ "history": [
+  {
+   "iteration": 1,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 224.6391749382019
+  },
+  {
+   "iteration": 2,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 437.9064178466797
+  },
+  {
+   "iteration": 3,
+   "solved": 0,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 0,
+   "elapsed": 665.4783699512482
+  },
+  {
+   "iteration": 4,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 889.667245388031
+  },
+  {
+   "iteration": 5,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 2290.2246267795563
+  },
+  {
+   "iteration": 6,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 3749.612523794174
+  },
+  {
+   "iteration": 7,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 4866.5235867500305
+  },
+  {
+   "iteration": 8,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 5826.661314249039
+  },
+  {
+   "iteration": 9,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 6769.696746587753
+  },
+  {
+   "iteration": 10,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 7774.79199886322
+  },
+  {
+   "iteration": 11,
+   "solved": 1,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 1,
+   "elapsed": 8741.416672229767
+  },
+  {
+   "iteration": 12,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 13306.617581367493
+  },
+  {
+   "iteration": 13,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 19414.64647769928
+  },
+  {
+   "iteration": 14,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 25456.874799251556
+  },
+  {
+   "iteration": 15,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 31444.937271595
+  },
+  {
+   "iteration": 16,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 37831.680520772934
+  },
+  {
+   "iteration": 17,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 43842.48272061348
+  },
+  {
+   "iteration": 18,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 49635.82319402695
+  },
+  {
+   "iteration": 19,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 54836.74049592018
+  },
+  {
+   "iteration": 20,
+   "solved": 2,
+   "n_tasks": 120,
+   "library": [],
+   "hits_top_down": 2,
+   "elapsed": 60710.301644325256
+  }
+ ],
+ "args": {
+  "kind": "full",
+  "iterations": 20,
+  "enumerationTimeout": 5.0,
+  "CPUs": 4,
+  "per_stage": 24,
+  "n_full": 120,
+  "e2e_n": 100,
+  "e2e_seed": 9999,
+  "no_consolidation": false,
+  "no_recognition": false,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "seed": 2,
+  "biasOptimal": true,
+  "out": "results/v6/full_nn_lib_s2.json"
+ },
+ "params": {
+  "solver": "pyfast",
+  "compressor": "pyvs",
+  "useRecognitionModel": true,
+  "noConsolidation": false,
+  "contextual": true,
+  "biasOptimal": true,
+  "auxiliaryLoss": true,
+  "recognitionSteps": 5000,
+  "recognitionTimeout": 3600,
+  "helmholtzRatio": 0.5,
+  "featureExtractor": "<class 'rubik.ec_domain.make_feature_extractor.<locals>.CubeFeatureExtractor'>",
+  "activation": "tanh",
+  "topK": 2,
+  "maximumFrontier": 5,
+  "pseudoCounts": 30.0,
+  "aic": 1.0,
+  "structurePenalty": 1.5,
+  "arity": 3,
+  "evaluationTimeout": null,
+  "enumerationTimeout": 5.0,
+  "testingTimeout": 0,
+  "iterations": 20,
+  "CPUs": 4,
+  "seed": 2,
+  "outputPrefix": "results/v6/full_nn_lib_s2_ckpt/cube",
+  "storeTaskMetrics": false
+ },
+ "grammar": {
+  "logVariable": 0.0,
+  "productions": [
+   [
+    0.0,
+    "alg",
+    "R"
+   ],
+   [
+    0.0,
+    "alg",
+    "U"
+   ],
+   [
+    0.0,
+    "alg",
+    "F"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "seq"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "inv"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "setup"
+   ],
+   [
+    0.0,
+    "alg -> alg -> alg",
+    "comm"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "x"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "y"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "z"
+   ],
+   [
+    0.0,
+    "alg -> alg",
+    "mirror"
+   ]
+  ]
+ },
+ "solutions_moves": {
+  "full#15": "U F' U' R U R' F U' R U F' R U' R' U F U'",
+  "full#40": "R2 U R' F R U' R' F' U'"
+ },
+ "solutions": {
+  "full#15": "(setup (setup (setup U (mirror F)) (comm R U)) R)",
+  "full#40": "(seq (seq R (comm (setup R U) F)) (inv U))"
+ },
+ "e2e": {
+  "n": 100,
+  "solved": 7,
+  "mean_len": 10.857142857142858,
+  "reached": {},
+  "moves": {
+   "2": [
+    "F U2 F R U R' F' R U' R2 U'"
+   ],
+   "45": [
+    "U R U' R' U' R U R' U"
+   ],
+   "50": [
+    "F U2 F U' F R F'"
+   ],
+   "72": [
+    "R U R' F R U' R' F' R L' U' L U' L' U L U R' U' L' U' L U L' U L"
+   ],
+   "73": [
+    "R' U' R U F R U' R' U R"
+   ],
+   "77": [
+    "R2 U R' F U' R' F"
+   ],
+   "82": [
+    "F' R2 U F U F'"
+   ]
+  }
+ },
+ "per_group": {
+  "5-solved": [
+   2,
+   120
+  ]
+ },
+ "library_readable": [],
+ "policy": {
+  "5-solved": [
+   [
+    "seq",
+    0.7968632545005145
+   ],
+   [
+    "setup",
+    0.08750046046951641
+   ],
+   [
+    "comm",
+    0.05317738819967806
+   ],
+   [
+    "inv",
+    0.04847653174006962
+   ],
+   [
+    "mirror",
+    0.009996015602079775
+   ],
+   [
+    "x",
+    0.0009471726589164864
+   ],
+   [
+    "y",
+    0.0008932969750504908
+   ],
+   [
+    "U",
+    0.0006654749188953264
+   ],
+   [
+    "R",
+    0.0005425731670862386
+   ],
+   [
+    "F",
+    0.0005127081419743516
+   ],
+   [
+    "z",
+    0.0004251236262185418
+   ]
+  ]
+ }
+}
