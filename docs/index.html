@@ -41,9 +41,8 @@
                     <label>Arm <select id="tArm"></select></label>
                     <label>Seed <select id="tSeed"><option>0</option><option>1</option><option>2</option></select></label>
                     <label>Search budget <select id="tBudget">
-                        <option value="p50000" selected>50,000 programs per stage (≈ the 5 s budget of the original Python search)</option>
+                        <option value="p50000" selected>50,000 programs per stage</option>
                         <option value="p500000">500,000 programs per stage</option>
-                        <option value="t5">5 s of your browser per stage</option>
                     </select></label>
                     <button id="solve" class="primary">▶ Solve</button>
                     <button id="cancelSolve">✕ Cancel</button>
@@ -73,7 +72,7 @@
                 The search tries programs from most to least likely under that model, runs each one on your cube, and keeps the first that reaches the goal. For the NN arms, the network first looks at your cube and reweights the building blocks.
                 Subtask models go stage by stage (1 corner → 2 corners → bottom layer → top colour → solved), with one search per stage. Full-task models do one search for the whole solve, with 5× the per-stage budget (as in the test protocol).
                 If no program is found within the budget, the model is <b>stuck</b> at that stage.
-                The budget is counted in programs tried, so results do not depend on how fast your device is. The default, 50,000 programs, is roughly what the original Python search checks in 5 s. Your browser is much faster, so the "5 s of your browser" option searches far more programs (often millions) than the models had during testing.
+                The budget is counted in programs tried, so results do not depend on how fast your device is. The default, 50,000 programs per stage, is about what the models could try per stage in the 100-cube test.
                 <span id="liveNumbers"></span>
                 The cube is first turned as a whole so its back-left-bottom corner is in place. A 2×2×2 has no centre pieces, so this corner defines the orientation.</div>
             </div>
@@ -129,13 +128,6 @@ Each stage's training tasks start from a random state in which the earlier stage
 <li>Goals are checked regardless of how the whole cube is held. Before each check, the cube is rotated so its back-left-bottom corner is in place. A 2×2×2 has no centre pieces, so this corner fixes the orientation.</li>
 </ul>
 
-<h3>Model and hyperparameters</h3>
-<ul>
-<li><b>Engine:</b> the official DreamCoder code (<a href="https://github.com/ellisk42/ec/tree/cb0e63f5c33cd2de360b791038b0f5272750270e">ellisk42/ec @ cb0e63f</a>). Its Python part is used unchanged apart from registering the backends. Its OCaml parts (program search, library compression, and the "dream" enumerator) are replaced by a Python port. The port was checked against the OCaml programs: the same set of programs with the same probabilities in each search band, the same dreams, and the same new routines from compression (the learned weights differ by up to about 0.001 because tied candidates are broken differently). Details and the remaining differences are in <code>pydreamcoder/PORT_STATUS.md</code>.</li>
-<li><b>Recognition network</b> (NN arms): DreamCoder's own recognition model. Input: the colour of each of the 24 stickers (one-hot) plus the stage id. One hidden layer of 64 tanh units. Output: a <i>contextual</i> grammar, i.e. a probability for each building block given which block it is an argument of. After every round it is trained for up to 5,000 steps on solved tasks and on "dreams". Dreams are programs enumerated from the current library, one per distinct effect on the cube, each turned into a task whose solution is known (bias-optimal training, plus the auxiliary loss).</li>
-<li><b>Search:</b> programs are tried from most to least likely under the model, in bands of 1.5 nats, for 5 s per task, with every task searched separately. At test time: 5 s per stage, or 25 s per cube for the full strategy.</li>
-<li><b>Library:</b> DreamCoder compression (version-space refactoring): new routines with up to 3 arguments, best 2 programs per task, pseudocounts 30, AIC 1, structure penalty 1.5. Up to 5 programs are kept per task. 20 rounds.</li>
-</ul>
             </div>
         </section>
 
@@ -182,7 +174,6 @@ Each stage's training tasks start from a random state in which the earlier stage
     <footer class="site-footer">
         <p class="tech-stack-label">Powered by</p>
         <div class="tech-stack">
-            <span>DreamCoder (official frontend + Python port of its OCaml backend)</span>
             <span>JavaScript</span>
             <span>Three.js</span>
         </div>
