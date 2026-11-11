@@ -330,7 +330,8 @@ function setScramble(list) {
 const SOLVED24 = () => STICKERS.map((_, i) => i);
 function randomScramble() {
   const out = []; let last = "";
-  while (out.length < 25) { const m = FACE_MOVES[Math.floor(Math.random() * FACE_MOVES.length)]; if (m[0] === last) continue; out.push(m); last = m[0]; }
+  const N = +(($("scrLen") || {}).value || 25);
+  while (out.length < N) { const m = FACE_MOVES[Math.floor(Math.random() * FACE_MOVES.length)]; if (m[0] === last) continue; out.push(m); last = m[0]; }
   return out;
 }
 async function solveNow() {
@@ -491,6 +492,7 @@ async function main() {
     setScramble(toks);
   };
   $("solve").onclick = solveNow;
+  $("cancelSolve").onclick = () => { stop(); cancelSearches(); drawAll8(); side.load(cube, null, { idle: "Search cancelled." }); };
   $("tSeed").onchange = () => { cancelSearches(); drawAll8(); };
   $("reset").onclick = () => { stop(); if (side.sol) side.load(side.start, side.sol, side.failMsg ? { fail: side.failMsg } : {}); };
   $("runAll8").onclick = runAll8;
